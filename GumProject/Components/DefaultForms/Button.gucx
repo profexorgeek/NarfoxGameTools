@@ -46,6 +46,37 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>NineSliceInstance.SourceFile</Name>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>NineSliceInstance.Texture Height</Name>
+      <Value xsi:type="xsd:int">24</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>NineSliceInstance.Texture Left</Name>
+      <Value xsi:type="xsd:int">3976</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>NineSliceInstance.Texture Top</Name>
+      <Value xsi:type="xsd:int">72</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>int</Type>
+      <Name>NineSliceInstance.Texture Width</Name>
+      <Value xsi:type="xsd:int">24</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>NineSliceInstance.Width</Name>
       <Value xsi:type="xsd:float">0</Value>
@@ -233,6 +264,30 @@
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3976</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">72</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Disabled</Name>
@@ -267,6 +322,30 @@
         <Type>ColorCategoryState</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3976</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">120</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">24</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <VariableList xsi:type="VariableListSaveOfString">
@@ -312,6 +391,30 @@
         <Value xsi:type="xsd:string">Black</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3976</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
       <VariableList xsi:type="VariableListSaveOfString">
         <Type>string</Type>
         <Name>AnimationFrames</Name>
@@ -350,6 +453,30 @@
         <Type>ColorCategoryState</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Black</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3976</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>NineSliceInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">24</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <VariableList xsi:type="VariableListSaveOfString">
