@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.2" tiledversion="1.2.5" orientation="orthogonal" renderorder="right-down" width="30" height="30" tilewidth="32" tileheight="32" infinite="0" nextlayerid="4" nextobjectid="1">
- <tileset firstgid="1" source="NarfoxStudiosArtPack.tsx"/>
+ <tileset firstgid="1" source="narfox.tsx"/>
  <layer id="1" name="Water" width="30" height="30">
   <data encoding="csv">
 2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,
