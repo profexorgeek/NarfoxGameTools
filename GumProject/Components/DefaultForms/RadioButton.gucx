@@ -7,25 +7,25 @@
     <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Height</Name>
-      <Value xsi:type="xsd:float">0</Value>
+      <Value xsi:type="xsd:float">48</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>ColoredFrameInstance.Height Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Width</Name>
-      <Value xsi:type="xsd:float">100</Value>
+      <Value xsi:type="xsd:float">48</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>ColoredFrameInstance.Width Units</Name>
-      <Value xsi:type="xsd:int">5</Value>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -97,7 +97,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>SpriteInstance.SourceFile</Name>
-      <Value xsi:type="xsd:string">UISpriteSheet.png</Value>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -109,25 +109,25 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Height</Name>
-      <Value xsi:type="xsd:int">37</Value>
+      <Value xsi:type="xsd:int">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Left</Name>
-      <Value xsi:type="xsd:int">245</Value>
+      <Value xsi:type="xsd:int">3904</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Top</Name>
-      <Value xsi:type="xsd:int">54</Value>
+      <Value xsi:type="xsd:int">128</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Width</Name>
-      <Value xsi:type="xsd:int">37</Value>
+      <Value xsi:type="xsd:int">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

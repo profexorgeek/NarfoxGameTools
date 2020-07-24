@@ -163,7 +163,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>SpriteInstance1.SourceFile</Name>
-      <Value xsi:type="xsd:string">UISpriteSheet.png</Value>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -175,25 +175,25 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Height</Name>
-      <Value xsi:type="xsd:int">18</Value>
+      <Value xsi:type="xsd:int">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Left</Name>
-      <Value xsi:type="xsd:int">105</Value>
+      <Value xsi:type="xsd:int">3872</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Top</Name>
-      <Value xsi:type="xsd:int">15</Value>
+      <Value xsi:type="xsd:int">128</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Width</Name>
-      <Value xsi:type="xsd:int">31</Value>
+      <Value xsi:type="xsd:int">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -242,7 +242,7 @@
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>SpriteInstance2.SourceFile</Name>
-      <Value xsi:type="xsd:string">UISpriteSheet.png</Value>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -254,25 +254,25 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Height</Name>
-      <Value xsi:type="xsd:int">18</Value>
+      <Value xsi:type="xsd:int">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Left</Name>
-      <Value xsi:type="xsd:int">105</Value>
+      <Value xsi:type="xsd:int">3872</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Top</Name>
-      <Value xsi:type="xsd:int">15</Value>
+      <Value xsi:type="xsd:int">128</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Width</Name>
-      <Value xsi:type="xsd:int">31</Value>
+      <Value xsi:type="xsd:int">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
