@@ -90,56 +90,56 @@
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ButtonOkay.Height</Name>
+      <Name>ButtonConfirm.Height</Name>
       <Value xsi:type="xsd:float">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ButtonOkay.Parent</Name>
+      <Name>ButtonConfirm.Parent</Name>
       <Value xsi:type="xsd:string">MarginContainer</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ButtonOkay.Text</Name>
+      <Name>ButtonConfirm.Text</Name>
       <Value xsi:type="xsd:string">OK</Value>
       <ExposedAsName>ConfirmButtonText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ButtonOkay.Width</Name>
+      <Name>ButtonConfirm.Width</Name>
       <Value xsi:type="xsd:float">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ButtonOkay.Width Units</Name>
+      <Name>ButtonConfirm.Width Units</Name>
       <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>ButtonOkay.X Origin</Name>
+      <Name>ButtonConfirm.X Origin</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>ButtonOkay.X Units</Name>
+      <Name>ButtonConfirm.X Units</Name>
       <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>ButtonOkay.Y Origin</Name>
+      <Name>ButtonConfirm.Y Origin</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>ButtonOkay.Y Units</Name>
+      <Name>ButtonConfirm.Y Units</Name>
       <Value xsi:type="xsd:int">5</Value>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -208,6 +208,13 @@
       <Type>string</Type>
       <Name>DialogTitle.Parent</Name>
       <Value xsi:type="xsd:string">MarginContainer</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>DialogTitle.Text</Name>
+      <Value xsi:type="xsd:string">TITLE</Value>
+      <ExposedAsName>TitleText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -344,7 +351,7 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ButtonOkay</Name>
+    <Name>ButtonConfirm</Name>
     <BaseType>DefaultForms/Button</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>

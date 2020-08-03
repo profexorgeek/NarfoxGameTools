@@ -16,15 +16,55 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>DialogYesNoInstance.X</Name>
+      <Value xsi:type="xsd:float">30</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>DialogYesNoInstance.Y</Name>
+      <Value xsi:type="xsd:float">215</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>bool</Type>
       <Name>IsXamarinFormsControl</Name>
       <Value xsi:type="xsd:boolean">false</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>MenuInstance.MenuTitleText</Name>
+      <Value xsi:type="xsd:string">EXAMPLE MENU</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>MenuInstance.X</Name>
+      <Value xsi:type="xsd:float">322</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>MenuInstance.Y</Name>
+      <Value xsi:type="xsd:float">24</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
   <Instance>
     <Name>DialogAlertInstance</Name>
     <BaseType>CommonComponents/DialogAlert</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>DialogYesNoInstance</Name>
+    <BaseType>CommonComponents/DialogYesNo</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>MenuInstance</Name>
+    <BaseType>CommonComponents/Menu</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
 </ScreenSave>

@@ -60,7 +60,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Height</Name>
-      <Value xsi:type="xsd:float">106</Value>
+      <Value xsi:type="xsd:float">256</Value>
       <Category>Dimensions</Category>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -150,7 +150,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">104</Value>
+      <Value xsi:type="xsd:float">256</Value>
       <Category>Dimensions</Category>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -217,6 +217,13 @@
       <Name>ComponentBackground</Name>
       <Variable>
         <Type>int</Type>
+        <Name>Texture Height</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
         <Name>Texture Left</Name>
         <Value xsi:type="xsd:int">3904</Value>
         <Category>Source</Category>
@@ -236,6 +243,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ComponentPushed</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -243,9 +253,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ComponentPushed</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -267,6 +274,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ComponentDisabled</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -274,9 +284,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ComponentDisabled</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -298,6 +305,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ComponentHighlighted</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -305,9 +315,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ComponentHighlighted</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -329,16 +336,15 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>MenuBackground</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
         <Value xsi:type="xsd:int">24</Value>
-        <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>MenuBackground</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -357,15 +363,16 @@
         <Value xsi:type="xsd:int">24</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ButtonNormal</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
         <Value xsi:type="xsd:int">24</Value>
+        <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ButtonNormal</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -387,6 +394,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ButtonPushed</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -394,9 +404,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ButtonPushed</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -418,6 +425,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ButtonWarning</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -425,9 +435,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ButtonWarning</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -449,6 +456,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ButtonDisabled</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -456,9 +466,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ButtonDisabled</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -480,6 +487,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>ButtonHighlighted</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -487,9 +497,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>ButtonHighlighted</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -511,6 +518,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>SolidNormal</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -518,9 +528,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>SolidNormal</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -542,6 +549,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>SolidPushed</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -549,9 +559,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>SolidPushed</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -573,6 +580,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>SolidWarning</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -580,9 +590,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>SolidWarning</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -604,6 +611,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>SolidDisabled</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -611,9 +621,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>SolidDisabled</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -635,6 +642,9 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>SolidHighlighted</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Height</Name>
@@ -642,9 +652,6 @@
         <Category>Source</Category>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>SolidHighlighted</Name>
       <Variable>
         <Type>int</Type>
         <Name>Texture Left</Name>
@@ -662,13 +669,6 @@
       <Variable>
         <Type>int</Type>
         <Name>Texture Width</Name>
-        <Value xsi:type="xsd:int">24</Value>
-        <Category>Source</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>Texture Height</Name>
         <Value xsi:type="xsd:int">24</Value>
         <Category>Source</Category>
         <SetsValue>true</SetsValue>

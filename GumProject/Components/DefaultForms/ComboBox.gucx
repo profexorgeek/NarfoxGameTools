@@ -70,27 +70,9 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>int</Type>
-      <Name>NineSliceInstance.Texture Height</Name>
-      <Value xsi:type="xsd:int">24</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>NineSliceInstance.Texture Left</Name>
-      <Value xsi:type="xsd:int">3976</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>NineSliceInstance.Texture Top</Name>
-      <Value xsi:type="xsd:int">72</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>NineSliceInstance.Texture Width</Name>
-      <Value xsi:type="xsd:int">24</Value>
+      <Type>StyleCategoryState</Type>
+      <Name>NineSliceInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">ButtonNormal</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -142,6 +124,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>bool</Type>
+      <Name>SpriteInstance.FlipVertical</Name>
+      <Value xsi:type="xsd:boolean">true</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
       <Name>SpriteInstance.Parent</Name>
       <Value xsi:type="xsd:string">NineSliceInstance</Value>
@@ -163,37 +151,37 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Height</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Left</Name>
-      <Value xsi:type="xsd:int">3872</Value>
+      <Value xsi:type="xsd:int">3921</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Top</Name>
-      <Value xsi:type="xsd:int">128</Value>
+      <Value xsi:type="xsd:int">56</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Width</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">14</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>SpriteInstance.X</Name>
-      <Value xsi:type="xsd:float">-4</Value>
+      <Value xsi:type="xsd:float">-16</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
       <Name>SpriteInstance.X Origin</Name>
-      <Value xsi:type="xsd:int">2</Value>
+      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -228,7 +216,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>TextInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Gray</Value>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -294,7 +282,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">250</Value>
+      <Value xsi:type="xsd:float">256</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <VariableList xsi:type="VariableListSaveOfString">
@@ -339,7 +327,37 @@
       <Variable>
         <Type>ColorCategoryState</Type>
         <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Gray</Value>
+        <Value xsi:type="xsd:string">White</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>NineSliceInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonNormal</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3921</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">56</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">14</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">7</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -373,9 +391,39 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>NineSliceInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonDisabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3921</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">48</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">14</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">7</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -409,9 +457,39 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>NineSliceInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonHighlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">7</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3921</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">56</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">14</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Black</Value>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -442,9 +520,39 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>NineSliceInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonPushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">7</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Left</Name>
+        <Value xsi:type="xsd:int">3921</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Top</Name>
+        <Value xsi:type="xsd:int">56</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Width</Name>
+        <Value xsi:type="xsd:int">14</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Black</Value>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <VariableList xsi:type="VariableListSaveOfString">

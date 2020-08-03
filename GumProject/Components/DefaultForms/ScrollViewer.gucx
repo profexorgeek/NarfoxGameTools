@@ -252,7 +252,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">243</Value>
+      <Value xsi:type="xsd:float">256</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>

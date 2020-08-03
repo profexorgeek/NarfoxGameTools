@@ -161,7 +161,13 @@
     <Variable>
       <Type>float</Type>
       <Name>ThumbInstance.Height</Name>
-      <Value xsi:type="xsd:float">40</Value>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ThumbInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -179,7 +185,13 @@
     <Variable>
       <Type>float</Type>
       <Name>ThumbInstance.Width</Name>
-      <Value xsi:type="xsd:float">33</Value>
+      <Value xsi:type="xsd:float">50</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ThumbInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">5</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -215,7 +227,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">484</Value>
+      <Value xsi:type="xsd:float">256</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <VariableList xsi:type="VariableListSaveOfString">

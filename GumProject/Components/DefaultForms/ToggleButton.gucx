@@ -271,6 +271,7 @@
     <Variable>
       <Type>string</Type>
       <Name>TextInstance.Text</Name>
+      <Value xsi:type="xsd:string">DON'T USE ME, USE CHECKBOX</Value>
       <ExposedAsName>Text</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>

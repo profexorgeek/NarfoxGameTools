@@ -217,19 +217,19 @@
     <Variable>
       <Type>float</Type>
       <Name>TextInstance.Width</Name>
-      <Value xsi:type="xsd:float">0</Value>
+      <Value xsi:type="xsd:float">-56</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>TextInstance.Width Units</Name>
-      <Value xsi:type="xsd:int">4</Value>
+      <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>TextInstance.X</Name>
-      <Value xsi:type="xsd:float">58</Value>
+      <Value xsi:type="xsd:float">56</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -265,7 +265,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">0</Value>
+      <Value xsi:type="xsd:float">256</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -374,6 +374,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentBackground</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
@@ -383,12 +389,6 @@
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>StyleCategoryState</Type>
-        <Name>ColoredFrameInstance.StyleCategoryState</Name>
-        <Value xsi:type="xsd:string">ComponentBackground</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
