@@ -29,6 +29,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>string</Type>
+      <Name>ColoredFrameInstance.Text</Name>
+      <Value xsi:type="xsd:string"></Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Width</Name>
       <Value xsi:type="xsd:float">48</Value>
@@ -122,7 +128,7 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Top</Name>
-      <Value xsi:type="xsd:int">128</Value>
+      <Value xsi:type="xsd:int">64</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -175,8 +181,9 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>TextInstance.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">White</Value>
       <ExposedAsName>TextColor</ExposedAsName>
-      <SetsValue>false</SetsValue>
+      <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
@@ -294,6 +301,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>string</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Enabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>ColoredFrameInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
@@ -317,6 +330,19 @@
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>TextColor</ExposedAsName>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentBackground</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -330,6 +356,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Enabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>ColoredFrameInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
@@ -355,6 +387,19 @@
         <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>TextColor</ExposedAsName>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentBackground</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>DisabledOn</Name>
@@ -363,6 +408,12 @@
         <Name>ColoredFrameInstance.Blue</Name>
         <Value xsi:type="xsd:int">255</Value>
         <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Disabled</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -386,9 +437,21 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>string</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentDisabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -402,6 +465,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Disabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>ColoredFrameInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Black</Value>
@@ -422,9 +491,22 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentDisabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
+        <ExposedAsName>TextColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -438,6 +520,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Highlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>ColoredFrameInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Yellow</Value>
@@ -458,9 +546,22 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentHighlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>TextColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -474,6 +575,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Highlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>ColoredFrameInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Yellow</Value>
@@ -494,9 +601,22 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentHighlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>TextColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -510,6 +630,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Pushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>ColoredFrameInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Yellow</Value>
@@ -530,9 +656,22 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentPushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>TextColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -545,6 +684,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>ColoredFrameInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Pushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategoryState</Type>
         <Name>ColoredFrameInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Yellow</Value>
@@ -563,9 +708,22 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentPushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>TextColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

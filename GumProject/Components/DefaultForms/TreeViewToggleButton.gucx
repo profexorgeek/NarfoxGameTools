@@ -6,6 +6,36 @@
     <Name>Default</Name>
     <Variable>
       <Type>float</Type>
+      <Name>ColoredFrameInstance.Height</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ColoredFrameInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>StyleCategoryState</Type>
+      <Name>ColoredFrameInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">ButtonNormal</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>ColoredFrameInstance.Width</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>ColoredFrameInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
       <Name>Height</Name>
       <Value xsi:type="xsd:float">20</Value>
       <SetsValue>true</SetsValue>
@@ -17,10 +47,16 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>bool</Type>
+      <Name>SpriteInstance.FlipVertical</Name>
+      <Value xsi:type="xsd:boolean">true</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <IsFile>true</IsFile>
       <Type>string</Type>
       <Name>SpriteInstance.SourceFile</Name>
-      <Value xsi:type="xsd:string">uispritesheet.png</Value>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -32,25 +68,25 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Height</Name>
-      <Value xsi:type="xsd:int">18</Value>
+      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Left</Name>
-      <Value xsi:type="xsd:int">105</Value>
+      <Value xsi:type="xsd:int">3921</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Top</Name>
-      <Value xsi:type="xsd:int">63</Value>
+      <Value xsi:type="xsd:int">56</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Width</Name>
-      <Value xsi:type="xsd:int">31</Value>
+      <Value xsi:type="xsd:int">14</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -118,351 +154,177 @@
     <State>
       <Name>EnabledOn</Name>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
         <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>bool</Type>
+        <Name>SpriteInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">63</Value>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonNormal</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>EnabledOff</Name>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>bool</Type>
+        <Name>SpriteInstance.FlipVertical</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
-        <Name>SpriteInstance.FlipVertical</Name>
+        <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
-        <Category>Flip</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">63</Value>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonNormal</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>DisabledOn</Name>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">128</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonDisabled</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
         <Value xsi:type="xsd:boolean">true</Value>
-        <Category>Flip</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">63</Value>
+        <Type>bool</Type>
+        <Name>SpriteInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>DisabledOff</Name>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">128</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonDisabled</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
-        <Category>Flip</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">63</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>HighlightedOn</Name>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonHighlighted</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
         <Value xsi:type="xsd:boolean">true</Value>
-        <Category>Flip</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">159</Value>
+        <Type>bool</Type>
+        <Name>SpriteInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>HighlightedOff</Name>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>SpriteInstance.FlipVertical</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <Category>Flip</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">159</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-    </State>
-    <State>
-      <Name>PushedOn</Name>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">150</Value>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonHighlighted</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
         <Value xsi:type="xsd:boolean">true</Value>
-        <Category>Flip</Category>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">150</Value>
+        <Type>bool</Type>
+        <Name>SpriteInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>PushedOn</Name>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonPushed</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">150</Value>
+        <Type>bool</Type>
+        <Name>SpriteInstance.FlipVertical</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">63</Value>
+        <Type>bool</Type>
+        <Name>SpriteInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>PushedOff</Name>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Alpha</Name>
-        <Value xsi:type="xsd:int">255</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Blue</Name>
-        <Value xsi:type="xsd:int">150</Value>
-        <Category>Rendering</Category>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonPushed</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
-        <Category>Flip</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Green</Name>
-        <Value xsi:type="xsd:int">150</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Red</Name>
-        <Value xsi:type="xsd:int">150</Value>
-        <Category>Rendering</Category>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Top</Name>
-        <Value xsi:type="xsd:int">63</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
   </Category>
+  <Instance>
+    <Name>ColoredFrameInstance</Name>
+    <BaseType>DefaultForms/ColoredFrame</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
   <Instance>
     <Name>SpriteInstance</Name>
     <BaseType>Sprite</BaseType>

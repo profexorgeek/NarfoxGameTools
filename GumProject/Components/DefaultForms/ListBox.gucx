@@ -83,6 +83,19 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>ColoredFrameInstance.SourceFile</Name>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>StyleCategoryState</Type>
+      <Name>ColoredFrameInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">ComponentBackground</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Width</Name>
       <Value xsi:type="xsd:float">0</Value>
@@ -255,6 +268,13 @@
       <Value xsi:type="xsd:float">243</Value>
       <SetsValue>true</SetsValue>
     </Variable>
+    <VariableList xsi:type="VariableListSaveOfString">
+      <Type>string</Type>
+      <Name>AnimationFrames</Name>
+      <IsFile>false</IsFile>
+      <IsHiddenInPropertyGrid>false</IsHiddenInPropertyGrid>
+      <Value />
+    </VariableList>
   </State>
   <Instance>
     <Name>ColoredFrameInstance</Name>

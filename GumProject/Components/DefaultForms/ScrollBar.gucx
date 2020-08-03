@@ -23,6 +23,19 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>BackgroundInstance.SourceFile</Name>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>StyleCategoryState</Type>
+      <Name>BackgroundInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">ComponentBackground</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>BackgroundInstance.Width</Name>
       <Value xsi:type="xsd:float">0</Value>
@@ -148,12 +161,6 @@
       <SetsValue>false</SetsValue>
     </Variable>
     <Variable>
-      <Type>bool</Type>
-      <Name>SpriteInstance1.FlipVertical</Name>
-      <Value xsi:type="xsd:boolean">true</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>string</Type>
       <Name>SpriteInstance1.Parent</Name>
       <Value xsi:type="xsd:string">UpButtonInstance</Value>
@@ -175,25 +182,25 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Height</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Left</Name>
-      <Value xsi:type="xsd:int">3872</Value>
+      <Value xsi:type="xsd:int">3921</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Top</Name>
-      <Value xsi:type="xsd:int">128</Value>
+      <Value xsi:type="xsd:int">56</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance1.Texture Width</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">14</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -233,6 +240,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>bool</Type>
+      <Name>SpriteInstance2.FlipVertical</Name>
+      <Value xsi:type="xsd:boolean">true</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
       <Name>SpriteInstance2.Parent</Name>
       <Value xsi:type="xsd:string">DownButtonInstance</Value>
@@ -254,25 +267,25 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Height</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Left</Name>
-      <Value xsi:type="xsd:int">3872</Value>
+      <Value xsi:type="xsd:int">3921</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Top</Name>
-      <Value xsi:type="xsd:int">128</Value>
+      <Value xsi:type="xsd:int">56</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance2.Texture Width</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">14</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

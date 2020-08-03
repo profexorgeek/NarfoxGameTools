@@ -23,6 +23,25 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <IsFile>true</IsFile>
+      <Type>string</Type>
+      <Name>BackgroundInstance.SourceFile</Name>
+      <Value xsi:type="xsd:string">../narfox.png</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>StyleCategoryState</Type>
+      <Name>BackgroundInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">ButtonNormal</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>BackgroundInstance.Text</Name>
+      <Value xsi:type="xsd:string"></Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>BackgroundInstance.Width</Name>
       <Value xsi:type="xsd:float">0</Value>
@@ -98,15 +117,63 @@
     <Name>ButtonCategory</Name>
     <State>
       <Name>Enabled</Name>
+      <Variable>
+        <Type>string</Type>
+        <Name>BackgroundInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Enabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonNormal</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Disabled</Name>
+      <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>BackgroundInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Disabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonDisabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Highlighted</Name>
+      <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>BackgroundInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Highlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonHighlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Pushed</Name>
+      <Variable>
+        <Type>ButtonCategory</Type>
+        <Name>BackgroundInstance.ButtonCategoryState</Name>
+        <Value xsi:type="xsd:string">Pushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonPushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
   </Category>
   <Instance>

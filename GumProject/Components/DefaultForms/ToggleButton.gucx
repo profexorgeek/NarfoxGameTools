@@ -5,27 +5,15 @@
   <State>
     <Name>Default</Name>
     <Variable>
-      <Type>int</Type>
-      <Name>ColoredRectangleInstance.Blue</Name>
-      <Value xsi:type="xsd:int">49</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>int</Type>
-      <Name>ColoredRectangleInstance.Green</Name>
-      <Value xsi:type="xsd:int">49</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
       <Name>ColoredRectangleInstance.Height</Name>
       <Value xsi:type="xsd:float">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>int</Type>
-      <Name>ColoredRectangleInstance.Red</Name>
-      <Value xsi:type="xsd:int">49</Value>
+      <Type>StyleCategoryState</Type>
+      <Name>ColoredRectangleInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">SolidWarning</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -259,7 +247,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>TextInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Gray</Value>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -712,7 +700,7 @@
   </Instance>
   <Instance>
     <Name>ColoredRectangleInstance</Name>
-    <BaseType>ColoredRectangle</BaseType>
+    <BaseType>DefaultForms/ColoredFrame</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors>

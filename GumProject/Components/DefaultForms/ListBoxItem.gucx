@@ -17,6 +17,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>StyleCategoryState</Type>
+      <Name>BackgroundInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">SolidNormal</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>BackgroundInstance.Width</Name>
       <Value xsi:type="xsd:float">0</Value>
@@ -89,7 +95,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>TextInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Black</Value>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -175,6 +181,12 @@
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">SolidNormal</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Highlighted</Name>
@@ -182,6 +194,12 @@
         <Type>ColorCategoryState</Type>
         <Name>BackgroundInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Yellow</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">SolidHighlighted</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -227,6 +245,12 @@
         <Type>ColorCategoryState</Type>
         <Name>BackgroundInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Green</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">SolidPushed</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

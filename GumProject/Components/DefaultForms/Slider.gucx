@@ -95,6 +95,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>StyleCategoryState</Type>
+      <Name>LineInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">ComponentBackground</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>float</Type>
       <Name>LineInstance.Width</Name>
       <Value xsi:type="xsd:float">0</Value>

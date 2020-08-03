@@ -187,13 +187,19 @@
     <Variable>
       <Type>float</Type>
       <Name>SelectionInstance.Height</Name>
-      <Value xsi:type="xsd:float">-2</Value>
+      <Value xsi:type="xsd:float">-8</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>SelectionInstance.Height Units</Name>
       <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>StyleCategoryState</Type>
+      <Name>SelectionInstance.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">SolidNormal</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -211,7 +217,19 @@
     <Variable>
       <Type>float</Type>
       <Name>SelectionInstance.Y</Name>
-      <Value xsi:type="xsd:float">1</Value>
+      <Value xsi:type="xsd:float">4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>VerticalAlignment</Type>
+      <Name>SelectionInstance.Y Origin</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>SelectionInstance.Y Units</Name>
+      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -227,7 +245,7 @@
     <Variable>
       <Type>ColorCategoryState</Type>
       <Name>TextInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Black</Value>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -319,15 +337,39 @@
     <Name>TextBoxCategory</Name>
     <State>
       <Name>Enabled</Name>
+      <Variable>
+        <Type>string</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentBackground</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Disabled</Name>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentDisabled</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Highlighted</Name>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentHighlighted</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
     <State>
       <Name>Selected</Name>
+      <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>BackgroundInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ComponentPushed</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
     </State>
   </Category>
   <Category>
@@ -338,18 +380,6 @@
         <Type>float</Type>
         <Name>Height</Name>
         <Value xsi:type="xsd:float">30</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>float</Type>
-        <Name>SelectionInstance.Height</Name>
-        <Value xsi:type="xsd:float">-2</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>DimensionUnitType</Type>
-        <Name>SelectionInstance.Height Units</Name>
-        <Value xsi:type="xsd:int">2</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -414,18 +444,6 @@
         <Type>float</Type>
         <Name>Height</Name>
         <Value xsi:type="xsd:float">110</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>float</Type>
-        <Name>SelectionInstance.Height</Name>
-        <Value xsi:type="xsd:float">27</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>DimensionUnitType</Type>
-        <Name>SelectionInstance.Height Units</Name>
-        <Value xsi:type="xsd:int">0</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>

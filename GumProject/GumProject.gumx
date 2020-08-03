@@ -4,11 +4,35 @@
   <Version>1</Version>
   <DefaultCanvasWidth>800</DefaultCanvasWidth>
   <DefaultCanvasHeight>600</DefaultCanvasHeight>
-  <ShowOutlines>true</ShowOutlines>
+  <ShowOutlines>false</ShowOutlines>
   <ConvertVariablesOnUnitTypeChange>false</ConvertVariablesOnUnitTypeChange>
   <RestrictToUnitValues>true</RestrictToUnitValues>
   <RestrictFileNamesForAndroid>false</RestrictFileNamesForAndroid>
   <Guides />
+  <ScreenReference>
+    <Name>DemoScreen</Name>
+    <ElementType>Screen</ElementType>
+  </ScreenReference>
+  <ComponentReference>
+    <Name>CommonComponents/ButtonClose</Name>
+    <ElementType>Component</ElementType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>CommonComponents/ButtonWarning</Name>
+    <ElementType>Component</ElementType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>CommonComponents/DialogAlert</Name>
+    <ElementType>Component</ElementType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>CommonComponents/Divider</Name>
+    <ElementType>Component</ElementType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>CommonComponents/TitleText</Name>
+    <ElementType>Component</ElementType>
+  </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/Button</Name>
     <ElementType>Component</ElementType>
