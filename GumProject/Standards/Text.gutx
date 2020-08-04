@@ -55,7 +55,7 @@
     <Variable>
       <Type>int</Type>
       <Name>FontSize</Name>
-      <Value xsi:type="xsd:int">18</Value>
+      <Value xsi:type="xsd:int">14</Value>
       <Category>Font</Category>
       <SetsValue>true</SetsValue>
     </Variable>

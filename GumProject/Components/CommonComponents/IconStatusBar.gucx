@@ -24,7 +24,7 @@
     <Variable>
       <Type>float</Type>
       <Name>StatusBar.BarPercent</Name>
-      <Value xsi:type="xsd:float">50</Value>
+      <Value xsi:type="xsd:float">100</Value>
       <ExposedAsName>StatusBarPercent</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -62,7 +62,7 @@
     <Variable>
       <Type>IconCategoryState</Type>
       <Name>StatusIcon.IconCategoryState</Name>
-      <Value xsi:type="xsd:string">TinyHeart</Value>
+      <Value xsi:type="xsd:string">Heart</Value>
       <ExposedAsName>Icon</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>

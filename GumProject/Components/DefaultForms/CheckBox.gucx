@@ -12,7 +12,7 @@
     <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Height</Name>
-      <Value xsi:type="xsd:float">48</Value>
+      <Value xsi:type="xsd:float">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -37,7 +37,7 @@
     <Variable>
       <Type>float</Type>
       <Name>ColoredFrameInstance.Width</Name>
-      <Value xsi:type="xsd:float">48</Value>
+      <Value xsi:type="xsd:float">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -85,7 +85,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Height</Name>
-      <Value xsi:type="xsd:float">50</Value>
+      <Value xsi:type="xsd:float">40</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -116,25 +116,25 @@
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Height</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">16</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Left</Name>
-      <Value xsi:type="xsd:int">3936</Value>
+      <Value xsi:type="xsd:int">3904</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Top</Name>
-      <Value xsi:type="xsd:int">64</Value>
+      <Value xsi:type="xsd:int">48</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>int</Type>
       <Name>SpriteInstance.Texture Width</Name>
-      <Value xsi:type="xsd:int">32</Value>
+      <Value xsi:type="xsd:int">16</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -224,7 +224,7 @@
     <Variable>
       <Type>float</Type>
       <Name>TextInstance.Width</Name>
-      <Value xsi:type="xsd:float">-56</Value>
+      <Value xsi:type="xsd:float">-36</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -236,7 +236,7 @@
     <Variable>
       <Type>float</Type>
       <Name>TextInstance.X</Name>
-      <Value xsi:type="xsd:float">56</Value>
+      <Value xsi:type="xsd:float">36</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

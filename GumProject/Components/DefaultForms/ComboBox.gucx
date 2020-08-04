@@ -12,7 +12,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Height</Name>
-      <Value xsi:type="xsd:float">48</Value>
+      <Value xsi:type="xsd:float">40</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -26,6 +26,12 @@
       <Name>ListBoxInstance.Height</Name>
       <Value xsi:type="xsd:float">180</Value>
       <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>bool</Type>
+      <Name>ListBoxInstance.Visible</Name>
+      <ExposedAsName>DropdownVisible</ExposedAsName>
+      <SetsValue>false</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
@@ -48,7 +54,7 @@
     <Variable>
       <Type>float</Type>
       <Name>ListBoxInstance.Y</Name>
-      <Value xsi:type="xsd:float">46</Value>
+      <Value xsi:type="xsd:float">39</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -220,10 +226,22 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>TextInstance.Height</Name>
+      <Value xsi:type="xsd:float">18</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>HorizontalAlignment</Type>
       <Name>TextInstance.HorizontalAlignment</Name>
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>TextInstance.Text</Name>
+      <ExposedAsName>Title</ExposedAsName>
+      <SetsValue>false</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
@@ -234,19 +252,19 @@
     <Variable>
       <Type>float</Type>
       <Name>TextInstance.Width</Name>
-      <Value xsi:type="xsd:float">0</Value>
+      <Value xsi:type="xsd:float">-48</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>TextInstance.Width Units</Name>
-      <Value xsi:type="xsd:int">4</Value>
+      <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>TextInstance.X</Name>
-      <Value xsi:type="xsd:float">16</Value>
+      <Value xsi:type="xsd:float">8</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -325,15 +343,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>ColorCategoryState</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>StyleCategoryState</Type>
         <Name>NineSliceInstance.StyleCategoryState</Name>
         <Value xsi:type="xsd:string">ButtonNormal</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">7</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -355,9 +373,9 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Height</Name>
-        <Value xsi:type="xsd:int">7</Value>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -397,9 +415,9 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>ColorCategoryState</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Gray</Value>
+        <Type>int</Type>
+        <Name>SpriteInstance.Texture Height</Name>
+        <Value xsi:type="xsd:int">7</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -421,9 +439,9 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>int</Type>
-        <Name>SpriteInstance.Texture Height</Name>
-        <Value xsi:type="xsd:int">7</Value>
+        <Type>ColorCategoryState</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
