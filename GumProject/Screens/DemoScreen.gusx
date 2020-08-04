@@ -329,6 +329,12 @@
     </Variable>
     <Variable>
       <Type>float</Type>
+      <Name>MenuInstance.Width</Name>
+      <Value xsi:type="xsd:float">588</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
       <Name>MenuInstance.X</Name>
       <Value xsi:type="xsd:float">299</Value>
       <SetsValue>true</SetsValue>
