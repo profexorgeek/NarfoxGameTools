@@ -323,6 +323,36 @@
     </Variable>
     <Variable>
       <Type>string</Type>
+      <Name>LevelChooserInstance.Parent</Name>
+      <Value xsi:type="xsd:string">ItemsContainer</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>LevelChooserInstance.Width</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>LevelChooserInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>MenuInstance.Height</Name>
+      <Value xsi:type="xsd:float">600</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>MenuInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
       <Name>MenuInstance.MenuTitleText</Name>
       <Value xsi:type="xsd:string">EXAMPLE MENU</Value>
       <SetsValue>true</SetsValue>
@@ -330,19 +360,19 @@
     <Variable>
       <Type>float</Type>
       <Name>MenuInstance.Width</Name>
-      <Value xsi:type="xsd:float">588</Value>
+      <Value xsi:type="xsd:float">415</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>MenuInstance.X</Name>
-      <Value xsi:type="xsd:float">299</Value>
+      <Value xsi:type="xsd:float">317</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>MenuInstance.Y</Name>
-      <Value xsi:type="xsd:float">34</Value>
+      <Value xsi:type="xsd:float">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -460,6 +490,11 @@
   <Instance>
     <Name>ComboBoxInstance</Name>
     <BaseType>DefaultForms/ComboBox</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>LevelChooserInstance</Name>
+    <BaseType>CommonComponents/LevelChooser</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
