@@ -2,27 +2,35 @@
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Threading.Tasks;
 
-namespace NarfoxGameTools.Telemetry
+namespace NarfoxGameTools.Services
 {
     /// <summary>
     /// Provides cross-platform Google Analytics tracking using the
     /// Google Measurement Protocol as defined here:
     /// https://developers.google.com/analytics/devguides/collection/protocol/v1/
     /// </summary>
-    public class GoogleAnalytics
+    public class GoogleAnalyticsService
     {
+        private const string gaUrl = "http://www.google-analytics.com/collect";
+
+        private static GoogleAnalyticsService instance;
+        private static bool initialized;
+        private WebClient client;
+        private string clientId;
+
         /// <summary>
         /// Singleton pattern accessor
         /// </summary>
         /// <value>The instance.</value>
-        public static GoogleAnalytics Instance
+        public static GoogleAnalyticsService Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new GoogleAnalytics();
+                    instance = new GoogleAnalyticsService();
                     initialized = false;
                 }
                 return instance;
@@ -78,26 +86,12 @@ namespace NarfoxGameTools.Telemetry
         /// <summary>
         ///  Google analytics tracking code, usually starts with "UA-"
         /// </summary>
-        public string TrackingId
-        {
-            get
-            {
-                return trackingId;
-            }
-        }
-
-        private const string gaUrl = "http://www.google-analytics.com/collect";
-
-        private static GoogleAnalytics instance;
-        private static bool initialized;
-        private WebClient client;
-        private string trackingId;
-        private string clientId;
+        public string TrackingId { get; private set; }
 
         /// <summary>
         /// Private constructor to enforce singleton pattern
         /// </summary>
-        private GoogleAnalytics()
+        private GoogleAnalyticsService()
         {
 
         }
@@ -110,10 +104,10 @@ namespace NarfoxGameTools.Telemetry
         {
             client = new WebClient();
             client.Headers[HttpRequestHeader.ContentType] = "application/x-www-form-urlencoded";
-            this.trackingId = trackingId;
-            this.AppName = appName;
-            this.AppVersion = appVersion;
-            this.Resolution = resolution;
+            TrackingId = trackingId;
+            AppName = appName;
+            AppVersion = appVersion;
+            Resolution = resolution;
 
             initialized = true;
         }
@@ -203,14 +197,16 @@ namespace NarfoxGameTools.Telemetry
         /// <returns>Byte array response from Google</returns>
         public void SendTrackingRequest(Dictionary<string, string> customParameters)
         {
-            // EARLY OUT: don't track in DEBUG mode. This pollutes game stats!
+            // EARLY OUT: don't track in DEBUG mode. This pollutes analytics tracking of actual users
 #if DEBUG
             return;
 #endif
 
             if (!initialized || string.IsNullOrWhiteSpace(TrackingId))
             {
-                throw new Exception("Google Analytics has not been initialized or tracking code is invalid.");
+                var msg = "Google Analytics has not been initialized or tracking code is invalid.";
+                LogService.Log.Error(msg);
+                throw new Exception(msg);
             }
 
             // build common request parameters
@@ -255,10 +251,9 @@ namespace NarfoxGameTools.Telemetry
                 var nvc = rp.ToNameValueCollection();
                 Task.Factory.StartNew(() => client.UploadValues(gaUrl, "post", nvc));
             }
-            catch
+            catch(Exception e)
             {
-                // TODO: catch failures and either batch or log or somehow handle failed calls
-                int m = 4;
+                LogService.Log.Warn($"Tracking request failed: {e}");
             }
         }
     }
