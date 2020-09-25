@@ -1,8 +1,6 @@
 ﻿using FlatRedBall.Math;
 using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NarfoxGameTools.Extensions
 {
