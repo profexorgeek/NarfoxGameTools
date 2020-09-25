@@ -57,6 +57,15 @@ namespace NarfoxGameTools.Extensions
 
     public static class ColorExtensions
     {
+        public static Color Tint(this Color color, float percent = 0.1f)
+        {
+            var newColor = new Color();
+            newColor.R = (color.R * (1f - percent)).Clamp();
+            newColor.G = (color.G * (1f - percent)).Clamp();
+            newColor.B = (color.B * (1f - percent)).Clamp();
+            return newColor;
+        }
+
         public static HSLColor FromRgb(byte R, byte G, byte B)
         {
             var hsl = new HSLColor();

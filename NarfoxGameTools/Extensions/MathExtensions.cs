@@ -37,5 +37,10 @@ namespace NarfoxGameTools.Extensions
             f = Math.Min(max, f);
             return f;
         }
+
+        public static byte Clamp(this float f)
+        {
+            return (byte)f.Clamp(0, 255);
+        }
     }
 }
