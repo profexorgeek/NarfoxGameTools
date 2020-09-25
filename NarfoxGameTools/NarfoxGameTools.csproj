@@ -8,4 +8,16 @@
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="FlatRedBallDesktopGL">
+      <HintPath>Libraries\DesktopGl\Debug\FlatRedBallDesktopGL.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>Libraries\DesktopGl\Debug\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="MonoGame.Framework.Net">
+      <HintPath>Libraries\DesktopGl\Debug\MonoGame.Framework.Net.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
