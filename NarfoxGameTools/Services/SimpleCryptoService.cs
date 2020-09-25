@@ -80,7 +80,9 @@ namespace NarfoxGameTools.Services
         {
             if (!initialized)
             {
-                throw new Exception("Crypto system has not been initialized!");
+                var msg = "Crypto service has not been initialized.";
+                LogService.Log.Error(msg);
+                throw new Exception(msg);
             }
 
             ICryptoTransform transform = algo.CreateEncryptor(key, iv);
@@ -101,7 +103,9 @@ namespace NarfoxGameTools.Services
         {
             if (!initialized)
             {
-                throw new Exception("Crypto system has not been initialized!");
+                var msg = "Crypto system has not been initialized!";
+                LogService.Log.Error(msg);
+                throw new Exception(msg);
             }
 
             ICryptoTransform transform = algo.CreateDecryptor(key, iv);
