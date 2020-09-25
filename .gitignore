@@ -21,3 +21,4 @@
 *.csvSettings
 .vs/config/applicationhost.config
 .vs/
+GumProject\EventExport\*
