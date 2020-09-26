@@ -35,7 +35,7 @@ function JsonArray(headers, data) {
             jsonArray.push(jsonObj);
         }
 
-        return (pretty === true) ? JSON.stringify(jsonArray, null, 2) : JSON.stringify(jsonArray);
+        return JSON.stringify(jsonArray, null, 2);
     }
     catch (e) {
         return "ERROR: " + e;
