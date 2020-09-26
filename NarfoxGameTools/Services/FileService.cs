@@ -58,14 +58,14 @@ namespace NarfoxGameTools.Services
             return files;
         }
 
-        public T LoadFile<T>(string path, bool decrypt = true)
+        public T LoadFile<T>(string path, bool decrypt = false)
         {
             var filetext = LoadText(path);
             var json = decrypt ? filetext.Decrypt() : filetext;
             return Deserialize<T>(json);
         }
 
-        public void SaveFile(object model, string path, bool encrypt = true)
+        public void SaveFile(object model, string path, bool encrypt = false)
         {
             var data = Serialize(model, !encrypt);
             var savetext = encrypt ? data.Encrypt() : data;
