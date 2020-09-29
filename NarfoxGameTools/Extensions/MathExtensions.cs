@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Xna.Framework;
+using System;
 
 namespace NarfoxGameTools.Extensions
 {
@@ -41,6 +42,16 @@ namespace NarfoxGameTools.Extensions
         public static byte Clamp(this float f)
         {
             return (byte)f.Clamp(0, 255);
+        }
+
+        public static float DistanceTo(this Vector2 vector, Vector2 vector2)
+        {
+            return (vector2 - vector).Length();
+        }
+
+        public static float DistanceTo(this Vector3 vector, Vector3 vector2)
+        {
+            return vector.ToVector2().DistanceTo(vector2.ToVector2());
         }
     }
 }

@@ -35,7 +35,7 @@ function JsonArray(headers, data) {
             jsonArray.push(jsonObj);
         }
 
-        return JSON.stringify(jsonArray, null, 2);
+        return JSON.stringify(jsonArray);
     }
     catch (e) {
         return "ERROR: " + e;
