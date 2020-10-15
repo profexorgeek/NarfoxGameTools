@@ -23,7 +23,7 @@ namespace NarfoxGameTools.Services
         /// key is considered secret in that it is used to
         /// decrypt data
         /// </summary>
-        public static string KeyString
+        public static string KeyBase64String
         {
             get
             {
@@ -44,7 +44,7 @@ namespace NarfoxGameTools.Services
         /// to "salt" a message before encryption. The Initialization
         /// Vector is typically considered non-secret.
         /// </summary>
-        public static string IvString
+        public static string IvBase64String
         {
             get
             {
@@ -60,11 +60,11 @@ namespace NarfoxGameTools.Services
             }
         }
 
-        public static void Initialize(string encKey, string encVector)
+        public static void Initialize(string keyString, string keyVector)
         {
             algo = DES.Create();
-            KeyString = encKey;
-            IvString = encVector;
+            KeyBase64String = GetValidBase64StringOrError(keyString);
+            IvBase64String = GetValidBase64StringOrError(keyVector);
             initialized = true;
         }
 
@@ -112,6 +112,18 @@ namespace NarfoxGameTools.Services
             byte[] inputBuffer = Convert.FromBase64String(str);
             byte[] outputBuffer = transform.TransformFinalBlock(inputBuffer, 0, inputBuffer.Length);
             return Encoding.UTF8.GetString(outputBuffer);
+        }
+
+        static string GetValidBase64StringOrError(string str)
+        {
+            var bytes = Encoding.UTF8.GetBytes(str);
+            var bits = bytes.Length * 8;
+            if (bits != 64)
+            {
+                throw new Exception($"Got {bits}bits but this encryption algorithm requires a 64bit key (8 UTF characters)!");
+            }
+            return Convert.ToBase64String(bytes);
+
         }
     }
 }
