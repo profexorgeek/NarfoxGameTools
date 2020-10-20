@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 
 namespace NarfoxGameTools.Services
 {
@@ -56,17 +57,17 @@ namespace NarfoxGameTools.Services
             gfx.SetRenderTargets(existingTargets);
 
             // try to get a default save path if one has not been set
-            if(string.IsNullOrWhiteSpace(SavePath))
+            if (string.IsNullOrWhiteSpace(SavePath))
             {
                 TryResolveDefaultSavePath();
             }
+
             path = Path.Combine(SavePath, GetFilename(path));
 
             if (File.Exists(path))
             {
                 throw new Exception($"Existing pathname generated: {path}. This can happen if you take screenshots too quickly.");
             }
-
             using (Stream stream = System.IO.File.Create(path))
             {
                 buffer.SaveAsPng(stream, width, height);
