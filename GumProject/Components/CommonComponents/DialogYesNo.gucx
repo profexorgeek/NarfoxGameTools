@@ -195,19 +195,19 @@
     <Variable>
       <Type>float</Type>
       <Name>DialogDetail.Height</Name>
-      <Value xsi:type="xsd:float">-84</Value>
+      <Value xsi:type="xsd:float">50</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>DialogDetail.Height Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
       <Name>DialogDetail.Parent</Name>
-      <Value xsi:type="xsd:string">MarginContainer</Value>
+      <Value xsi:type="xsd:string">DialogTitle</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -244,7 +244,25 @@
     <Variable>
       <Type>float</Type>
       <Name>DialogDetail.Y</Name>
-      <Value xsi:type="xsd:float">32</Value>
+      <Value xsi:type="xsd:float">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>DialogDetail.Y Units</Name>
+      <Value xsi:type="xsd:int">5</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>DialogTitle.Height</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>DialogTitle.Height Units</Name>
+      <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -256,7 +274,7 @@
     <Variable>
       <Type>string</Type>
       <Name>DialogTitle.Text</Name>
-      <Value xsi:type="xsd:string">TITLE</Value>
+      <Value xsi:type="xsd:string">Do you want?</Value>
       <ExposedAsName>TitleText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -275,13 +293,13 @@
     <Variable>
       <Type>float</Type>
       <Name>DialogTitle.Y</Name>
-      <Value xsi:type="xsd:float">30</Value>
+      <Value xsi:type="xsd:float">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
       <Name>DialogTitle.Y Origin</Name>
-      <Value xsi:type="xsd:int">2</Value>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -358,7 +376,13 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">256</Value>
+      <Value xsi:type="xsd:float">300</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>Width Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -394,13 +418,13 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ButtonConfirm</Name>
-    <BaseType>DefaultForms/Button</BaseType>
+    <Name>ButtonDeny</Name>
+    <BaseType>CommonComponents/ButtonWarning</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ButtonDeny</Name>
-    <BaseType>CommonComponents/ButtonWarning</BaseType>
+    <Name>ButtonConfirm</Name>
+    <BaseType>DefaultForms/Button</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors />

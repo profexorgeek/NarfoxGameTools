@@ -154,6 +154,12 @@
     <State>
       <Name>EnabledOn</Name>
       <Variable>
+        <Type>StyleCategoryState</Type>
+        <Name>ColoredFrameInstance.StyleCategoryState</Name>
+        <Value xsi:type="xsd:string">ButtonNormal</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
         <Value xsi:type="xsd:boolean">true</Value>
@@ -165,15 +171,15 @@
         <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>EnabledOff</Name>
       <Variable>
         <Type>StyleCategoryState</Type>
         <Name>ColoredFrameInstance.StyleCategoryState</Name>
         <Value xsi:type="xsd:string">ButtonNormal</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>EnabledOff</Name>
       <Variable>
         <Type>bool</Type>
         <Name>SpriteInstance.FlipVertical</Name>
@@ -184,12 +190,6 @@
         <Type>bool</Type>
         <Name>SpriteInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>StyleCategoryState</Type>
-        <Name>ColoredFrameInstance.StyleCategoryState</Name>
-        <Value xsi:type="xsd:string">ButtonNormal</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

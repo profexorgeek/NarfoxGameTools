@@ -246,6 +246,12 @@
       <Name>BlueBar</Name>
       <Variable>
         <Type>int</Type>
+        <Name>StatusBarSprite.Texture Height</Name>
+        <Value xsi:type="xsd:int">3</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
         <Name>StatusBarSprite.Texture Left</Name>
         <Value xsi:type="xsd:int">3968</Value>
         <SetsValue>true</SetsValue>
@@ -262,15 +268,15 @@
         <Value xsi:type="xsd:int">128</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>YellowBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Height</Name>
         <Value xsi:type="xsd:int">3</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>YellowBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Left</Name>
@@ -289,15 +295,15 @@
         <Value xsi:type="xsd:int">128</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>RedBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Height</Name>
         <Value xsi:type="xsd:int">3</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>RedBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Left</Name>
@@ -316,15 +322,15 @@
         <Value xsi:type="xsd:int">128</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>GreenBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Height</Name>
         <Value xsi:type="xsd:int">3</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>GreenBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Left</Name>
@@ -343,15 +349,15 @@
         <Value xsi:type="xsd:int">128</Value>
         <SetsValue>true</SetsValue>
       </Variable>
+    </State>
+    <State>
+      <Name>PinkBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Height</Name>
         <Value xsi:type="xsd:int">3</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-    </State>
-    <State>
-      <Name>PinkBar</Name>
       <Variable>
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Left</Name>
@@ -368,12 +374,6 @@
         <Type>int</Type>
         <Name>StatusBarSprite.Texture Width</Name>
         <Value xsi:type="xsd:int">128</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>int</Type>
-        <Name>StatusBarSprite.Texture Height</Name>
-        <Value xsi:type="xsd:int">3</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
