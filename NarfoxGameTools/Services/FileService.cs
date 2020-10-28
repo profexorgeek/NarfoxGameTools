@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 
 namespace NarfoxGameTools.Services
 {
@@ -36,6 +37,33 @@ namespace NarfoxGameTools.Services
                 return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             }
         }
+
+        public string DefaultSaveDirectory
+        {
+            get
+            {
+                var assembly = Assembly.GetEntryAssembly();
+                string defaultSaveDirectory = assembly == null ? "" : Assembly.GetEntryAssembly().FullName;
+                if (string.IsNullOrEmpty(defaultSaveDirectory))
+                {
+                    defaultSaveDirectory = "narfox";
+                }
+                else
+                {
+                    defaultSaveDirectory = defaultSaveDirectory.Substring(0, defaultSaveDirectory.IndexOf(','));
+                }
+
+                var fullpath = Path.Combine(AppDataDirectory, defaultSaveDirectory);
+
+                if(Directory.Exists(fullpath) == false)
+                {
+                    Directory.CreateDirectory(fullpath);
+                }
+
+                return fullpath;
+            }
+        }
+
         public ILogger Logger { get; set; }
 
 
