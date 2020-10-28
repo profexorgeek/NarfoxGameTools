@@ -1,0 +1,127 @@
+{
+  "MaxParticleLifeTime": 0.75,
+  "TextureFileName": "..\\narfox.png",
+  "TextureSections": [
+    {
+      "LeftX": 0,
+      "TopY": 3872,
+      "RightX": 16,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 16,
+      "TopY": 3872,
+      "RightX": 32,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 32,
+      "TopY": 3872,
+      "RightX": 40,
+      "BottomY": 3880
+    },
+    {
+      "LeftX": 32,
+      "TopY": 3880,
+      "RightX": 40,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 40,
+      "TopY": 3872,
+      "RightX": 56,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 56,
+      "TopY": 3872,
+      "RightX": 72,
+      "BottomY": 3888
+    }
+  ],
+  "Trigger": {
+    "EditorShortName": "One Shot",
+    "EditorShortValue": "",
+    "$ParmeType": "OneShotTrigger"
+  },
+  "Initializers": [
+    {
+      "EditorShortName": "Static",
+      "EditorShortValue": "(0, 0)",
+      "XOffset": 0.0,
+      "YOffset": 0.0,
+      "$ParmeType": "StaticPositionInitializer"
+    },
+    {
+      "EditorShortName": "Static",
+      "EditorShortValue": "255, 255, 255, 0.88",
+      "Red": 255,
+      "Green": 255,
+      "Blue": 255,
+      "Alpha": 0.878,
+      "$ParmeType": "StaticColorInitializer"
+    },
+    {
+      "EditorShortName": "Random",
+      "EditorShortValue": "-45° - 45° / sec",
+      "MinRotationSpeedInDegreesPerSecond": -45,
+      "MaxRotationSpeedInDegreesPerSecond": 45,
+      "$ParmeType": "RandomRotationalVelocityInitializer"
+    },
+    {
+      "EditorShortName": "Random",
+      "EditorShortValue": "15 - 24",
+      "MinimumToSpawn": 15,
+      "MaximumToSpawn": 24,
+      "$ParmeType": "RandomParticleCountInitializer"
+    },
+    {
+      "EditorShortName": "Wedge",
+      "EditorShortValue": "200 btw 0° - 360°",
+      "Magnitude": 200.0,
+      "MinDegrees": 0.0,
+      "MaxDegrees": 360.0,
+      "$ParmeType": "RadialVelocityInitializer"
+    },
+    {
+      "EditorShortName": "Random In Range",
+      "EditorShortValue": "(2, 0) - (12, 0) (Ratio Preserved)",
+      "MinWidth": 2,
+      "MaxWidth": 12,
+      "MinHeight": 0,
+      "MaxHeight": 0,
+      "PreserveAspectRatio": true,
+      "RandomizedAxis": null,
+      "$ParmeType": "RandomSizeInitializer"
+    },
+    {
+      "EditorShortName": "Random",
+      "EditorShortValue": "",
+      "$ParmeType": "RandomTextureInitializer"
+    }
+  ],
+  "Modifiers": [
+    {
+      "EditorShortName": "Drag",
+      "EditorShortValue": "5.00",
+      "DragFactor": 5.0,
+      "$ParmeType": "DragModifier"
+    },
+    {
+      "EditorShortName": "Ending Color Multiplier",
+      "EditorShortValue": "255, 255, 255, 0.00",
+      "Red": 255,
+      "Green": 255,
+      "Blue": 255,
+      "Alpha": 0.0,
+      "$ParmeType": "EndingColorModifier"
+    },
+    {
+      "EditorShortName": "Constant Size",
+      "EditorShortValue": "(16, 16)",
+      "WidthChangePerSecond": 16.0,
+      "HeightChangePerSecond": 16.0,
+      "$ParmeType": "ConstantSizeModifier"
+    }
+  ]
+}

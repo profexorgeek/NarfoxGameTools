@@ -1,0 +1,100 @@
+{
+  "MaxParticleLifeTime": 0.75,
+  "TextureFileName": "..\\narfox.png",
+  "TextureSections": [
+    {
+      "LeftX": 10,
+      "TopY": 3803,
+      "RightX": 12,
+      "BottomY": 3805
+    },
+    {
+      "LeftX": 10,
+      "TopY": 3787,
+      "RightX": 13,
+      "BottomY": 3790
+    }
+  ],
+  "Trigger": {
+    "EditorShortName": "Time Elapsed",
+    "EditorShortValue": "every 0.2 seconds",
+    "Frequency": 0.2,
+    "$ParmeType": "TimeElapsedTrigger"
+  },
+  "Initializers": [
+    {
+      "EditorShortName": "Random",
+      "EditorShortValue": "",
+      "$ParmeType": "RandomTextureInitializer"
+    },
+    {
+      "EditorShortName": "Random",
+      "EditorShortValue": "-180° - 180° / sec",
+      "MinRotationSpeedInDegreesPerSecond": -180,
+      "MaxRotationSpeedInDegreesPerSecond": 180,
+      "$ParmeType": "RandomRotationalVelocityInitializer"
+    },
+    {
+      "EditorShortName": "Static",
+      "EditorShortValue": "9",
+      "ParticleSpawnCount": 9,
+      "$ParmeType": "StaticParticleCountInitializer"
+    },
+    {
+      "EditorShortName": "Static",
+      "EditorShortValue": "255, 255, 255, 0.65",
+      "Red": 255,
+      "Green": 255,
+      "Blue": 255,
+      "Alpha": 0.646,
+      "$ParmeType": "StaticColorInitializer"
+    },
+    {
+      "EditorShortName": "Random In Range",
+      "EditorShortValue": "(2, 0) - (3, 0) (Ratio Preserved)",
+      "MinWidth": 2,
+      "MaxWidth": 3,
+      "MinHeight": 0,
+      "MaxHeight": 0,
+      "PreserveAspectRatio": true,
+      "RandomizedAxis": null,
+      "$ParmeType": "RandomSizeInitializer"
+    },
+    {
+      "EditorShortName": "Random Range",
+      "EditorShortValue": "(-4, 0) - (4, 15)",
+      "MinXVelocity": -4.0,
+      "MaxXVelocity": 4.0,
+      "MinYVelocity": 0.0,
+      "MaxYVelocity": 15.0,
+      "$ParmeType": "RandomRangeVelocityInitializer"
+    },
+    {
+      "EditorShortName": "Region",
+      "EditorShortValue": "(-1, -1) - (1, 1)",
+      "MinXOffset": -1.0,
+      "MinYOffset": -1.0,
+      "MaxXOffset": 1.0,
+      "MaxYOffset": 1.0,
+      "$ParmeType": "RandomRegionPositionInitializer"
+    }
+  ],
+  "Modifiers": [
+    {
+      "EditorShortName": "Constant Acceleration",
+      "EditorShortValue": "(0, 25)",
+      "XAcceleration": 0.0,
+      "YAcceleration": 25.0,
+      "$ParmeType": "ConstantAccelerationModifier"
+    },
+    {
+      "EditorShortName": "Ending Color Multiplier",
+      "EditorShortValue": "255, 255, 255, 0.00",
+      "Red": 255,
+      "Green": 255,
+      "Blue": 255,
+      "Alpha": 0.0,
+      "$ParmeType": "EndingColorModifier"
+    }
+  ]
+}

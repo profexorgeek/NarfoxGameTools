@@ -1,0 +1,124 @@
+{
+  "MaxParticleLifeTime": 1.0,
+  "TextureFileName": "..\\narfox.png",
+  "TextureSections": [
+    {
+      "LeftX": 0,
+      "TopY": 3872,
+      "RightX": 16,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 16,
+      "TopY": 3872,
+      "RightX": 32,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 32,
+      "TopY": 3872,
+      "RightX": 40,
+      "BottomY": 3880
+    },
+    {
+      "LeftX": 32,
+      "TopY": 3880,
+      "RightX": 40,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 40,
+      "TopY": 3872,
+      "RightX": 56,
+      "BottomY": 3888
+    },
+    {
+      "LeftX": 56,
+      "TopY": 3872,
+      "RightX": 72,
+      "BottomY": 3888
+    }
+  ],
+  "Trigger": {
+    "EditorShortName": "Distance Travelled",
+    "EditorShortValue": "every 4 units",
+    "UnitsPerEmission": 4.0,
+    "$ParmeType": "DistanceBasedTrigger"
+  },
+  "Initializers": [
+    {
+      "EditorShortName": "Random",
+      "EditorShortValue": "",
+      "$ParmeType": "RandomTextureInitializer"
+    },
+    {
+      "EditorShortName": "Static",
+      "EditorShortValue": "1",
+      "ParticleSpawnCount": 1,
+      "$ParmeType": "StaticParticleCountInitializer"
+    },
+    {
+      "EditorShortName": "Random",
+      "EditorShortValue": "-90° - 90° / sec",
+      "MinRotationSpeedInDegreesPerSecond": -90,
+      "MaxRotationSpeedInDegreesPerSecond": 90,
+      "$ParmeType": "RandomRotationalVelocityInitializer"
+    },
+    {
+      "EditorShortName": "Random Range",
+      "EditorShortValue": "(0, -3) - (0, 3)",
+      "MinXVelocity": 0.0,
+      "MaxXVelocity": 0.0,
+      "MinYVelocity": -3.0,
+      "MaxYVelocity": 3.0,
+      "$ParmeType": "RandomRangeVelocityInitializer"
+    },
+    {
+      "EditorShortName": "Random In Range",
+      "EditorShortValue": "(12, 0) - (20, 0) (Ratio Preserved)",
+      "MinWidth": 12,
+      "MaxWidth": 20,
+      "MinHeight": 0,
+      "MaxHeight": 0,
+      "PreserveAspectRatio": true,
+      "RandomizedAxis": null,
+      "$ParmeType": "RandomSizeInitializer"
+    },
+    {
+      "EditorShortName": "Static",
+      "EditorShortValue": "255, 225, 189, 0.80",
+      "Red": 255,
+      "Green": 225,
+      "Blue": 189,
+      "Alpha": 0.801,
+      "$ParmeType": "StaticColorInitializer"
+    },
+    {
+      "EditorShortName": "Region",
+      "EditorShortValue": "(-6, -6) - (-6, 6)",
+      "MinXOffset": -6.0,
+      "MinYOffset": -6.0,
+      "MaxXOffset": -6.0,
+      "MaxYOffset": 6.0,
+      "$ParmeType": "RandomRegionPositionInitializer"
+    }
+  ],
+  "Modifiers": [
+    {
+      "EditorShortName": "Ending Color Multiplier",
+      "EditorShortValue": "255, 255, 255, 0.00",
+      "Red": 255,
+      "Green": 255,
+      "Blue": 255,
+      "Alpha": 0.0,
+      "$ParmeType": "EndingColorModifier"
+    },
+    {
+      "EditorShortName": "Constant Size",
+      "EditorShortValue": "(0, 0)",
+      "WidthChangePerSecond": 0.0,
+      "HeightChangePerSecond": 0.0,
+      "$ParmeType": "ConstantSizeModifier"
+    }
+  ]
+}
