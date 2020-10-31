@@ -113,6 +113,13 @@ namespace NarfoxGameTools.Services
                 throw new Exception("Attempted to play effect before initializing the SoundService.");
             }
 
+            // EARLY OUT: null name
+            if(string.IsNullOrWhiteSpace(effectName))
+            {
+                LogService.Log.Warn($"Empty sound name requested!");
+                return;
+            }
+
             var pitch = randomizePitch ? RandomService.Random.InRange(-PitchVariance, PitchVariance) : 0f;
             var request = new SoundRequest
             {
