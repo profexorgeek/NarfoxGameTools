@@ -1,6 +1,7 @@
 ﻿using NarfoxGameTools.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
 using System.Text;
@@ -63,6 +64,16 @@ namespace NarfoxGameTools.Extensions
                 o = default(T);
             }
             return o;
+        }
+
+        public static ObservableCollection<T> AsObservable<T>(this IEnumerable<T> list)
+        {
+            var collection = new ObservableCollection<T>();
+            foreach(var item in list)
+            {
+                collection.Add(item);
+            }
+            return collection;
         }
 
         /// <summary>
