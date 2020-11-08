@@ -146,6 +146,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>SizeCategoryState</Type>
+      <Name>SizeCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>State</Type>
       <Name>State</Name>
       <Value xsi:type="xsd:string">Default</Value>
@@ -168,7 +173,7 @@
     <Variable>
       <Type>bool</Type>
       <Name>UseFontSmoothing</Name>
-      <Value xsi:type="xsd:boolean">true</Value>
+      <Value xsi:type="xsd:boolean">false</Value>
       <Category>Font</Category>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -313,6 +318,96 @@
         <Name>Red</Name>
         <Value xsi:type="xsd:int">223</Value>
         <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Yellow</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">27</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">180</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">244</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Green</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">52</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">170</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">113</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+  </Category>
+  <Category>
+    <Name>SizeCategory</Name>
+    <State>
+      <Name>Small</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>FontSize</Name>
+        <Value xsi:type="xsd:int">10</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Normal</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>FontSize</Name>
+        <Value xsi:type="xsd:int">14</Value>
+        <Category>Font</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Large</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>FontSize</Name>
+        <Value xsi:type="xsd:int">18</Value>
+        <Category>Font</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Huge</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>FontSize</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <Category>Font</Category>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

@@ -144,9 +144,9 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>int</Type>
-      <Name>DialogDetail.FontSize</Name>
-      <Value xsi:type="xsd:int">14</Value>
+      <Type>ColorCategory</Type>
+      <Name>DialogDetail.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -165,6 +165,12 @@
       <Type>string</Type>
       <Name>DialogDetail.Parent</Name>
       <Value xsi:type="xsd:string">MarginContainer</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>SizeCategoryState</Type>
+      <Name>DialogDetail.SizeCategoryState</Name>
+      <Value xsi:type="xsd:string">Normal</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -201,7 +207,7 @@
     <Variable>
       <Type>float</Type>
       <Name>DialogDetail.Y</Name>
-      <Value xsi:type="xsd:float">32</Value>
+      <Value xsi:type="xsd:float">34</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
