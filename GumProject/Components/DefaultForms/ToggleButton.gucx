@@ -155,13 +155,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <IsFile>true</IsFile>
-      <Type>string</Type>
-      <Name>NineSliceInstance1.SourceFile</Name>
-      <Value xsi:type="xsd:string">UISpriteSheet.png</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>TextureAddress</Type>
       <Name>NineSliceInstance1.Texture Address</Name>
       <Value xsi:type="xsd:int">1</Value>
@@ -702,7 +695,7 @@
   </Instance>
   <Instance>
     <Name>NineSliceInstance1</Name>
-    <BaseType>NineSlice</BaseType>
+    <BaseType>DefaultForms/ColoredFrame</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>

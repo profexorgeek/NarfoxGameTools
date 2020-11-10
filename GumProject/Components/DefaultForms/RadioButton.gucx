@@ -89,12 +89,6 @@
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>SourceFile</Name>
-      <Value xsi:type="xsd:string">C:\Users\Victor\Documents\FlatRedBallProjects\FrbFormsTestProject\FrbFormsTestProject\FrbFormsTestProjectContent\GumProject\UISpriteSheet.png</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
       <Name>SpriteInstance.Parent</Name>
       <Value xsi:type="xsd:string">ColoredFrameInstance</Value>
       <SetsValue>true</SetsValue>
