@@ -1,10 +1,10 @@
-﻿using NarfoxGameTools.Services;
+﻿using FlatRedBall.AI.Pathfinding;
+using NarfoxGameTools.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
 using System.Linq;
-using System.Text;
 
 namespace NarfoxGameTools.Extensions
 {
@@ -64,6 +64,12 @@ namespace NarfoxGameTools.Extensions
                 o = default(T);
             }
             return o;
+        }
+
+        public static PositionedNode Random(this TileNodeNetwork network, Random rand = null)
+        {
+            rand = rand ?? RandomService.Random;
+            return network.Nodes.Random(rand);
         }
 
         public static ObservableCollection<T> AsObservable<T>(this IEnumerable<T> list)

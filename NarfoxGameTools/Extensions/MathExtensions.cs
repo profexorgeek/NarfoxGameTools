@@ -1,4 +1,6 @@
-﻿using Microsoft.Xna.Framework;
+﻿using FlatRedBall;
+using FlatRedBall.AI.Pathfinding;
+using Microsoft.Xna.Framework;
 using System;
 
 namespace NarfoxGameTools.Extensions
@@ -42,6 +44,21 @@ namespace NarfoxGameTools.Extensions
         public static byte Clamp(this float f)
         {
             return (byte)f.Clamp(0, 255);
+        }
+
+        public static float DistanceTo(this PositionedObject o1, PositionedObject o2)
+        {
+            return o1.Position.ToVector2().DistanceTo(o2.Position.ToVector2());
+        }
+
+        public static float DistanceTo(this PositionedObject o1, PositionedNode node)
+        {
+            return o1.Position.ToVector2().DistanceTo(node.Position.ToVector2());
+        }
+
+        public static float DistanceTo(this PositionedObject o1, Vector2 target)
+        {
+            return o1.Position.ToVector2().DistanceTo(target);
         }
 
         public static float DistanceTo(this Vector2 vector, Vector2 vector2)
