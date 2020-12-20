@@ -9,9 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Reference Include="FlatRedBallDesktopGL">
-      <HintPath>Libraries\DesktopGl\Debug\FlatRedBallDesktopGL.dll</HintPath>
-    </Reference>
+    <ProjectReference Include="..\..\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBall\FlatRedBallDesktopGL.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="MonoGame.Framework">
       <HintPath>Libraries\DesktopGl\Debug\MonoGame.Framework.dll</HintPath>
     </Reference>

@@ -63,6 +63,7 @@ namespace NarfoxGameTools.Services
                 return fullpath;
             }
         }
+        public string Extension { get; set; } = ".sav";
 
         public ILogger Logger { get; set; }
 
