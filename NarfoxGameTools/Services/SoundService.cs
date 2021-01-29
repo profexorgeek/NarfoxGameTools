@@ -136,11 +136,12 @@ namespace NarfoxGameTools.Services
         protected float GetVolumeForPosition(Vector3? nullablePosition)
         {
             // EARLY OUT: null position
-            if (IsMuted || nullablePosition == null)
+            if (IsMuted)
             {
                 return 0f;
             }
-            var position = nullablePosition.Value;
+
+            var position = nullablePosition == null ? Vector3.Zero : nullablePosition.Value;
             var volume = 0f;
             var dist = Camera.Main.DistanceTo(position.X, position.Y);
             if (dist < VolumeMaxDistance)
