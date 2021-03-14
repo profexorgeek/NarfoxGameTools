@@ -1,7 +1,9 @@
 ﻿using FlatRedBall;
+using FlatRedBall.Audio;
 using FlatRedBall.Content;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Media;
 using NarfoxGameTools.Extensions;
 using System;
 using System.Collections.Generic;
@@ -27,6 +29,7 @@ namespace NarfoxGameTools.Services
         private static SoundService instance;
         private List<SoundRequest> soundQueue = new List<SoundRequest>();
         private ContentManager contentManager;
+        float musicVolume = 1;
         bool initialized = false;
 
         public static SoundService Instance
@@ -75,6 +78,25 @@ namespace NarfoxGameTools.Services
             }
         }
         public string SoundFolder { get; set; } = @"Content/GlobalContent/Sounds";
+        public string MusicFolder { get; set; } = @"Content/GlobalContent/Music";
+        public float MusicMixVolume { get; set; } = 1f;
+        public float SoundMixVolume { get; set; } = 1f;
+        public float MusicVolume
+        {
+            get
+            {
+                return musicVolume;
+            }
+            set
+            {
+                musicVolume = value;
+                MediaPlayer.Volume = CalcMusicVolume;
+            }
+        }
+        public float SoundVolume { get; set; } = 1f;
+
+        float CalcMusicVolume => MusicVolume * MusicMixVolume;
+        float CalcSoundVolume => SoundVolume * SoundMixVolume;
 
 
 
@@ -132,6 +154,29 @@ namespace NarfoxGameTools.Services
             PlaySound(request);
         }
 
+        public void RequestPlaySong(Song song, bool loop = true, bool forceRestart = false)
+        {
+            // if no volume, don't bother playing music
+            if (CalcMusicVolume <= 0)
+            {
+                AudioManager.StopSong();
+            }
+            else
+            {
+                var current = AudioManager.CurrentlyPlayingSong;
+
+                // if we have no song, or our current song has a different name, or we're forcing
+                // a song restart - stop other music and start playing the new song
+                if (current == null || current.Name != song.Name || forceRestart)
+                {
+                    AudioManager.StopSong();
+                    MediaPlayer.Volume = CalcMusicVolume;
+                    MediaPlayer.IsRepeating = loop;
+                    AudioManager.PlaySong(song, true, true);
+                }
+            }
+        }
+
 
         protected float GetVolumeForPosition(Vector3? nullablePosition)
         {
@@ -148,6 +193,9 @@ namespace NarfoxGameTools.Services
             {
                 volume = 1f - (dist / VolumeMaxDistance);
             }
+
+            volume *= CalcSoundVolume;
+
             return volume;
         }
 
@@ -194,5 +242,6 @@ namespace NarfoxGameTools.Services
                 LogService.Log.Warn($"Too many sounds requested {CurrentlyPlayingSounds}/{MaxConcurrentSounds}");
             }
         }
+
     }
 }
