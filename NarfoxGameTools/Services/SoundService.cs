@@ -156,24 +156,16 @@ namespace NarfoxGameTools.Services
 
         public void RequestPlaySong(Song song, bool loop = true, bool forceRestart = false)
         {
-            // if no volume, don't bother playing music
-            if (CalcMusicVolume <= 0)
+            var current = AudioManager.CurrentlyPlayingSong;
+
+            // if we have no song, or our current song has a different name, or we're forcing
+            // a song restart - stop other music and start playing the new song
+            if (current == null || current.Name != song.Name || forceRestart)
             {
                 AudioManager.StopSong();
-            }
-            else
-            {
-                var current = AudioManager.CurrentlyPlayingSong;
-
-                // if we have no song, or our current song has a different name, or we're forcing
-                // a song restart - stop other music and start playing the new song
-                if (current == null || current.Name != song.Name || forceRestart)
-                {
-                    AudioManager.StopSong();
-                    MediaPlayer.Volume = CalcMusicVolume;
-                    MediaPlayer.IsRepeating = loop;
-                    AudioManager.PlaySong(song, true, true);
-                }
+                MediaPlayer.Volume = CalcMusicVolume;
+                MediaPlayer.IsRepeating = loop;
+                AudioManager.PlaySong(song, true, true);
             }
         }
 

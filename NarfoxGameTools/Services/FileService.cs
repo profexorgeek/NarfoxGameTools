@@ -105,6 +105,13 @@ namespace NarfoxGameTools.Services
             var encrypted = src.Encrypt();
             SaveText(destPath, encrypted);
         }
+        public void DecryptFile(string srcPath, string destPath)
+        {
+            var src = LoadText(srcPath);
+            var decrypted = src.Decrypt();
+            SaveText(destPath, decrypted);
+        }
+
         public T Clone<T>(T obj)
         {
             var json = Serialize(obj);

@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Graphics;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -12,7 +13,10 @@ namespace NarfoxGameTools.Services
 {
     public class ScreenshotService
     {
-        private static ScreenshotService instance;
+        static ScreenshotService instance;
+        string savePath = "";
+        bool initialized = false;
+
         public static ScreenshotService Instance
         {
             get
@@ -26,16 +30,75 @@ namespace NarfoxGameTools.Services
             }
         }
 
-        public string SavePath { get; set; } = "";
+        public string SaveDirectory
+        {
+            get
+            {
+                if (string.IsNullOrWhiteSpace(savePath))
+                {
+                    savePath = DefaultSaveDirectory;
+                }
+                return savePath;
+            }
+            set
+            {
+                savePath = value;
+            }
+        }
+
+        public string PicturesDirectory
+        {
+            get
+            {
+                return Environment.GetFolderPath(Environment.SpecialFolder.MyPictures);
+            }
+        }
+
+        public string DefaultSaveDirectory
+        {
+            get
+            {
+                var assembly = Assembly.GetEntryAssembly();
+                string defaultSaveDirectory = assembly == null ? "" : Assembly.GetEntryAssembly().FullName;
+                if (string.IsNullOrEmpty(defaultSaveDirectory))
+                {
+                    defaultSaveDirectory = "narfox";
+                }
+                else
+                {
+                    defaultSaveDirectory = defaultSaveDirectory.Substring(0, defaultSaveDirectory.IndexOf(','));
+                }
+
+                var fullpath = Path.Combine(PicturesDirectory, defaultSaveDirectory);
+
+                if (Directory.Exists(fullpath) == false)
+                {
+                    Directory.CreateDirectory(fullpath);
+                }
+
+                return fullpath;
+            }
+        }
 
         private ScreenshotService() { }
 
-        public void SaveScreenshotPng(string path = null, Camera camera = null)
+        public void Initialize(string savePath = null)
         {
-            if(!FlatRedBallServices.IsInitialized)
+            if (!FlatRedBallServices.IsInitialized)
             {
-                throw new Exception("FlatRedBall must be fully initialized before you can take a screenshot!");
+                throw new Exception("FlatRedBall must be fully initialized you can initialize this service!");
             }
+
+            initialized = true;
+        }
+
+        public void SaveScreenshotPng(string filename = null, Camera camera = null)
+        {
+            if(!initialized)
+            {
+                throw new Exception("Tried to take screenshot before service was initialized. You must initialize the ScreenshotService to use it!");
+            }
+
 
             camera = camera ?? Camera.Main;
             var gfx = FlatRedBallServices.GraphicsDevice;
@@ -56,13 +119,7 @@ namespace NarfoxGameTools.Services
             // restore render targets
             gfx.SetRenderTargets(existingTargets);
 
-            // try to get a default save path if one has not been set
-            if (string.IsNullOrWhiteSpace(SavePath))
-            {
-                TryResolveDefaultSavePath();
-            }
-
-            path = Path.Combine(SavePath, GetFilename(path));
+            var path = Path.Combine(SaveDirectory, GetFilename(filename));
 
             if (File.Exists(path))
             {
@@ -72,23 +129,6 @@ namespace NarfoxGameTools.Services
             {
                 buffer.SaveAsPng(stream, width, height);
             }
-        }
-
-        private void TryResolveDefaultSavePath()
-        {
-            var path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Screenshots");
-            if (!Directory.Exists(path))
-            {
-                try
-                {
-                    Directory.CreateDirectory(path);
-                }
-                catch (Exception e)
-                {
-                    throw new Exception($"Cannot create default screenshot location at: {path} because {e.Message}.");
-                }
-            }
-            SavePath = path;
         }
 
         private string GetFilename(string name = null)
