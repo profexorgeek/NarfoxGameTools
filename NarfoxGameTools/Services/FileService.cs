@@ -16,8 +16,32 @@ namespace NarfoxGameTools.Services
     public class FileService
     {
         static FileService instance;
+        string appVersion = null;
 
-
+        public string AppVersion
+        {
+            get
+            {
+                if (appVersion == null)
+                {
+                    try
+                    {
+                        var version = Assembly.GetEntryAssembly().GetName().Version;
+                        var versionString = string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
+                        appVersion = $"PC {versionString}";
+                    }
+                    catch(Exception e)
+                    {
+                        appVersion = "v0.0.0";
+                    }
+                }
+                return appVersion;
+            }
+            private set
+            {
+                appVersion = value;
+            }
+        }
         public static FileService Instance
         {
             get
