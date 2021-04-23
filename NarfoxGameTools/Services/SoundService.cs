@@ -220,12 +220,20 @@ namespace NarfoxGameTools.Services
                 return 0f;
             }
 
-            var position = nullablePosition == null ? Vector3.Zero : nullablePosition.Value;
-            var volume = 0f;
-            var dist = Camera.Main.DistanceTo(position.X, position.Y);
-            if (dist < VolumeMaxDistance)
+            // assume max volume to start, if no position was
+            // passed, this will be the default
+            float volume = 1f;
+
+            // if we got a position, calculate the sound based
+            // on max distance
+            if(nullablePosition != null)
             {
-                volume = 1f - (dist / VolumeMaxDistance);
+                var position = nullablePosition.Value;
+                var dist = Camera.Main.DistanceTo(position.X, position.Y);
+                if (dist < VolumeMaxDistance)
+                {
+                    volume = 1f - (dist / VolumeMaxDistance);
+                }
             }
 
             volume *= CalcSoundVolume;
