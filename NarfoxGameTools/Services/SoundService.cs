@@ -8,6 +8,7 @@ using NarfoxGameTools.Extensions;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 
 namespace NarfoxGameTools.Services
@@ -28,6 +29,7 @@ namespace NarfoxGameTools.Services
 
         private static SoundService instance;
         private List<SoundRequest> soundQueue = new List<SoundRequest>();
+        private Dictionary<SoundEffectInstance, PositionedObject> ownedInstances = new Dictionary<SoundEffectInstance, PositionedObject>();
         private ContentManager contentManager;
         float musicVolume = 1;
         bool initialized = false;
@@ -44,15 +46,8 @@ namespace NarfoxGameTools.Services
             }
         }
 
-        public float VolumeMaxDistance
-        {
-            get
-            {
-                // use twice the camera's longest dimension
-                // as the maximum sound distance
-                return Camera.Main.AbsoluteRightXEdgeAt(0) * 2;
-            }
-        }
+        public float VolumeMaxDistance { get; set; }
+        
         public float MaxConcurrentSounds { get; set; } = 32;
         public float CurrentlyPlayingSounds
         {
@@ -107,6 +102,10 @@ namespace NarfoxGameTools.Services
         public void Initialize(string managerName = null)
         {
             ContentManagerName = managerName ?? FlatRedBallServices.GlobalContentManager;
+            
+            // user camera for rough max distance
+            VolumeMaxDistance = Camera.Main.AbsoluteRightXEdgeAt(0);
+
             initialized = true;
         }
 
@@ -124,6 +123,16 @@ namespace NarfoxGameTools.Services
                 if(TimeManager.CurrentTime - req.TimeRequested > req.Duration)
                 {
                     soundQueue.Remove(req);
+                }
+            }
+
+            // manage named instances
+            foreach (var kvp in ownedInstances)
+            {
+                if(!kvp.Key.IsDisposed && kvp.Value != null)
+                {
+                    kvp.Key.Pan = GetPanForPosition(kvp.Value.Position);
+                    kvp.Key.Volume = GetVolumeForPosition(kvp.Value.Position);
                 }
             }
         }
@@ -169,6 +178,40 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        public SoundEffectInstance GetOwnedInstance(string effectName, PositionedObject requestor = null)
+        {
+            SoundEffect effect = GetEffect(effectName);
+            SoundEffectInstance instance = null;
+
+            if (effect != null)
+            {
+                instance = effect.CreateInstance();
+
+                if(requestor != null)
+                {
+                    ownedInstances.Add(instance, requestor);
+                }
+            }
+
+            return instance;
+        }
+
+        public void UnloadOwnedInstance(PositionedObject requestor)
+        {
+            var item = ownedInstances.Where(kvp => kvp.Value == requestor).FirstOrDefault();
+
+            if(item.Key != null)
+            {
+                item.Key.Stop();
+                ownedInstances.Remove(item.Key);
+            }
+        }
+
+        public void UnloadAllOwnedInstances()
+        {
+            ownedInstances.Clear();
+        }
+
 
         protected float GetVolumeForPosition(Vector3? nullablePosition)
         {
@@ -205,9 +248,7 @@ namespace NarfoxGameTools.Services
 
         protected void PlaySound(SoundRequest request)
         {
-            var barename = Path.GetFileNameWithoutExtension(request.Name);
-            var path = Path.Combine(SoundFolder, barename);
-            var effect = contentManager.Load<SoundEffect>(path);
+            var effect = GetEffect(request.Name);
 
             if (effect == null)
             {
@@ -233,6 +274,14 @@ namespace NarfoxGameTools.Services
             {
                 LogService.Log.Warn($"Too many sounds requested {CurrentlyPlayingSounds}/{MaxConcurrentSounds}");
             }
+        }
+
+        protected SoundEffect GetEffect(string name)
+        {
+            var barename = Path.GetFileNameWithoutExtension(name);
+            var path = Path.Combine(SoundFolder, barename);
+            var effect = contentManager.Load<SoundEffect>(path);
+            return effect;
         }
 
     }
