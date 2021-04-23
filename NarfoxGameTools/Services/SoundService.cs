@@ -153,7 +153,7 @@ namespace NarfoxGameTools.Services
                 if(!kvp.Key.IsDisposed && kvp.Value != null)
                 {
                     kvp.Key.Pan = GetPanForPosition(kvp.Value.Position);
-                    kvp.Key.Volume = GetVolumeForPosition(kvp.Value.Position);
+                    kvp.Key.Volume = IsMuted ? 0 : GetVolumeForPosition(kvp.Value.Position);
                 }
             }
         }
@@ -199,7 +199,7 @@ namespace NarfoxGameTools.Services
             }
         }
 
-        public SoundEffectInstance GetOwnedInstance(string effectName, PositionedObject requestor = null, bool isLooped = true)
+        public SoundEffectInstance GetOwnedInstance(string effectName, PositionedObject requestor = null, bool playImmediately = false, bool isLooped = true)
         {
             SoundEffect effect = GetEffect(effectName);
             SoundEffectInstance instance = null;
@@ -207,7 +207,19 @@ namespace NarfoxGameTools.Services
             if (effect != null)
             {
                 instance = effect.CreateInstance();
+
+                // volume defaults to zero because the position may not be taken
+                // into account until next frame and we don't want audio to
+                // pop in and go quiet. This allows requestors to immediately
+                // play
+                instance.Volume = 0;
+                instance.Pan = 0;
                 instance.IsLooped = isLooped;
+
+                if(playImmediately)
+                {
+                    instance.Play();
+                }
 
                 if(requestor != null)
                 {
@@ -273,9 +285,10 @@ namespace NarfoxGameTools.Services
             {
                 return 0f;
             }
-
             var position = nullablePosition.Value;
-            return ((position.X - Target.X) / VolumeMaxDistance).Clamp(-1f, 1f);
+            var deltaX = position.X - Target.X;
+            var percent = deltaX / VolumeMaxDistance;
+            return percent.Clamp(-1f, 1f);
         }
 
         protected void PlaySound(SoundRequest request)
@@ -294,6 +307,9 @@ namespace NarfoxGameTools.Services
 
                 try
                 {
+                    // NOTE: pan does not seem to be working right. Did thorough
+                    // investigation and it appears to be an issue with the
+                    // underlying default audio engine in monogame
                     effect.Play(request.Volume, request.Pitch, request.Pan);
                 }
                 catch (Exception e)
