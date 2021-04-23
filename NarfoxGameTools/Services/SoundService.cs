@@ -27,12 +27,13 @@ namespace NarfoxGameTools.Services
 
         const float PitchVariance = 0.5f;
 
-        private static SoundService instance;
-        private List<SoundRequest> soundQueue = new List<SoundRequest>();
-        private Dictionary<SoundEffectInstance, PositionedObject> ownedInstances = new Dictionary<SoundEffectInstance, PositionedObject>();
-        private ContentManager contentManager;
+        static SoundService instance;
+        List<SoundRequest> soundQueue = new List<SoundRequest>();
+        Dictionary<SoundEffectInstance, PositionedObject> ownedInstances = new Dictionary<SoundEffectInstance, PositionedObject>();
+        ContentManager contentManager;
         float musicVolume = 1;
         bool initialized = false;
+        PositionedObject target;
 
         public static SoundService Instance
         {
@@ -47,6 +48,26 @@ namespace NarfoxGameTools.Services
         }
 
         public float VolumeMaxDistance { get; set; }
+        public PositionedObject Target
+        {
+            get
+            {
+                if(target == null)
+                {
+                    target = Camera.Main;
+                }
+                return target;
+            }
+            set
+            {
+                target = value;
+
+                if(target == null)
+                {
+                    target = Camera.Main;
+                }
+            }
+        }
         
         public float MaxConcurrentSounds { get; set; } = 32;
         public float CurrentlyPlayingSounds
@@ -103,7 +124,7 @@ namespace NarfoxGameTools.Services
         {
             ContentManagerName = managerName ?? FlatRedBallServices.GlobalContentManager;
             
-            // user camera for rough max distance
+            // use camera for default volume distance and target
             VolumeMaxDistance = Camera.Main.AbsoluteRightXEdgeAt(0);
 
             initialized = true;
@@ -229,10 +250,14 @@ namespace NarfoxGameTools.Services
             if(nullablePosition != null)
             {
                 var position = nullablePosition.Value;
-                var dist = Camera.Main.DistanceTo(position.X, position.Y);
+                var dist = Target.DistanceTo(position.X, position.Y);
                 if (dist < VolumeMaxDistance)
                 {
                     volume = 1f - (dist / VolumeMaxDistance);
+                }
+                else
+                {
+                    volume = 0f;
                 }
             }
 
@@ -250,7 +275,7 @@ namespace NarfoxGameTools.Services
             }
 
             var position = nullablePosition.Value;
-            return ((position.X - Camera.Main.X) / VolumeMaxDistance).Clamp(-1f, 1f);
+            return ((position.X - Target.X) / VolumeMaxDistance).Clamp(-1f, 1f);
         }
 
         protected void PlaySound(SoundRequest request)
