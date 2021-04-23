@@ -178,7 +178,7 @@ namespace NarfoxGameTools.Services
             }
         }
 
-        public SoundEffectInstance GetOwnedInstance(string effectName, PositionedObject requestor = null)
+        public SoundEffectInstance GetOwnedInstance(string effectName, PositionedObject requestor = null, bool isLooped = true)
         {
             SoundEffect effect = GetEffect(effectName);
             SoundEffectInstance instance = null;
@@ -186,6 +186,7 @@ namespace NarfoxGameTools.Services
             if (effect != null)
             {
                 instance = effect.CreateInstance();
+                instance.IsLooped = isLooped;
 
                 if(requestor != null)
                 {
@@ -196,14 +197,12 @@ namespace NarfoxGameTools.Services
             return instance;
         }
 
-        public void UnloadOwnedInstance(PositionedObject requestor)
+        public void UnloadOwnedInstance(SoundEffectInstance instance)
         {
-            var item = ownedInstances.Where(kvp => kvp.Value == requestor).FirstOrDefault();
-
-            if(item.Key != null)
+            if(ownedInstances.ContainsKey(instance))
             {
-                item.Key.Stop();
-                ownedInstances.Remove(item.Key);
+                instance.Stop();
+                ownedInstances.Remove(instance);
             }
         }
 
