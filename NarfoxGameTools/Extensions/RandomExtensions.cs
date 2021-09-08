@@ -20,6 +20,11 @@ namespace NarfoxGameTools.Extensions
             return min + randInRange;
         }
 
+        public static float Sign(this Random rand)
+        {
+            return rand.NextDouble() < 0.5 ? 1f : -1f;
+        }
+
         public static Color Color(this Random rand, float minTint = 0f, float maxTint = 1f)
         {
             var r = rand.InRange(minTint, maxTint);
