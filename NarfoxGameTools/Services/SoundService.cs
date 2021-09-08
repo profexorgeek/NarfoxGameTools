@@ -8,8 +8,6 @@ using NarfoxGameTools.Extensions;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace NarfoxGameTools.Services
 {
@@ -25,7 +23,7 @@ namespace NarfoxGameTools.Services
             public double Duration;
         }
 
-        const float PitchVariance = 0.5f;
+        const float PitchVariance = 0.25f;
 
         static SoundService instance;
         List<SoundRequest> soundQueue = new List<SoundRequest>();
@@ -69,7 +67,7 @@ namespace NarfoxGameTools.Services
             }
         }
         
-        public float MaxConcurrentSounds { get; set; } = 32;
+        public float MaxConcurrentSounds { get; set; } = 32f;
         public float CurrentlyPlayingSounds
         {
             get
@@ -168,7 +166,7 @@ namespace NarfoxGameTools.Services
             // EARLY OUT: null name
             if(string.IsNullOrWhiteSpace(effectName))
             {
-                LogService.Log.Warn($"Empty sound name requested!");
+                LogService.Log.Debug($"Empty sound name requested!");
                 return;
             }
 
@@ -176,9 +174,34 @@ namespace NarfoxGameTools.Services
             var request = new SoundRequest
             {
                 Name = effectName,
-                Pitch = pitch,
                 Volume = GetVolumeForPosition(position),
                 Pan = GetPanForPosition(position),
+                Pitch = pitch,
+                TimeRequested = TimeManager.CurrentScreenTime,
+            };
+            PlaySound(request);
+        }
+
+        public void RequestPlayEffect(string effectName, float volume, float pan, float pitch)
+        {
+            if (!initialized)
+            {
+                throw new Exception("Attempted to play effect before initializing the SoundService.");
+            }
+
+            // EARLY OUT: null name
+            if (string.IsNullOrWhiteSpace(effectName))
+            {
+                LogService.Log.Debug($"Empty sound name requested!");
+                return;
+            }
+
+            var request = new SoundRequest
+            {
+                Name = effectName,
+                Volume = volume,
+                Pan = pan,
+                Pitch = pitch,
                 TimeRequested = TimeManager.CurrentScreenTime,
             };
             PlaySound(request);
@@ -255,7 +278,7 @@ namespace NarfoxGameTools.Services
 
             // assume max volume to start, if no position was
             // passed, this will be the default
-            float volume = 1f;
+            var volume = 1f;
 
             // if we got a position, calculate the sound based
             // on max distance
@@ -294,10 +317,12 @@ namespace NarfoxGameTools.Services
         protected void PlaySound(SoundRequest request)
         {
             var effect = GetEffect(request.Name);
+            //var effectLeft = GetEffect(request.Name);
+            //var effectRight = GetEffect(request.Name);
 
             if (effect == null)
             {
-                LogService.Log.Warn($"Bad effect requested: {request.Name}!");
+                LogService.Log.Debug($"Bad effect requested: {request.Name}!");
             }
             else if (IsMuted == false && CurrentlyPlayingSounds < MaxConcurrentSounds)
             {
@@ -310,17 +335,29 @@ namespace NarfoxGameTools.Services
                     // NOTE: pan does not seem to be working right. Did thorough
                     // investigation and it appears to be an issue with the
                     // underlying default audio engine in monogame
+                    // see:
+                    // https://github.com/MonoGame/MonoGame/issues/6876
+                    // https://github.com/MonoGame/MonoGame/issues/6543
+                    // https://github.com/MonoGame/MonoGame/issues/5739
+                    
+                    // One potential hack is to play two sounds at once and fake panning:
+                    //float panVolumeCompensation = // figure out the calc for this;
+                    //var leftVolume = (1 - request.Pan).Clamp(0, 1) * request.Volume * panVolumeCompensation;
+                    //var rightVolume = (1 + request.Pan).Clamp(0, 1) * request.Volume * panVolumeCompensation;
+                    //effectLeft.Play(leftVolume, request.Pitch, -1);
+                    //effectRight.Play(rightVolume, request.Pitch, 1);
+
+                    // This is how the sound should actually be played
                     effect.Play(request.Volume, request.Pitch, request.Pan);
                 }
                 catch (Exception e)
                 {
                     LogService.Log.Error(e.Message);
                 }
-
             }
             else
             {
-                LogService.Log.Warn($"Too many sounds requested {CurrentlyPlayingSounds}/{MaxConcurrentSounds}");
+                LogService.Log.Debug($"Too many sounds requested {CurrentlyPlayingSounds}/{MaxConcurrentSounds}");
             }
         }
 
