@@ -8,6 +8,11 @@ namespace NarfoxGameTools.Logging
     {
         public LogLevel Level { get; set; } = LogLevel.Debug;
 
+        public ScreenLogger()
+        {
+            FlatRedBall.Debugging.Debugger.TextCorner = FlatRedBall.Debugging.Debugger.Corner.BottomLeft;
+        }
+
         public void Debug(string msg)
         {
             Write(LogLevel.Debug, msg);
