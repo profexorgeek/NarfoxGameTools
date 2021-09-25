@@ -36,8 +36,8 @@ namespace NarfoxGameTools.Extensions
 
         public static T EnumValue<T>(this Random rand)
         {
-            Array vals = Enum.GetValues(typeof(T));
-            return vals.Random<T>();
+            T[] vals = Enum.GetValues(typeof(T)) as T[];
+            return vals.Random(rand);
         }
 
         public static bool Bool(this Random rand)

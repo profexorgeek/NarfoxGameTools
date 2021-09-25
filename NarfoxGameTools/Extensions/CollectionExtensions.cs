@@ -43,21 +43,14 @@ namespace NarfoxGameTools.Extensions
         /// <param name="rand">Optional Random instance, if not provided 
         /// the method will use a static default instance.</param>
         /// <returns>An element of type T or default(T)</returns>
-        public static T Random<T>(this Array array, Random rand = null)
+        public static T Random<T>(this T[] array, Random rand = null)
         {
             rand = rand ?? RandomService.Random;
             T o;
             var c = array.Length;
-            if (c > 0)
+            if(c > 0)
             {
-                try
-                {
-                    o = (T)array.GetValue(rand.Next(0, c));
-                }
-                catch
-                {
-                    o = default(T);
-                }
+                o = array[rand.Next(0, c)];
             }
             else
             {
