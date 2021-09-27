@@ -11,8 +11,17 @@ using System.IO;
 
 namespace NarfoxGameTools.Services
 {
+
+    /// <summary>
+    /// This class wraps FlatRedBall and MonoGame audio utilities
+    /// to provide more advanced functionality like positioned audio
+    /// </summary>
     public class SoundService
     {
+        /// <summary>
+        /// A struct that represents a queued request
+        /// to play a sound.
+        /// </summary>
         protected struct SoundRequest
         {
             public string Name;
@@ -23,6 +32,8 @@ namespace NarfoxGameTools.Services
             public double Duration;
         }
 
+        // how much the pitch is allowed to vary
+        // in sound requests
         const float PitchVariance = 0.25f;
 
         static SoundService instance;
@@ -33,6 +44,9 @@ namespace NarfoxGameTools.Services
         bool initialized = false;
         PositionedObject target;
 
+        /// <summary>
+        /// Property exposing this class as a singleton
+        /// </summary>
         public static SoundService Instance
         {
             get
@@ -45,7 +59,20 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        /// <summary>
+        /// The maximum distance a sound can be heard,
+        /// usually in pixels for 2D pixelart games.
+        /// Positioned sound will attenuate linearly
+        /// over this distance.
+        /// </summary>
         public float VolumeMaxDistance { get; set; }
+        
+        /// <summary>
+        /// The target "listener" to use when determining audio
+        /// position. This is usually the camera but may need
+        /// to be a different target if the camera interpolates
+        /// to a position over time.
+        /// </summary>
         public PositionedObject Target
         {
             get
@@ -67,7 +94,16 @@ namespace NarfoxGameTools.Services
             }
         }
         
+        /// <summary>
+        /// The maximum number of sounds to play at the same time. This may need to be 
+        /// set differently for mobile or lowspec devices that have low limits on
+        /// simultaneous sounds
+        /// </summary>
         public float MaxConcurrentSounds { get; set; } = 32f;
+        
+        /// <summary>
+        /// The number of sounds in the queue
+        /// </summary>
         public float CurrentlyPlayingSounds
         {
             get
@@ -75,6 +111,10 @@ namespace NarfoxGameTools.Services
                 return soundQueue.Count;
             }
         }
+
+        /// <summary>
+        /// The name of the content manager responsible for loading and caching sounds
+        /// </summary>
         public string ContentManagerName
         {
             get
@@ -91,10 +131,31 @@ namespace NarfoxGameTools.Services
                 }
             }
         }
+        
+        /// <summary>
+        /// The folder where sounds are located.
+        /// </summary>
         public string SoundFolder { get; set; } = @"Content/GlobalContent/Sounds";
+
+        /// <summary>
+        /// The folder where music is located.
+        /// </summary>
         public string MusicFolder { get; set; } = @"Content/GlobalContent/Music";
+        
+        /// <summary>
+        /// The mix volume of the music: how loud it should be in the mix, from 0 - 1
+        /// </summary>
         public float MusicMixVolume { get; set; } = 1f;
+
+        /// <summary>
+        /// The mix volume of the sound: how loud it should be in the mix, from 0 - 1
+        /// </summary>
         public float SoundMixVolume { get; set; } = 1f;
+        
+        /// <summary>
+        /// The volume of music in the game, this is usually set by the user in some type
+        /// of settings menu
+        /// </summary>
         public float MusicVolume
         {
             get
@@ -107,17 +168,41 @@ namespace NarfoxGameTools.Services
                 MediaPlayer.Volume = CalcMusicVolume;
             }
         }
+
+        /// <summary>
+        /// The volume of sound in the game, this is usually set by the user in some tyupe
+        /// of settings menu
+        /// </summary>
         public float SoundVolume { get; set; } = 1f;
 
+        /// <summary>
+        /// The calculated total volume of music, a product of the mix volume and user volume
+        /// </summary>
         float CalcMusicVolume => MusicVolume * MusicMixVolume;
+
+        /// <summary>
+        /// The calculated total volume of sound, a product of the mix volume and user volume
+        /// </summary>
         float CalcSoundVolume => SoundVolume * SoundMixVolume;
 
-
-
+        /// <summary>
+        /// Whether or not sound will play. If true, no sound will play at all
+        /// </summary>
         public bool IsMuted { get; set; } = false;
 
+
+
+        /// <summary>
+        /// Protected constructor to enforce singleton pattern
+        /// </summary>
         protected SoundService() { }
 
+        /// <summary>
+        /// Initializes the sound service. This must be called before attempting
+        /// to play sounds or otherwise use the SoundService. This should be called
+        /// in the Game1 class in FlatRedBall during Initialization
+        /// </summary>
+        /// <param name="managerName">The name of the manager to use, defaults to the GlobalContentManager</param>
         public void Initialize(string managerName = null)
         {
             ContentManagerName = managerName ?? FlatRedBallServices.GlobalContentManager;
@@ -128,6 +213,10 @@ namespace NarfoxGameTools.Services
             initialized = true;
         }
 
+        /// <summary>
+        /// This must be called in the game loop. This processes the queue of requested
+        /// sounds every frame
+        /// </summary>
         public void Update()
         {
             if(!initialized)
@@ -156,6 +245,15 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        /// <summary>
+        /// Fire-and-forget method to play a single sound effect. Passing the Position will pan
+        /// and attenuate the sound based on the Target position. This method doesn't
+        /// keep a handle to the sound effect and so effects played this way can not be
+        /// stopped or altered once started.
+        /// </summary>
+        /// <param name="effectName">The name of the effect, which will be resolved from the base directories</param>
+        /// <param name="position">The position of the effect, used to attenuate and pan the sound</param>
+        /// <param name="randomizePitch">Whether or not to randomize pitch, defaults to true</param>
         public void RequestPlayEffect(string effectName, Vector3? position = null, bool randomizePitch = true)
         {
             if(!initialized)
@@ -182,6 +280,13 @@ namespace NarfoxGameTools.Services
             PlaySound(request);
         }
 
+        /// <summary>
+        /// Fire-and-forget method to play a single sound effect with specific volume, pan, and pitch
+        /// </summary>
+        /// <param name="effectName">The name of the effect, which will be resolved from the base directories</param>
+        /// <param name="volume">The volume of the effect from 0 to 1</param>
+        /// <param name="pan">The pan of the effect from -1 to 1</param>
+        /// <param name="pitch">The pitch of the effect</param>
         public void RequestPlayEffect(string effectName, float volume, float pan, float pitch)
         {
             if (!initialized)
@@ -207,6 +312,12 @@ namespace NarfoxGameTools.Services
             PlaySound(request);
         }
 
+        /// <summary>
+        /// Plays a song and can force a restart or loop
+        /// </summary>
+        /// <param name="song">The song instance to play</param>
+        /// <param name="loop">Whether or not to loop the song</param>
+        /// <param name="forceRestart">Whether or not to force a restart if a song is already playing</param>
         public void RequestPlaySong(Song song, bool loop = true, bool forceRestart = false)
         {
             var current = AudioManager.CurrentlyPlayingSong;
@@ -222,6 +333,17 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        /// <summary>
+        /// Gets a sound effect instance with a handle. This is used for sounds that need to be
+        /// updated over time to stop and start or play at a specific pitch. Any sound requested
+        /// this way should be released when the requestor is done with the sound using the
+        /// UnloadOwnedInstance method
+        /// </summary>
+        /// <param name="effectName"></param>
+        /// <param name="requestor"></param>
+        /// <param name="playImmediately"></param>
+        /// <param name="isLooped"></param>
+        /// <returns>A SoundEffectInstance</returns>
         public SoundEffectInstance GetOwnedInstance(string effectName, PositionedObject requestor = null, bool playImmediately = false, bool isLooped = true)
         {
             SoundEffect effect = GetEffect(effectName);
@@ -253,6 +375,10 @@ namespace NarfoxGameTools.Services
             return instance;
         }
 
+        /// <summary>
+        /// Unloads an owned SoundEffectInstance obtained using GetOwnedInstance
+        /// </summary>
+        /// <param name="instance">The instance to unload</param>
         public void UnloadOwnedInstance(SoundEffectInstance instance)
         {
             if(ownedInstances.ContainsKey(instance))
@@ -262,12 +388,22 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        /// <summary>
+        /// Unloads all owned instances. This is usually called when unloading
+        /// a screen to make sure all owned instances are released.
+        /// </summary>
         public void UnloadAllOwnedInstances()
         {
             ownedInstances.Clear();
         }
 
-
+        /// <summary>
+        /// Calculates the volume of a sound based on its distance
+        /// from the Target listener. Returns 1 if provided with a
+        /// bad position
+        /// </summary>
+        /// <param name="nullablePosition">The position to use for calculation</param>
+        /// <returns>A float representing the volume from 0 to 1</returns>
         protected float GetVolumeForPosition(Vector3? nullablePosition)
         {
             // EARLY OUT: null position
@@ -301,6 +437,12 @@ namespace NarfoxGameTools.Services
             return volume;
         }
 
+        /// <summary>
+        /// Calculates the pan for a sound based on its position to
+        /// left or right of the Target listener
+        /// </summary>
+        /// <param name="nullablePosition">The position to use for calculation</param>
+        /// <returns>A float from -1 to 1</returns>
         protected float GetPanForPosition(Vector3? nullablePosition)
         {
             // EARLY OUT: null position
@@ -314,6 +456,11 @@ namespace NarfoxGameTools.Services
             return percent.Clamp(-1f, 1f);
         }
 
+        /// <summary>
+        /// Plays a sound request object, usually called during Update when
+        /// processing the sound queue
+        /// </summary>
+        /// <param name="request">The sound request object to play</param>
         protected void PlaySound(SoundRequest request)
         {
             var effect = GetEffect(request.Name);
@@ -361,6 +508,11 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        /// <summary>
+        /// Loads a sound effect by name from the content manager
+        /// </summary>
+        /// <param name="name">The filename of the effect</param>
+        /// <returns>A SoundEffect instance</returns>
         protected SoundEffect GetEffect(string name)
         {
             var barename = Path.GetFileNameWithoutExtension(name);
