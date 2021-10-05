@@ -40,6 +40,12 @@ namespace NarfoxGameTools.Extensions
             f = Math.Min(max, f);
             return f;
         }
+        public static int Clamp(this int f, int min, int max)
+        {
+            f = Math.Max(min, f);
+            f = Math.Min(max, f);
+            return f;
+        }
 
         public static byte Clamp(this float f)
         {
