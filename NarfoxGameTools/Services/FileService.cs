@@ -107,6 +107,7 @@ namespace NarfoxGameTools.Services
 
             return files;
         }
+
         public T LoadFile<T>(string path, bool decrypt = false)
         {
             var filetext = LoadText(path);

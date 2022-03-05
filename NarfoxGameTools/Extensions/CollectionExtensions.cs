@@ -1,4 +1,5 @@
 ﻿using FlatRedBall.AI.Pathfinding;
+using FlatRedBall.Math.Geometry;
 using NarfoxGameTools.Services;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,6 @@ namespace NarfoxGameTools.Extensions
 {
     public static class CollectionExtensions
     {
-
         /// <summary>
         /// A Linq-like method for getting a random element from an IEnumerable
         /// </summary>

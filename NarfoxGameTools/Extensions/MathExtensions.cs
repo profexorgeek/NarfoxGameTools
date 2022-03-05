@@ -27,6 +27,11 @@ namespace NarfoxGameTools.Extensions
             return degrees * (float)(180f / Math.PI);
         }
 
+        public static float NormalizeAngle(this float radians)
+        {
+            return FlatRedBall.Math.MathFunctions.RegulateAngle(radians);
+        }
+
         /// <summary>
         /// Clamps a float value to be within the min and max parameters.
         /// </summary>
