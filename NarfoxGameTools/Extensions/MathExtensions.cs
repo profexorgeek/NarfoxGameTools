@@ -1,5 +1,6 @@
 ﻿using FlatRedBall;
 using FlatRedBall.AI.Pathfinding;
+using FlatRedBall.Math;
 using Microsoft.Xna.Framework;
 using System;
 
@@ -51,11 +52,11 @@ namespace NarfoxGameTools.Extensions
             f = Math.Min(max, f);
             return f;
         }
-
         public static byte Clamp(this float f)
         {
             return (byte)f.Clamp(0, 255);
         }
+
 
         public static float DistanceTo(this PositionedObject o1, PositionedObject o2)
         {
@@ -80,6 +81,21 @@ namespace NarfoxGameTools.Extensions
         public static float DistanceTo(this Vector3 vector, Vector3 vector2)
         {
             return vector.ToVector2().DistanceTo(vector2.ToVector2());
+        }
+
+
+        public static float RotationTo(this PositionedObject source, PositionedObject target)
+        {
+            return RotationTo(source, target.X, target.Y);
+        }
+        public static float RotationTo(this PositionedObject source, float x, float y)
+        {
+            return (float)MathFunctions.RegulateAngle(Math.Atan2(y - source.Y, x - source.X));
+        }
+
+        public static float ShortestRotationDelta(this float angle1, float angle2)
+        {
+            return MathFunctions.AngleToAngle(angle1, angle2);
         }
     }
 }
