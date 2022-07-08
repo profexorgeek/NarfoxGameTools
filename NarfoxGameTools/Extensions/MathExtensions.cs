@@ -8,6 +8,9 @@ namespace NarfoxGameTools.Extensions
 {
     public static class MathExtensions
     {
+        public const float RadiansPerDegree = (float)(Math.PI / 180f);
+        public const float DegreesPerRadian = (float)(180f / Math.PI);
+
         /// <summary>
         /// Converts a float value from degrees to radians.
         /// </summary>
@@ -15,17 +18,17 @@ namespace NarfoxGameTools.Extensions
         /// <returns>The value in radians</returns>
         public static float ToRadians(this float degrees)
         {
-            return degrees * (float)(Math.PI / 180f);
+            return degrees * RadiansPerDegree;
         }
 
         /// <summary>
         /// Converts a float value from radians to degrees.
         /// </summary>
-        /// <param name="degrees">A radians value as a float</param>
+        /// <param name="radians">A radians value as a float</param>
         /// <returns>The value in degrees</returns>
-        public static float ToDegrees(this float degrees)
+        public static float ToDegrees(this float radians)
         {
-            return degrees * (float)(180f / Math.PI);
+            return radians * DegreesPerRadian;
         }
 
         public static float NormalizeAngle(this float radians)
