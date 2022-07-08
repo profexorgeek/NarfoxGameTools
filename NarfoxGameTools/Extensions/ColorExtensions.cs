@@ -63,6 +63,7 @@ namespace NarfoxGameTools.Extensions
             newColor.R = (color.R * (1f - percent)).Clamp();
             newColor.G = (color.G * (1f - percent)).Clamp();
             newColor.B = (color.B * (1f - percent)).Clamp();
+            newColor.A = color.A;
             return newColor;
         }
 
