@@ -7,6 +7,11 @@ namespace NarfoxGameTools.Extensions
     {
         public static float Pi => (float)Math.PI;
 
+
+        public static float InRange(this Random rand, double min, double max)
+        {
+            return rand.InRange((float)min, (float)max);
+        }
         public static float InRange(this Random rand, float min, float max)
         {
             // early out for equal. This may not be perfectly accurate
