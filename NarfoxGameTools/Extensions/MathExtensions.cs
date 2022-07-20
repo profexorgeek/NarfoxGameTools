@@ -10,6 +10,9 @@ namespace NarfoxGameTools.Extensions
     {
         public const float RadiansPerDegree = (float)(Math.PI / 180f);
         public const float DegreesPerRadian = (float)(180f / Math.PI);
+        public const float PiAsFloat = (float)Math.PI;
+        public const float TwoPi = PiAsFloat * 2f;
+        public const float HalfPi = PiAsFloat / 2f;
 
         /// <summary>
         /// Converts a float value from degrees to radians.
