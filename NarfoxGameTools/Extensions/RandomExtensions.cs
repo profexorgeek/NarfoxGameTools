@@ -27,14 +27,15 @@ namespace NarfoxGameTools.Extensions
             return min + randInRange;
         }
 
-        public static Vector2 PositionInRadius(this Random rand, float radius)
+        public static Vector3 PositionInRadius(this Random rand, float radius)
         {
+            var vector = Vector3.Zero;
             var coefficient = (float)Math.Sqrt(rand.NextDouble());
             var magnitude = coefficient * radius;
             var angle = rand.InRange(0, 2 * Pi);
-            var x = Math.Cos(angle) * magnitude;
-            var y = Math.Sin(angle) * magnitude;
-            return new Vector2((float)x, (float)y);
+            vector.X = (float)(Math.Cos(angle) * magnitude);
+            vector.Y = (float)(Math.Sin(angle) * magnitude);
+            return vector;
         }
 
         public static float Sign(this Random rand)
