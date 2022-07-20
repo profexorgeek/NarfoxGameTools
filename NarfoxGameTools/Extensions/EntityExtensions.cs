@@ -16,6 +16,11 @@ namespace NarfoxGameTools.Extensions
             return new Vector2(x - entity.X, y - entity.Y).Length();
         }
 
+        public static float DistanceTo(this IPositionable entity, Vector3 position)
+        {
+            return DistanceTo(entity, position.X, position.Y);
+        }
+
         public static float DistanceToStop(float velocityLength, float drag)
         {
             // NOTE: a more precise calculation involves simulating out
