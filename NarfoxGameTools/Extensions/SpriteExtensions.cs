@@ -21,5 +21,10 @@ namespace NarfoxGameTools.Extensions
                 sprite.Alpha = (float)(color.A / 255f);
             }
         }
+
+        public static Color GetColor(this Sprite sprite)
+        {
+            return new Color(sprite.Red, sprite.Green, sprite.Blue);
+        }
     }
 }
