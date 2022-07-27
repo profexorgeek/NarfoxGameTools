@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <GumProjectSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <CustomProperties />
+  <FontRanges>32-126,160-255</FontRanges>
   <Version>1</Version>
   <DefaultCanvasWidth>800</DefaultCanvasWidth>
   <DefaultCanvasHeight>600</DefaultCanvasHeight>
@@ -9,173 +10,222 @@
   <RestrictToUnitValues>true</RestrictToUnitValues>
   <RestrictFileNamesForAndroid>false</RestrictFileNamesForAndroid>
   <Guides />
-  <ScreenReference>
-    <Name>DemoScreen</Name>
-    <ElementType>Screen</ElementType>
-  </ScreenReference>
+  <ShowLocalizationInGum>true</ShowLocalizationInGum>
+  <CurrentLanguageIndex>0</CurrentLanguageIndex>
   <ComponentReference>
     <Name>CommonComponents/ButtonClose</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/ButtonWarning</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/DialogAlert</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/DialogYesNo</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/Divider</Name>
     <ElementType>Component</ElementType>
-  </ComponentReference>
-  <ComponentReference>
-    <Name>CommonComponents/LevelChooser</Name>
-    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/Hud</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/Icon</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/IconStatusBar</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>CommonComponents/LevelChooser</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/LevelGalleryItem</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/Menu</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/SearchBox</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/StatusBar</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>CommonComponents/TitleText</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>Controls/ButtonStandard</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ComponentReference>
+  <ComponentReference>
+    <Name>Controls/Icon</Name>
+    <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/Button</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/CheckBox</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ColoredFrame</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ComboBox</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ListBox</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ListBoxItem</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/PasswordBox</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/RadioButton</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ScrollBar</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ScrollBarThumb</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ScrollViewer</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/Slider</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/TextBox</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/ToggleButton</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/TreeView</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/TreeViewItem</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/TreeViewToggleButton</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <ComponentReference>
     <Name>DefaultForms/UserControl</Name>
     <ElementType>Component</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </ComponentReference>
   <StandardElementReference>
     <Name>Circle</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>ColoredRectangle</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>Component</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>Container</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>NineSlice</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>Polygon</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>Rectangle</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>Sprite</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <StandardElementReference>
     <Name>Text</Name>
     <ElementType>Standard</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
   </StandardElementReference>
   <BehaviorReference>
     <Name>ButtonBehavior</Name>

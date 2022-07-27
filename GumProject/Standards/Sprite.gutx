@@ -32,6 +32,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ColorCategory</Type>
+      <Name>ColorCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
       <Name>CurrentChainName</Name>
       <Category>Animation</Category>
@@ -264,4 +269,292 @@
       <Value />
     </VariableList>
   </State>
+  <Category>
+    <Name>ColorCategory</Name>
+    <State>
+      <Name>Black</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">0</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>DarkGray</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">70</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">70</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">70</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Gray</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">130</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">130</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">130</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>LightGray</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">170</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">170</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">170</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>White</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">255</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>PrimaryDark</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">137</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">120</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">4</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Primary</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">177</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">159</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">6</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>PrimaryLight</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">193</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">180</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">74</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Success</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">48</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">167</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">62</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Warning</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">25</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">171</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">232</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Danger</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">41</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">18</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">212</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Accent</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Blue</Name>
+        <Value xsi:type="xsd:int">138</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Green</Name>
+        <Value xsi:type="xsd:int">48</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Red</Name>
+        <Value xsi:type="xsd:int">140</Value>
+        <Category>Rendering</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+  </Category>
 </StandardElementSave>

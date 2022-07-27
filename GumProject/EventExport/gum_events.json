@@ -1,0 +1,2976 @@
+{
+  "UserEvents": {
+    "jusjohns": [
+      {
+        "NewName": "Elements/Panel",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-22T16:07:26.0282508Z"
+      },
+      {
+        "NewName": "Button_Default",
+        "OldName": "Panel1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:11:44.4648424Z"
+      },
+      {
+        "NewName": "ButtonDefault",
+        "OldName": "Button_Default",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:12:10.6704612Z"
+      },
+      {
+        "NewName": "Dialog",
+        "OldName": "Panel",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:12:32.5746042Z"
+      },
+      {
+        "NewName": "Background",
+        "OldName": "Dialog",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:12:38.6864546Z"
+      },
+      {
+        "NewName": "ButtonSuccess",
+        "OldName": "ButtonDefault1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:12:51.4292681Z"
+      },
+      {
+        "NewName": "ButtonWarning",
+        "OldName": "ButtonSuccess1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:13:07.991602Z"
+      },
+      {
+        "NewName": "ButtonFailure",
+        "OldName": "ButtonWarning1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:13:23.1032562Z"
+      },
+      {
+        "NewName": "ButtonFailure",
+        "OldName": "ButtonFailure1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:13:35.2568671Z"
+      },
+      {
+        "NewName": "Elements/Background",
+        "OldName": "Elements/Panel",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-22T16:14:11.9316348Z"
+      },
+      {
+        "NewName": "Panel",
+        "OldName": "Background",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:14:19.637246Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0546943Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0556946Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0606957Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0646965Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0686974Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0726985Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0756991Z"
+      },
+      {
+        "NewName": "DefaultForms/Button (Container).Background",
+        "OldName": "DefaultForms/Button (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T16:14:28.0796997Z"
+      },
+      {
+        "NewName": "ButtonDisabled",
+        "OldName": "ButtonFailure",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:15:22.7469541Z"
+      },
+      {
+        "NewName": "Elements/Fill",
+        "OldName": "Elements/Background",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-22T16:20:59.8167788Z"
+      },
+      {
+        "NewName": "Menus/TestMenu",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-22T16:44:46.5875187Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-22T16:44:53.2406531Z"
+      },
+      {
+        "NewName": "LargeTitle",
+        "OldName": "Title",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:49:35.4425043Z"
+      },
+      {
+        "NewName": "NormalTitle",
+        "OldName": "Normal1",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T16:49:50.5200994Z"
+      },
+      {
+        "NewName": "ButtonHover",
+        "OldName": "ButtonSuccess",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:20:42.3425899Z"
+      },
+      {
+        "NewName": "SquareBrand",
+        "OldName": "ButtonDefault",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:20:57.0168333Z"
+      },
+      {
+        "NewName": "SquareHover",
+        "OldName": "ButtonHover",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:21:03.9626254Z"
+      },
+      {
+        "NewName": "SquareWarning",
+        "OldName": "ButtonWarning",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:22:23.7077861Z"
+      },
+      {
+        "NewName": "Square Press",
+        "OldName": "ButtonFailure",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:22:45.4679697Z"
+      },
+      {
+        "NewName": "SquareDanger",
+        "OldName": "SquareWarning",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:23:15.3568044Z"
+      },
+      {
+        "NewName": "SquareDisabled",
+        "OldName": "ButtonDisabled",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:23:25.4983168Z"
+      },
+      {
+        "NewName": "StyleCategory",
+        "OldName": "SizeCategory",
+        "ElementType": "Standards",
+        "EventType": 4,
+        "TimestampUtc": "2022-07-22T18:23:59.7388253Z"
+      },
+      {
+        "NewName": "Button",
+        "OldName": "Normal1",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-22T18:24:20.1053714Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ButtonInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-22T18:33:34.610484Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-22T18:33:43.4483944Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MarginContainer",
+        "OldName": "Menus/TestMenu (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-22T18:33:56.6589477Z"
+      },
+      {
+        "NewName": "Solid",
+        "OldName": "Panel1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:18:24.8667573Z"
+      },
+      {
+        "NewName": "LightBorder",
+        "OldName": "Solid1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:18:48.3627344Z"
+      },
+      {
+        "NewName": "SlottedBottom",
+        "OldName": "DarkBorder1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:20:53.707193Z"
+      },
+      {
+        "NewName": "LeftAngleBottom",
+        "OldName": "SlottedBottom1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:21:44.5555257Z"
+      },
+      {
+        "NewName": "Underline",
+        "OldName": "SlottedBottom1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:30:37.3478303Z"
+      },
+      {
+        "NewName": "PrimaryDark",
+        "OldName": "Disabled",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:36:29.8835286Z"
+      },
+      {
+        "NewName": "PrimaryLight",
+        "OldName": "Hover",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:36:36.4413706Z"
+      },
+      {
+        "NewName": "Danger",
+        "OldName": "Failure",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:39:50.3873083Z"
+      },
+      {
+        "NewName": "Black",
+        "OldName": "None",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T01:50:50.7795856Z"
+      },
+      {
+        "NewName": "None",
+        "OldName": "None",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T02:02:09.4994093Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/ScrollViewer (Container).Elements/Fill ColoredFrameInstance in DefaultForms/ScrollViewer (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-23T02:06:55.108943Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/ListBox (Container).DefaultForms/ColoredFrame ColoredFrameInstance in DefaultForms/ListBox (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-23T02:10:18.6655471Z"
+      },
+      {
+        "NewName": "NeutralDark",
+        "OldName": "Grey",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-23T02:16:41.8073664Z"
+      },
+      {
+        "NewName": "DefaultForms/ButtonStandard",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-23T02:51:09.8509332Z"
+      },
+      {
+        "NewName": "Elements/ButtonStandard",
+        "OldName": "DefaultForms/ButtonStandard",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-23T02:51:16.656918Z"
+      },
+      {
+        "NewName": "Elements/ButtonConfirm",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-23T02:51:44.7842348Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).DefaultForms/Button ButtonInstance in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-23T02:55:42.4006428Z"
+      },
+      {
+        "NewName": "Elements/ButtonDeny",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-23T02:56:36.692487Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:01:14.4921705Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MenuBackground",
+        "OldName": "Menus/TestMenu (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:01:20.9101765Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:01:39.4842474Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ItemContainer",
+        "OldName": "Menus/TestMenu (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:01:43.811927Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).HeadingText",
+        "OldName": "Menus/TestMenu (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:01:51.9002851Z"
+      },
+      {
+        "NewName": "Elements/Icon",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-23T03:02:35.353905Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:04:39.5606565Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:17.9883954Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:17.9893965Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:17.9903965Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:17.9943973Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:17.9983989Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:18.0013992Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:18.0054Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:18.0094009Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:18.0144018Z"
+      },
+      {
+        "NewName": "Elements/Icon (Container).IconSprite",
+        "OldName": "Elements/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:07:18.0184029Z"
+      },
+      {
+        "NewName": "Elements/ButtonIcon",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-23T03:08:21.9743634Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ButtonIcon (Container).Text TextInstance in Elements/ButtonIcon (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-23T03:08:26.7818612Z"
+      },
+      {
+        "NewName": "Elements/ButtonIcon (Container).IconInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:08:29.7386332Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ButtonIconInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:09:59.8401554Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).CloseButton",
+        "OldName": "Menus/TestMenu (Container).ButtonIconInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:10:51.5570644Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).SettingsListContainer",
+        "OldName": "Menus/TestMenu (Container).ItemContainer",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:11:42.3087596Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).CheckBoxInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:11:50.8881004Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ComboBoxInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:12:36.7960522Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).FullScreenCheckbox",
+        "OldName": "Menus/TestMenu (Container).CheckBoxInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:12:48.3353439Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).LabelInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:13:35.0020809Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ResolutionLabel",
+        "OldName": "Menus/TestMenu (Container).LabelInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:13:42.1871996Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).SliderInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:14:32.2185251Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ResolutionLabel1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:14:44.7415796Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Music",
+        "OldName": "Menus/TestMenu (Container).ResolutionLabel1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:14:53.9337348Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MusicSlider",
+        "OldName": "Menus/TestMenu (Container).SliderInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:15:43.5726742Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MusicLabel",
+        "OldName": "Menus/TestMenu (Container).Music",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:15:57.4529743Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MusicLabel1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:16:00.9201187Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MusicSlider1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:16:00.9211184Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).SoundSlider",
+        "OldName": "Menus/TestMenu (Container).MusicSlider1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:16:11.3646609Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).SoundLabel",
+        "OldName": "Menus/TestMenu (Container).MusicLabel1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:16:20.5407032Z"
+      },
+      {
+        "NewName": "DefaultForms/Slider (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:18:17.5236013Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/Slider (Container).Container ContainerInstance in DefaultForms/Slider (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-23T03:18:24.1872383Z"
+      },
+      {
+        "NewName": "Decorations/CautionLines",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-23T03:18:55.9177498Z"
+      },
+      {
+        "NewName": "Decorations/CautionLines (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:19:20.7018444Z"
+      },
+      {
+        "NewName": "DefaultForms/Slider (Container).CautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:20:59.7832535Z"
+      },
+      {
+        "NewName": "DefaultForms/Slider (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:23:32.6993982Z"
+      },
+      {
+        "NewName": "DefaultForms/Slider (Container).FlavorText",
+        "OldName": "DefaultForms/Slider (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:24:08.6603261Z"
+      },
+      {
+        "NewName": "DefaultForms/Slider (Container).FlavorText",
+        "OldName": "DefaultForms/Slider (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:24:08.6613264Z"
+      },
+      {
+        "NewName": "DefaultForms/Slider (Container).FlavorText",
+        "OldName": "DefaultForms/Slider (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:24:08.6623265Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).SoundLabel1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:25:16.2059378Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ControlLabel",
+        "OldName": "Menus/TestMenu (Container).SoundLabel1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:25:21.9336262Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ResolutionComboBox",
+        "OldName": "Menus/TestMenu (Container).ComboBoxInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:25:38.3412639Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ResolutionComboBox1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:25:51.429998Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ControlComboBox",
+        "OldName": "Menus/TestMenu (Container).ResolutionComboBox1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:25:56.7885264Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:26:24.6223819Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ButtonContainer",
+        "OldName": "Menus/TestMenu (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:26:30.4743955Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ButtonConfirmInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:26:42.8568382Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Confirm",
+        "OldName": "Menus/TestMenu (Container).ButtonConfirmInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:27:09.8454097Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ButtonDenyInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:27:14.8584937Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Dney",
+        "OldName": "Menus/TestMenu (Container).ButtonDenyInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:27:47.8854382Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Deny",
+        "OldName": "Menus/TestMenu (Container).Dney",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:27:51.324609Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).DefaultForms/ComboBox ResolutionComboBox in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-23T03:32:11.9578529Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ListBoxInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-23T03:32:17.5719936Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ResolutionBox",
+        "OldName": "Menus/TestMenu (Container).ListBoxInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-23T03:32:25.8535368Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-24T01:12:09.3294917Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1 (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:12:18.1343297Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1 (Container).LineEndAccent",
+        "OldName": "Decorations/CornerAccent1 (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:13:34.88085Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1 (Container).LineEndAccent1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:14:11.3279376Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1 (Container).Line1",
+        "OldName": "Decorations/CornerAccent1 (Container).LineEndAccent1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:14:16.572435Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1 (Container).Line2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:15:37.5356298Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1 (Container).Line3",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:16:44.9097731Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccent1 (Container).Line4",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:17:23.6293574Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).CornerAccent1Instance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:25:36.2052215Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).CornerAccent1Instance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:27:26.2140731Z"
+      },
+      {
+        "NewName": "BorderOnly",
+        "OldName": "LeftAngleBottom1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-24T01:28:43.4246305Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:29:07.7472298Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Border",
+        "OldName": "Menus/TestMenu (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:29:14.0441604Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:29:40.5886789Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).Container ContainerInstance in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-24T01:29:52.4161608Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MenuContainer",
+        "OldName": "Menus/TestMenu (Container).MarginContainer",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:29:57.0201698Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MarginContainer",
+        "OldName": "Menus/TestMenu (Container).MenuContainer",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:30:16.2051884Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:30:23.6445577Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Menu",
+        "OldName": "Menus/TestMenu (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:30:26.7405334Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).AccentTopLeft",
+        "OldName": "Menus/TestMenu (Container).CornerAccent1Instance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:32:00.0769644Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).Container MarginContainer in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-24T01:32:25.6679108Z"
+      },
+      {
+        "NewName": "BracketBorder",
+        "OldName": "BorderOnlyCopy",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-24T01:34:14.8702792Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Background",
+        "OldName": "Menus/TestMenu (Container).Border",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:34:32.7408636Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).AccentBottomRight",
+        "OldName": "Menus/TestMenu (Container).CornerAccent1Instance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:34:48.4447916Z"
+      },
+      {
+        "NewName": "DefaultForms/ScrollViewer (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:36:19.4296226Z"
+      },
+      {
+        "NewName": "DefaultForms/ScrollViewer (Container).Background",
+        "OldName": "DefaultForms/ScrollViewer (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:37:04.2285739Z"
+      },
+      {
+        "NewName": "DefaultForms/ScrollViewer (Container).Background",
+        "OldName": "DefaultForms/ScrollViewer (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:37:04.2295851Z"
+      },
+      {
+        "NewName": "DefaultForms/ScrollViewer (Container).Background",
+        "OldName": "DefaultForms/ScrollViewer (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-24T01:37:04.2305757Z"
+      },
+      {
+        "NewName": "DefaultForms/ListBox (Container).Background",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-24T01:37:58.325982Z"
+      },
+      {
+        "NewName": "Decorations/PrimaryCornerAccent",
+        "OldName": "Decorations/CornerAccent1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-24T01:46:30.1172322Z"
+      },
+      {
+        "NewName": "Decorations/AccentLine",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-25T14:32:30.042209Z"
+      },
+      {
+        "NewName": "Decorations/AccentLine (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T14:33:13.8582459Z"
+      },
+      {
+        "NewName": "Decorations/CenterAccentLine",
+        "OldName": "Decorations/AccentLine",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T14:33:40.8246769Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).AccentBottomRight1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:17:46.4866059Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).AccentTopRight",
+        "OldName": "Menus/TestMenu (Container).AccentBottomRight1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:18:50.7812969Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:20:30.4570338Z"
+      },
+      {
+        "NewName": "LineTwoTone",
+        "OldName": "Underline",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T15:35:23.8549553Z"
+      },
+      {
+        "NewName": "LinePlain",
+        "OldName": "LineGreebleCenter1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T15:35:50.93326Z"
+      },
+      {
+        "NewName": "LineAccentRight",
+        "OldName": "LinePlain1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T15:36:16.563839Z"
+      },
+      {
+        "NewName": "LineAccentCenter",
+        "OldName": "LineGreebleCenter",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T15:36:23.0551249Z"
+      },
+      {
+        "NewName": "Elements/MenuBackground",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-25T15:36:54.2508523Z"
+      },
+      {
+        "NewName": "MenuBackground",
+        "OldName": "Menus/TestMenu",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T15:37:46.6311431Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/MenuBackground",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-25T15:37:49.4663386Z"
+      },
+      {
+        "NewName": "MenuBackground (Container).PanelBackground",
+        "OldName": "MenuBackground (Container).MenuBackground",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:37:58.7957775Z"
+      },
+      {
+        "NewName": "White",
+        "OldName": "None",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T15:38:28.7896894Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-25T15:39:25.5871468Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:39:47.2886607Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).BracketBorder",
+        "OldName": "Elements/DecorativeFrame1 (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:40:21.7163306Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:40:31.0883668Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorativeFrame1 (Container).Elements/Fill FillInstance in Elements/DecorativeFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:41:07.999469Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:41:33.1911841Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).AccentLineRight",
+        "OldName": "Elements/DecorativeFrame1 (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:41:39.1559473Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).Secondary Border",
+        "OldName": "Elements/DecorativeFrame1 (Container).AccentLineRight",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:43:29.9711519Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).Secondary Border1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:44:27.1573117Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).BottomGreeble",
+        "OldName": "Elements/DecorativeFrame1 (Container).Secondary Border1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:44:32.8277659Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).Greeble",
+        "OldName": "Elements/DecorativeFrame1 (Container).BottomGreeble",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:44:42.9317745Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorativeFrame1 (Container).Elements/Fill Greeble in Elements/DecorativeFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:45:59.834197Z"
+      },
+      {
+        "NewName": "Underline",
+        "OldName": "LineTwoTone",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T15:46:26.9156773Z"
+      },
+      {
+        "NewName": "Decorations/AccentLineTR",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-25T15:50:21.96168Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Decorations/AccentLineTR",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-25T15:50:55.7544208Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MenuBackground (Container).Decorations/PrimaryCornerAccent AccentTopLeft in MenuBackground (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:51:04.8993189Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "MenuBackground (Container).Decorations/PrimaryCornerAccent AccentTopRight in MenuBackground (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:51:06.2930735Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Decorations/PrimaryCornerAccent (Container).Sprite LineEndAccent in Decorations/PrimaryCornerAccent (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:52:12.8188681Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Decorations/PrimaryCornerAccent (Container).Sprite Line1 in Decorations/PrimaryCornerAccent (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:52:14.2125043Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Decorations/PrimaryCornerAccent (Container).Sprite Line2 in Decorations/PrimaryCornerAccent (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:52:15.4589417Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Decorations/PrimaryCornerAccent (Container).Sprite Line3 in Decorations/PrimaryCornerAccent (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:52:16.4755065Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Decorations/PrimaryCornerAccent (Container).Sprite Line4 in Decorations/PrimaryCornerAccent (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T15:52:17.5470789Z"
+      },
+      {
+        "NewName": "Decorations/PrimaryCornerAccent (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:52:23.13366Z"
+      },
+      {
+        "NewName": "Decorations/PrimaryCornerAccent (Container).BottomLine",
+        "OldName": "Decorations/PrimaryCornerAccent (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:53:04.4835196Z"
+      },
+      {
+        "NewName": "Decorations/CornerBL",
+        "OldName": "Decorations/PrimaryCornerAccent",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T15:55:17.3843756Z"
+      },
+      {
+        "NewName": "Decorations/CornerBL (Container).BottomLine1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:56:03.9329215Z"
+      },
+      {
+        "NewName": "Decorations/CornerBL (Container).BottomLineAccent",
+        "OldName": "Decorations/CornerBL (Container).BottomLine1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:56:56.3559171Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary",
+        "OldName": "Decorations/CornerBL",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T15:57:06.6735967Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).BottomLine1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:57:10.3496083Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).RightLine",
+        "OldName": "Decorations/CornerAccentPrimary (Container).BottomLine1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:57:13.5239758Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).BottomLineAccent1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:57:30.4293763Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).RightLineAccent",
+        "OldName": "Decorations/CornerAccentPrimary (Container).BottomLineAccent1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:57:35.6842363Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).RightLineAccent1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:57:58.2323104Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).RightLineFlare",
+        "OldName": "Decorations/CornerAccentPrimary (Container).RightLineAccent1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:58:06.8045641Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).RightLine1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T15:58:41.2616445Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).RightLineFlareCap",
+        "OldName": "Decorations/CornerAccentPrimary (Container).RightLineFlare",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:58:47.3887101Z"
+      },
+      {
+        "NewName": "Decorations/CornerAccentPrimary (Container).RightLineFlare",
+        "OldName": "Decorations/CornerAccentPrimary (Container).RightLine1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T15:58:54.668413Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).CornerAccentPrimaryInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:02:16.7567374Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:03:52.6594654Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).RightText",
+        "OldName": "Elements/DecorativeFrame1 (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:06:12.7482048Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).CornerBottomRight",
+        "OldName": "Elements/DecorativeFrame1 (Container).CornerAccentPrimaryInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:06:50.34868Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).CornerBottomRight1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:06:58.4768723Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).CornerTopLeft",
+        "OldName": "Elements/DecorativeFrame1 (Container).CornerBottomRight1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:07:02.5485949Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:09:21.4798394Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).BackgroundSpriteTopLeft",
+        "OldName": "Elements/DecorativeFrame1 (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:11:09.6520204Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:11:18.4219556Z"
+      },
+      {
+        "NewName": "White",
+        "OldName": "None",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T16:13:52.4057694Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).Label",
+        "OldName": "Elements/DecorativeFrame1 (Container).BackgroundSpriteTopLeft",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:14:14.4691768Z"
+      },
+      {
+        "NewName": "DefaultForms/Label (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:14:48.6264268Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/Label (Container).Sprite SpriteInstance in DefaultForms/Label (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T16:14:50.7788855Z"
+      },
+      {
+        "NewName": "DefaultForms/Label (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:14:54.2890396Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorativeFrame1 (Container).Sprite Label in Elements/DecorativeFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T16:21:10.0680301Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorativeFrame1 (Container).Text TextInstance in Elements/DecorativeFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T16:21:10.1140401Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).LabelInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:21:14.1812015Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).TopLeftLabel",
+        "OldName": "Elements/DecorativeFrame1 (Container).LabelInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:22:00.9014358Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).BottomRightLabel",
+        "OldName": "Elements/DecorativeFrame1 (Container).RightText",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:23:25.7572996Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:24:00.2360108Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1 (Container).LeftLine",
+        "OldName": "Elements/DecorativeFrame1 (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:24:11.3972701Z"
+      },
+      {
+        "NewName": "NeutralDark",
+        "OldName": "PrimaryDarkCopy",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T16:28:08.9580711Z"
+      },
+      {
+        "NewName": "Decorations/DecorativeFrame1",
+        "OldName": "Elements/DecorativeFrame1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:45:54.7132332Z"
+      },
+      {
+        "NewName": "Elements/DecorativeFrame1",
+        "OldName": "Decorations/DecorativeFrame1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:46:12.7773622Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1",
+        "OldName": "Elements/DecorativeFrame1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:46:31.2872426Z"
+      },
+      {
+        "NewName": "Decorations/DecorCautionLines",
+        "OldName": "Decorations/CautionLines",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:47:00.4559909Z"
+      },
+      {
+        "NewName": "Elements/DecorCautionLines",
+        "OldName": "Decorations/DecorCautionLines",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:47:04.9587906Z"
+      },
+      {
+        "NewName": "Elements/CornerAccentPrimary",
+        "OldName": "Decorations/CornerAccentPrimary",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:47:13.2173939Z"
+      },
+      {
+        "NewName": "Decorations/DecorCorner1",
+        "OldName": "Elements/CornerAccentPrimary",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:47:23.4563243Z"
+      },
+      {
+        "NewName": "Elements/DecorCorner1",
+        "OldName": "Decorations/DecorCorner1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T16:47:28.8514401Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Decorations/CenterAccentLine",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-25T16:47:36.5992922Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).DecorCautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:48:19.2502288Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame1 (Container).Elements/DecorCautionLines DecorCautionLinesInstance in Elements/DecorFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T16:50:34.92884Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame1 (Container).DefaultForms/Label TopLeftLabel in Elements/DecorFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T16:50:59.6369382Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:51:09.2629743Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:51:19.4575301Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).TextBackground",
+        "OldName": "Elements/DecorFrame1 (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:51:37.6310722Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).SideText",
+        "OldName": "Elements/DecorFrame1 (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:51:43.0773934Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).TopLeftText",
+        "OldName": "Elements/DecorFrame1 (Container).BottomRightLabel",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:53:43.949416Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:54:35.033194Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).BottomText",
+        "OldName": "Elements/DecorFrame1 (Container).TextBackground",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:54:45.3574337Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).FrameLabelText",
+        "OldName": "Elements/DecorFrame1 (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T16:56:48.6695238Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).DecorCautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T16:58:38.7236108Z"
+      },
+      {
+        "NewName": "Menus/MenuBackground",
+        "OldName": "MenuBackground",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T17:02:53.5998624Z"
+      },
+      {
+        "NewName": "TestMenu",
+        "OldName": "Menus/MenuBackground",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T17:03:01.080197Z"
+      },
+      {
+        "NewName": "Menus/TestMenu",
+        "OldName": "TestMenu",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-25T17:03:08.4628214Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).Elements/DecorCorner1 AccentBottomRight in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T17:03:21.7176601Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).Text TextInstance in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T17:03:23.9024006Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).Elements/Fill Background in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T17:03:28.1006195Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).DecorFrame1Instance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T17:03:39.7119118Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).BackgroundFrame",
+        "OldName": "Menus/TestMenu (Container).DecorFrame1Instance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T17:03:44.8455867Z"
+      },
+      {
+        "NewName": "BracketRL",
+        "OldName": "BracketBorder",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T17:05:34.644266Z"
+      },
+      {
+        "NewName": "BracketTB",
+        "OldName": "BracketRL1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-25T17:05:45.3447203Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T17:07:17.4451606Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).BottomLeftBlock",
+        "OldName": "Elements/DecorFrame1 (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T17:07:24.7979242Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).BottomRightText",
+        "OldName": "Elements/DecorFrame1 (Container).BottomText",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T17:07:29.1262901Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).BottomCautionLines",
+        "OldName": "Elements/DecorFrame1 (Container).DecorCautionLinesInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T17:07:35.5903715Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T17:07:43.4472809Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).BottomLine",
+        "OldName": "Elements/DecorFrame1 (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T17:07:46.637932Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame1 (Container).Container SideText in Elements/DecorFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T17:11:55.0817372Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).LeftLine1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T17:24:26.5858973Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).Right",
+        "OldName": "Elements/DecorFrame1 (Container).LeftLine1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T17:24:30.3501013Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).Right1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T17:25:04.9294893Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).RightGreeble",
+        "OldName": "Elements/DecorFrame1 (Container).Right1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T17:25:09.7189182Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).CornerBottomRight1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:29:52.0111899Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).CornerTopRight",
+        "OldName": "Elements/DecorFrame1 (Container).CornerBottomRight1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T20:29:57.2170639Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).CornerBottomRight1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:31:48.1652938Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).CornerBottomLeft",
+        "OldName": "Elements/DecorFrame1 (Container).CornerBottomRight1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T20:31:55.0107896Z"
+      },
+      {
+        "NewName": "Elements/DecorLine",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-25T20:33:37.2558654Z"
+      },
+      {
+        "NewName": "Elements/DecorLine (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:33:44.2966755Z"
+      },
+      {
+        "NewName": "Elements/DecorLine (Container).LineSprite",
+        "OldName": "Elements/DecorLine (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T20:34:24.8267536Z"
+      },
+      {
+        "NewName": "Elements/DecorLine (Container).LineSprite1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:34:55.3488261Z"
+      },
+      {
+        "NewName": "Elements/DecorLine (Container).GreebleSprite",
+        "OldName": "Elements/DecorLine (Container).LineSprite1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T20:34:59.5149394Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).DecorLineInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:36:57.5441739Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).MusicLabel1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:37:53.5326016Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).DefaultForms/Label MusicLabel1 in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T20:37:58.0548898Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).DecorLineInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:37:59.999989Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Divider2",
+        "OldName": "Menus/TestMenu (Container).DecorLineInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T20:38:11.4353697Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Divider1",
+        "OldName": "Menus/TestMenu (Container).DecorLineInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T20:38:16.7148486Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).Divider3",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:38:30.98038Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).ListBoxItemInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T20:41:54.9662875Z"
+      },
+      {
+        "NewName": "Elements/DecorScanlines",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-25T21:08:57.2036571Z"
+      },
+      {
+        "NewName": "Elements/DecorScanlines (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T21:09:06.1245999Z"
+      },
+      {
+        "NewName": "Elements/DecorScanlines (Container).Sprite1",
+        "OldName": "Elements/DecorScanlines (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-25T21:10:37.8720093Z"
+      },
+      {
+        "NewName": "Elements/DecorScanlines (Container).Sprite2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T21:10:42.6399478Z"
+      },
+      {
+        "NewName": "Menus/TestMenu (Container).DecorScanlinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-25T21:11:51.613723Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Menus/TestMenu (Container).Elements/DecorScanlines DecorScanlinesInstance in Menus/TestMenu (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-25T21:12:19.1676664Z"
+      },
+      {
+        "NewName": "Elements/Health",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-26T19:52:35.3871835Z"
+      },
+      {
+        "NewName": "Elements/PercentBar",
+        "OldName": "Elements/Health",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-26T19:53:03.1757876Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T19:53:34.6525593Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).Background",
+        "OldName": "Elements/PercentBar (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T19:53:38.0409028Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).Border",
+        "OldName": "Elements/PercentBar (Container).Background",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T19:54:04.959347Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T19:55:10.7575184Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).BarBackground",
+        "OldName": "Elements/PercentBar (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T19:55:15.0559129Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T19:55:44.7288909Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).FillContainer",
+        "OldName": "Elements/PercentBar (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T19:55:52.3033033Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T19:58:38.4837443Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).fILL",
+        "OldName": "Elements/PercentBar (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T19:58:41.4717237Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).Fill",
+        "OldName": "Elements/PercentBar (Container).fILL",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T19:58:44.9590987Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).DecorCautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T19:58:57.8439513Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/PercentBar (Container).Container Fill in Elements/PercentBar (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T19:59:10.2470505Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).FillBar",
+        "OldName": "Elements/PercentBar (Container).DecorCautionLinesInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T19:59:14.4081454Z"
+      },
+      {
+        "NewName": "Elements/ShipHud",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-26T20:02:39.2220921Z"
+      },
+      {
+        "NewName": "Heart",
+        "OldName": "XCopy",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-26T20:07:42.5741279Z"
+      },
+      {
+        "NewName": "Battery",
+        "OldName": "Heart1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-26T20:07:53.4442607Z"
+      },
+      {
+        "NewName": "Elements/IconPercentBar",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-26T20:08:32.1971863Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/IconPercentBar",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-26T20:08:36.8487969Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-26T20:08:45.2089531Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon (Container).IconInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:09:00.227338Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon (Container).Icon",
+        "OldName": "Elements/PercentBarIcon (Container).IconInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:09:05.3282529Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:11:14.3578904Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).SolidFill",
+        "OldName": "Elements/ShipHud (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:11:44.3442467Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:11:51.8403129Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).HudBorder",
+        "OldName": "Elements/ShipHud (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:11:56.5839141Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).PercentBarInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:12:55.8554302Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:12:59.4266389Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).MarginContainer",
+        "OldName": "Elements/ShipHud (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:13:05.3396178Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Elements/PercentBar PercentBarInstance in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:13:45.7673117Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).PercentBarIconInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:13:48.8129898Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).HealthBar",
+        "OldName": "Elements/ShipHud (Container).PercentBarIconInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:14:23.1598224Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).HealthBar1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:14:27.0986059Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).EnergyBar",
+        "OldName": "Elements/ShipHud (Container).HealthBar1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:14:30.3530648Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:15:13.4253957Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).SectorName",
+        "OldName": "Elements/ShipHud (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:15:21.6197849Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:16:53.6491881Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).Health",
+        "OldName": "Elements/ShipHud (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:17:00.4041212Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Container Health in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:17:15.1754786Z"
+      },
+      {
+        "NewName": "Elements/CashDisplay",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-26T20:19:45.1374857Z"
+      },
+      {
+        "NewName": "Dollar",
+        "OldName": "Battery1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-26T20:21:40.5849921Z"
+      },
+      {
+        "NewName": "Elements/CashDisplay (Container).IconInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:22:13.6333802Z"
+      },
+      {
+        "NewName": "Elements/CashDisplay (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:22:40.6575273Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).CashDisplayInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:25:17.640847Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:26:06.0252433Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).HealthHud",
+        "OldName": "Elements/ShipHud (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:26:13.9366578Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).CashDisplay",
+        "OldName": "Elements/ShipHud (Container).CashDisplayInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:27:15.3284783Z"
+      },
+      {
+        "NewName": "Elements/CashDisplay (Container).CashIcon",
+        "OldName": "Elements/CashDisplay (Container).IconInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:27:23.2404838Z"
+      },
+      {
+        "NewName": "Elements/CashDisplay (Container).CashText",
+        "OldName": "Elements/CashDisplay (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:27:27.5362321Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).PlayerShipHud",
+        "OldName": "Elements/ShipHud (Container).HealthHud",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:29:01.8567113Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).EnergyBar1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:29:08.7644853Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).CargoBar",
+        "OldName": "Elements/ShipHud (Container).EnergyBar1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:29:11.7921921Z"
+      },
+      {
+        "NewName": "Basket",
+        "OldName": "Battery1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-26T20:37:40.2739297Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).DefaultForms/Label SectorName in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:42:01.47297Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorCorner1Instance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:42:09.2035955Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorCornerBL",
+        "OldName": "Elements/ShipHud (Container).DecorCorner1Instance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:43:02.4084606Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorCorner1Instance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:43:12.3950401Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorCornerTR",
+        "OldName": "Elements/ShipHud (Container).DecorCorner1Instance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:43:16.3606112Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorLineInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:45:50.7622745Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).Divider",
+        "OldName": "Elements/ShipHud (Container).DecorLineInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:46:42.7133164Z"
+      },
+      {
+        "NewName": "GameScreenGum.ShipHudInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:47:19.6351569Z"
+      },
+      {
+        "NewName": "GameScreenGum.ShipHud",
+        "OldName": "GameScreenGum.ShipHudInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:47:53.9451871Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:48:09.2300635Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorText",
+        "OldName": "Elements/ShipHud (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:49:09.2332214Z"
+      },
+      {
+        "NewName": "Elements/GameConsole",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-26T20:50:49.987533Z"
+      },
+      {
+        "NewName": "Elements/GameConsole (Container).DecorFrame1Instance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:51:04.3771444Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/GameConsole (Container).Elements/DecorFrame1 DecorFrame1Instance in Elements/GameConsole (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:51:08.27019Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-26T20:51:19.2220872Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame2 (Container).Container MarginContainer in Elements/DecorFrame2 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:52:28.7933391Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame2 (Container).Elements/PercentBarIcon CargoBar in Elements/DecorFrame2 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:52:28.8763583Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame2 (Container).Elements/CashDisplay CashDisplay in Elements/DecorFrame2 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:52:28.8783586Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame2 (Container).Elements/DecorLine Divider in Elements/DecorFrame2 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:52:28.8833606Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame2 (Container).Elements/PercentBarIcon EnergyBar in Elements/DecorFrame2 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:52:28.889362Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame2 (Container).Elements/PercentBarIcon HealthBar in Elements/DecorFrame2 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:52:28.8943633Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorFrame2Instance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:53:13.2036053Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Text DecorText in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:53:17.3066232Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Elements/DecorCorner1 DecorCornerTR in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:53:18.8413808Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Elements/DecorCorner1 DecorCornerBL in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:53:19.7865803Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Container PlayerShipHud in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:53:31.98005Z"
+      },
+      {
+        "NewName": "Elements/ShipHud (Container).DecorFrame",
+        "OldName": "Elements/ShipHud (Container).DecorFrame2Instance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:53:47.0724329Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Elements/Fill HudBorder in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:53:50.447896Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/ShipHud (Container).Elements/Fill SolidFill in Elements/ShipHud (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T20:53:51.9284671Z"
+      },
+      {
+        "NewName": "Elements/GameConsole (Container).DecorFrame2Instance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:55:21.881359Z"
+      },
+      {
+        "NewName": "Elements/GameConsole (Container).DecorFrame",
+        "OldName": "Elements/GameConsole (Container).DecorFrame2Instance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:55:26.057347Z"
+      },
+      {
+        "NewName": "Elements/GameConsole (Container).ListBoxInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:57:40.2084759Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame2 (Container).Background",
+        "OldName": "Elements/DecorFrame2 (Container).PlayerShipHud",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T20:58:41.9443543Z"
+      },
+      {
+        "NewName": "GameScreenGum.GameConsoleInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T20:59:33.1712173Z"
+      },
+      {
+        "NewName": "Elements/DecorFrame1 (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T21:00:35.1714063Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/DecorFrame1 (Container).Elements/Fill FillInstance in Elements/DecorFrame1 (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T21:00:43.6227821Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).FillInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-26T22:20:37.3349527Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1024231Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1054241Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1124266Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1164267Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1214272Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1244281Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1294295Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1334293Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1374312Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.141432Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1454327Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1494338Z"
+      },
+      {
+        "NewName": "DefaultForms/CheckBox (Container).Checkbox",
+        "OldName": "DefaultForms/CheckBox (Container).FillInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-26T22:21:10.1534349Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/CheckBox (Container).Elements/Fill Checkbox in DefaultForms/CheckBox (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T22:22:48.5400943Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/UserControl",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-26T22:55:04.4292309Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/TreeViewToggleButton",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-26T22:55:18.163652Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/Button",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-26T22:55:23.3352486Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/CheckBox",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-26T22:55:28.136403Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DefaultForms/ColoredFrame",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-26T22:55:30.8536793Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Elements/ShipHud ShipHud in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T22:59:01.8078843Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "GameScreenGum.Elements/GameConsole GameConsoleInstance in GameScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-26T22:59:03.3943196Z"
+      },
+      {
+        "NewName": "Controls",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T15:17:58.5513594Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Controls",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-27T15:18:00.9160522Z"
+      },
+      {
+        "NewName": "H3",
+        "OldName": "H2",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:22:31.3672384Z"
+      },
+      {
+        "NewName": "TabBordered",
+        "OldName": "Tab",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:31:48.063473Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T15:33:47.6594486Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T15:38:48.448513Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T15:39:21.3554882Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonBackground",
+        "OldName": "Controls/ButtonStandard (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:26.2628952Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonBackground",
+        "OldName": "Controls/ButtonStandard (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:26.2648876Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonBackground",
+        "OldName": "Controls/ButtonStandard (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:26.2758902Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonBackground",
+        "OldName": "Controls/ButtonStandard (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:26.2818914Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonBackground",
+        "OldName": "Controls/ButtonStandard (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:26.2868923Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonText",
+        "OldName": "Controls/ButtonStandard (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:31.4193609Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonText",
+        "OldName": "Controls/ButtonStandard (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:31.4213719Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonText",
+        "OldName": "Controls/ButtonStandard (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:31.4273646Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonText",
+        "OldName": "Controls/ButtonStandard (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:31.4323656Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).ButtonText",
+        "OldName": "Controls/ButtonStandard (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:39:31.4363663Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreen",
+        "ElementType": "Screens",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-27T15:40:56.4146797Z"
+      },
+      {
+        "NewName": "Controls/Icon",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T15:42:11.5329608Z"
+      },
+      {
+        "NewName": "Controls/Icon (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T15:42:19.2766639Z"
+      },
+      {
+        "NewName": "Controls/Icon (Container).IconSprite",
+        "OldName": "Controls/Icon (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T15:42:23.9007256Z"
+      },
+      {
+        "NewName": "Gamepad",
+        "OldName": "UserCopy",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:44:27.874833Z"
+      },
+      {
+        "NewName": "UserGear",
+        "OldName": "UserSettings",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:46:33.0247755Z"
+      },
+      {
+        "NewName": "FastForward",
+        "OldName": "Forward",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:48:43.0341935Z"
+      },
+      {
+        "NewName": "FitToScreen",
+        "OldName": "FullScreen",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:49:33.9695226Z"
+      },
+      {
+        "NewName": "Close",
+        "OldName": "X",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:50:12.6734146Z"
+      },
+      {
+        "NewName": "Crosshairs",
+        "OldName": "Attack",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T15:53:12.4146994Z"
+      }
+    ],
+    "justi": [],
+    "vchel": []
+  }
+}

@@ -102,7 +102,7 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>StyleCategoryState</Type>
+      <Type>StyleCategory</Type>
       <Name>StyleCategoryState</Name>
       <SetsValue>false</SetsValue>
     </Variable>
