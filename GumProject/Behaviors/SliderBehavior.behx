@@ -4,6 +4,12 @@
   <RequiredVariables />
   <Category>
     <Name>SliderCategory</Name>
+    <State>
+      <Name>Enabled</Name>
+    </State>
+    <State>
+      <Name>Focused</Name>
+    </State>
   </Category>
   <RequiredInstances>
     <InstanceSave>
@@ -16,4 +22,5 @@
       </Behaviors>
     </InstanceSave>
   </RequiredInstances>
+  <RequiredAnimations />
 </BehaviorSave>

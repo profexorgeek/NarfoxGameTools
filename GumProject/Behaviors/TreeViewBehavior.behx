@@ -23,4 +23,5 @@
       <Behaviors />
     </InstanceSave>
   </RequiredInstances>
+  <RequiredAnimations />
 </BehaviorSave>

@@ -28,6 +28,19 @@
     <State>
       <Name>PushedOff</Name>
     </State>
+    <State>
+      <Name>FocusedOn</Name>
+    </State>
+    <State>
+      <Name>FocusedOff</Name>
+    </State>
+    <State>
+      <Name>HighlightedFocusedOn</Name>
+    </State>
+    <State>
+      <Name>HighlightedFocusedOff</Name>
+    </State>
   </Category>
   <RequiredInstances />
+  <RequiredAnimations />
 </BehaviorSave>
