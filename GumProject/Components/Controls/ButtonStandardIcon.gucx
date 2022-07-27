@@ -82,6 +82,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ButtonCategory</Type>
+      <Name>ButtonCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>ButtonText.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">White</Value>

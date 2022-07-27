@@ -164,6 +164,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>StyleCategory</Type>
+      <Name>StyleCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
       <Name>Text</Name>
       <Value xsi:type="xsd:string">Hello</Value>
@@ -543,7 +548,7 @@
     </State>
   </Category>
   <Category>
-    <Name>SizeCategory</Name>
+    <Name>StyleCategory</Name>
     <State>
       <Name>Tiny</Name>
       <Variable>

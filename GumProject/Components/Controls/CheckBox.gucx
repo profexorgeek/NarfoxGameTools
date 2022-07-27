@@ -47,6 +47,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>CheckBoxCategory</Type>
+      <Name>CheckBoxCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>CheckboxText.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">White</Value>
@@ -125,54 +130,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>ColorCategory</Type>
-      <Name>FocusIndicator.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Warning</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>FocusIndicator.Height</Name>
-      <Value xsi:type="xsd:float">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>StyleCategory</Type>
-      <Name>FocusIndicator.StyleCategoryState</Name>
-      <Value xsi:type="xsd:string">Solid</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>bool</Type>
-      <Name>FocusIndicator.Visible</Name>
-      <Value xsi:type="xsd:boolean">false</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>FocusIndicator.Width</Name>
-      <Value xsi:type="xsd:float">32</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>FocusIndicator.Y</Name>
-      <Value xsi:type="xsd:float">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>FocusIndicator.Y Origin</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>FocusIndicator.Y Units</Name>
-      <Value xsi:type="xsd:int">5</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
       <Name>Height</Name>
       <Value xsi:type="xsd:float">32</Value>
@@ -195,6 +152,12 @@
     <State>
       <Name>EnabledOn</Name>
       <Variable>
+        <Type>ColorCategory</Type>
+        <Name>Check.IconColor</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>bool</Type>
         <Name>Check.Visible</Name>
         <Value xsi:type="xsd:boolean">true</Value>
@@ -208,25 +171,19 @@
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>Check.IconColor</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
         <Name>CheckboxText.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
     <State>
       <Name>EnabledOff</Name>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>Check.IconColor</Name>
+        <Value xsi:type="xsd:string">White</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
       <Variable>
         <Type>bool</Type>
         <Name>Check.Visible</Name>
@@ -241,20 +198,8 @@
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>Check.IconColor</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
         <Name>CheckboxText.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -284,12 +229,6 @@
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
     </State>
     <State>
       <Name>DisabledOff</Name>
@@ -317,12 +256,6 @@
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
     </State>
     <State>
       <Name>HighlightedOn</Name>
@@ -341,19 +274,13 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>CheckboxBackground.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
+        <Value xsi:type="xsd:string">PrimaryLight</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
         <Name>CheckboxText.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">true</Value>
+        <Value xsi:type="xsd:string">PrimaryLight</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -374,19 +301,13 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>CheckboxBackground.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
+        <Value xsi:type="xsd:string">PrimaryLight</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
         <Name>CheckboxText.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">true</Value>
+        <Value xsi:type="xsd:string">PrimaryLight</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -416,12 +337,6 @@
         <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
     </State>
     <State>
       <Name>PushedOff</Name>
@@ -449,12 +364,6 @@
         <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
     </State>
   </Category>
   <Instance>
@@ -470,11 +379,6 @@
   <Instance>
     <Name>Check</Name>
     <BaseType>Elements/Icon</BaseType>
-    <DefinedByBase>false</DefinedByBase>
-  </Instance>
-  <Instance>
-    <Name>FocusIndicator</Name>
-    <BaseType>NineSlice</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors>

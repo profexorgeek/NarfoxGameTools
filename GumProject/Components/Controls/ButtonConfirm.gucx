@@ -77,6 +77,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ButtonCategory</Type>
+      <Name>ButtonCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>ButtonText.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">White</Value>
@@ -103,7 +108,7 @@
     <Variable>
       <Type>string</Type>
       <Name>ButtonText.Text</Name>
-      <Value xsi:type="xsd:string">Click Me</Value>
+      <Value xsi:type="xsd:string">Okay</Value>
       <ExposedAsName>ButtonDisplayText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
