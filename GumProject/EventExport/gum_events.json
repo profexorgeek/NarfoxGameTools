@@ -5586,6 +5586,167 @@
         "ElementType": "Screens",
         "EventType": 5,
         "TimestampUtc": "2022-07-27T23:39:14.4419205Z"
+      },
+      {
+        "NewName": "DemoScreen.MenuTitle2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7509776Z"
+      },
+      {
+        "NewName": "DemoScreen.TitleText2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7549782Z"
+      },
+      {
+        "NewName": "DemoScreen.ButtonCloseInstance2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7609799Z"
+      },
+      {
+        "NewName": "DemoScreen.DividerInstance5",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7659809Z"
+      },
+      {
+        "NewName": "DemoScreen.Background2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7699818Z"
+      },
+      {
+        "NewName": "DemoScreen.DemoDialog1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7809837Z"
+      },
+      {
+        "NewName": "DemoScreen.MarginContainer1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7849852Z"
+      },
+      {
+        "NewName": "DemoScreen.LabelInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7889862Z"
+      },
+      {
+        "NewName": "DemoScreen.TextBoxInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.7929871Z"
+      },
+      {
+        "NewName": "DemoScreen.ButtonConfirmInstance2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:42:43.797988Z"
+      },
+      {
+        "NewName": "DemoScreen.NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:43:05.596992Z"
+      },
+      {
+        "NewName": "DemoScreen.Hud",
+        "OldName": "DemoScreen.NineSliceInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T23:43:09.8003069Z"
+      },
+      {
+        "NewName": "DemoScreen.PercentBarInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:44:09.0352995Z"
+      },
+      {
+        "NewName": "DemoScreen.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:44:16.198098Z"
+      },
+      {
+        "NewName": "DemoScreen.PercentBarInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:45:34.0740039Z"
+      },
+      {
+        "NewName": "DemoScreen.PercentBarInstance2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:45:46.5149496Z"
+      },
+      {
+        "NewName": "DemoScreen.MenuTitle2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:45:55.6260254Z"
+      },
+      {
+        "NewName": "DemoScreen.TitleText2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:45:55.6300261Z"
+      },
+      {
+        "NewName": "DemoScreen.ButtonCloseInstance2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:45:55.6390281Z"
+      },
+      {
+        "NewName": "DemoScreen.DividerInstance5",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:45:55.6540312Z"
+      },
+      {
+        "NewName": "DemoScreen.PercentBarInstance3",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:47:09.4898945Z"
+      },
+      {
+        "NewName": "DemoScreen.PercentBarInstance4",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:47:14.602976Z"
+      },
+      {
+        "NewName": "DemoScreen.PercentBarInstance5",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:47:20.139046Z"
       }
     ],
     "justi": [],
