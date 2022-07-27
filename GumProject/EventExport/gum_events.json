@@ -4298,6 +4298,531 @@
         "ElementType": "Components",
         "EventType": 5,
         "TimestampUtc": "2022-07-27T21:25:58.8548378Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T21:56:09.5654193Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.3691852Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.3721856Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.3781868Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.3901898Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.395191Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.4001918Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.4051926Z"
+      },
+      {
+        "NewName": "Controls/ButtonClose (Container).FocusedIndicator",
+        "OldName": "Controls/ButtonClose (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T21:56:18.4101947Z"
+      },
+      {
+        "NewName": "Controls/ButtonConfirm (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:08:50.4318581Z"
+      },
+      {
+        "NewName": "Controls/ButtonDeny (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:16:14.4061395Z"
+      },
+      {
+        "NewName": "Controls/ButtonIcon (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:17:17.6778842Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandard (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:18:47.7669169Z"
+      },
+      {
+        "NewName": "Controls/ButtonStandardIcon (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:18:52.1748754Z"
+      },
+      {
+        "NewName": "Controls/CheckBox (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:18:56.2299266Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:23:23.1508431Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4381436Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4401439Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4471457Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4521468Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4571478Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4621489Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4671504Z"
+      },
+      {
+        "NewName": "Controls/ComboBox (Container).Background",
+        "OldName": "Controls/ComboBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:24:18.4711513Z"
+      },
+      {
+        "NewName": "DisabledFocusedOff",
+        "OldName": "",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T22:24:56.9140721Z"
+      },
+      {
+        "NewName": "Controls/ListBox (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:27:29.5665403Z"
+      },
+      {
+        "NewName": "Controls/ListBoxItem (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:28:20.671148Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:29:01.5506728Z"
+      },
+      {
+        "NewName": "Controls/RadioButton (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:30:59.0712111Z"
+      },
+      {
+        "NewName": "DisabledFocusedOn",
+        "OldName": "DisabledOn1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T22:34:20.6511504Z"
+      },
+      {
+        "NewName": "DisabledFocusedOff",
+        "OldName": "DisabledOff1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-27T22:34:35.832288Z"
+      },
+      {
+        "NewName": "Controls/Slider (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:39:58.9804305Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:45:45.6661988Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).SelectionInstance",
+        "OldName": "Controls/PasswordBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:45:50.3341793Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).SelectionInstance",
+        "OldName": "Controls/PasswordBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:45:50.3371802Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).SelectionInstance",
+        "OldName": "Controls/PasswordBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:45:50.3441817Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).SelectionInstance",
+        "OldName": "Controls/PasswordBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:45:50.3491829Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).SelectionInstance",
+        "OldName": "Controls/PasswordBox (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:45:50.3531838Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).TextInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:47:03.7628106Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).PlaceholderTextInstance",
+        "OldName": "Controls/PasswordBox (Container).TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:47:24.1662691Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).PlaceholderTextInstance",
+        "OldName": "Controls/PasswordBox (Container).TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:47:24.1692805Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).PlaceholderTextInstance",
+        "OldName": "Controls/PasswordBox (Container).TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:47:24.1762728Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).PlaceholderTextInstance",
+        "OldName": "Controls/PasswordBox (Container).TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:47:24.1812747Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox (Container).PlaceholderTextInstance",
+        "OldName": "Controls/PasswordBox (Container).TextInstance1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:47:24.1862754Z"
+      },
+      {
+        "NewName": "Controls/PasswordBox1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T22:48:08.8616931Z"
+      },
+      {
+        "NewName": "Controls/TextBox",
+        "OldName": "Controls/PasswordBox1",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-27T22:48:23.4472245Z"
+      },
+      {
+        "NewName": "Controls/ButtonToggle",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T22:52:44.0749303Z"
+      },
+      {
+        "NewName": "Controls/ButtonToggle (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:53:29.5474755Z"
+      },
+      {
+        "NewName": "Controls/TreeView",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T22:53:47.5192431Z"
+      },
+      {
+        "NewName": "Controls/TreeView (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:54:02.2147826Z"
+      },
+      {
+        "NewName": "Controls/TreeViewItem",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T22:54:38.3046572Z"
+      },
+      {
+        "NewName": "Controls/TreeViewItem (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:54:45.5932989Z"
+      },
+      {
+        "NewName": "Controls/UserControl",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T22:58:24.9463849Z"
+      },
+      {
+        "NewName": "Controls/UserControl (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:58:44.6471952Z"
+      },
+      {
+        "NewName": "Elements/PercentBar",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T22:59:18.9641246Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:59:37.7118999Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).Background",
+        "OldName": "Elements/PercentBar (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:59:43.6368514Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T22:59:54.7997582Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).BarContainer",
+        "OldName": "Elements/PercentBar (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T22:59:59.2062016Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:00:02.0871079Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).Bar",
+        "OldName": "Elements/PercentBar (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T23:00:54.4543006Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T23:02:21.3872206Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon (Container).IconInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:02:52.2119798Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon (Container).ContainerInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:03:59.8471368Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon (Container).StackContainer",
+        "OldName": "Elements/PercentBarIcon (Container).ContainerInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T23:04:04.686747Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Elements/PercentBarIcon (Container).Container StackContainer in Elements/PercentBarIcon (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-27T23:04:42.8870328Z"
+      },
+      {
+        "NewName": "Elements/Divider",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T23:09:03.2320249Z"
+      },
+      {
+        "NewName": "Elements/Divider (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:09:15.5006474Z"
+      },
+      {
+        "NewName": "Elements/Divider (Container).AccentLeft",
+        "OldName": "Elements/Divider (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T23:10:00.9751597Z"
+      },
+      {
+        "NewName": "Elements/Divider (Container).AccentLeft1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:10:32.6399343Z"
+      },
+      {
+        "NewName": "Elements/Divider (Container).AccentRight",
+        "OldName": "Elements/Divider (Container).AccentLeft1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T23:10:37.3025644Z"
+      },
+      {
+        "NewName": "Elements/Divider (Container).AccentLeft1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-27T23:10:49.2351696Z"
+      },
+      {
+        "NewName": "Elements/Divider (Container).Line",
+        "OldName": "Elements/Divider (Container).AccentLeft1",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-27T23:10:53.5432208Z"
+      },
+      {
+        "NewName": "Demo",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-27T23:12:02.6792958Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Demo",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-27T23:12:05.4408413Z"
       }
     ],
     "justi": [],

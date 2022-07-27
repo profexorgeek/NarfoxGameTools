@@ -1,13 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ComponentSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>Controls/ComboBox</Name>
+  <Name>Controls/TextBox</Name>
   <BaseType>Container</BaseType>
   <State>
     <Name>Default</Name>
     <Variable>
-      <Type>ComboBoxCategory</Type>
-      <Name>ComboBoxCategoryState</Name>
-      <SetsValue>false</SetsValue>
+      <Type>ColorCategory</Type>
+      <Name>Background.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">DarkGray</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>StyleCategory</Type>
+      <Name>Background.StyleCategoryState</Name>
+      <Value xsi:type="xsd:string">Bordered</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>CaretInstance.Height</Name>
+      <Value xsi:type="xsd:float">24</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>IconCategory</Type>
+      <Name>CaretInstance.IconCategoryState</Name>
+      <Value xsi:type="xsd:string">CursorText</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>ColorCategory</Type>
+      <Name>CaretInstance.IconColor</Name>
+      <Value xsi:type="xsd:string">Primary</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>CaretInstance.Width</Name>
+      <Value xsi:type="xsd:float">24</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>CaretInstance.X</Name>
+      <Value xsi:type="xsd:float">18</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>CaretInstance.Y</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>ColorCategory</Type>
@@ -69,159 +112,123 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>float</Type>
-      <Name>IconInstance.Height</Name>
-      <Value xsi:type="xsd:float">24</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>IconCategory</Type>
-      <Name>IconInstance.IconCategoryState</Name>
-      <Value xsi:type="xsd:string">Arrow2</Value>
-      <SetsValue>true</SetsValue>
+      <Type>PasswordBoxCategory</Type>
+      <Name>PasswordBoxCategoryState</Name>
+      <SetsValue>false</SetsValue>
     </Variable>
     <Variable>
       <Type>ColorCategory</Type>
-      <Name>IconInstance.IconColor</Name>
-      <Value xsi:type="xsd:string">Primary</Value>
+      <Name>PlaceholderTextInstance.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>IconInstance.Rotation</Name>
-      <Value xsi:type="xsd:float">-90</Value>
+      <Name>PlaceholderTextInstance.Height</Name>
+      <Value xsi:type="xsd:float">-4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>PlaceholderTextInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>PlaceholderTextInstance.Text</Name>
+      <Value xsi:type="xsd:string">Text Placeholder</Value>
+      <ExposedAsName>PlaceholderText</ExposedAsName>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>VerticalAlignment</Type>
+      <Name>PlaceholderTextInstance.VerticalAlignment</Name>
+      <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>IconInstance.Width</Name>
-      <Value xsi:type="xsd:float">24</Value>
+      <Name>PlaceholderTextInstance.Width</Name>
+      <Value xsi:type="xsd:float">-8</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>PlaceholderTextInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>IconInstance.X Origin</Name>
+      <Name>PlaceholderTextInstance.X Origin</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>IconInstance.X Units</Name>
-      <Value xsi:type="xsd:int">4</Value>
+      <Name>PlaceholderTextInstance.X Units</Name>
+      <Value xsi:type="xsd:int">6</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>IconInstance.Y Origin</Name>
+      <Name>PlaceholderTextInstance.Y Origin</Name>
+      <Value xsi:type="xsd:int">1</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>PositionUnitType</Type>
+      <Name>PlaceholderTextInstance.Y Units</Name>
+      <Value xsi:type="xsd:int">7</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>ColorCategory</Type>
+      <Name>SelectionInstance.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">Accent</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>SelectionInstance.Height</Name>
+      <Value xsi:type="xsd:float">-4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>SelectionInstance.Width</Name>
+      <Value xsi:type="xsd:float">7</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>SelectionInstance.Width Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>SelectionInstance.X</Name>
+      <Value xsi:type="xsd:float">15</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>HorizontalAlignment</Type>
+      <Name>SelectionInstance.X Origin</Name>
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>IconInstance.Y Units</Name>
-      <Value xsi:type="xsd:int">7</Value>
+      <Name>SelectionInstance.X Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ListBoxInstance.Height</Name>
-      <Value xsi:type="xsd:float">128</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>bool</Type>
-      <Name>ListBoxInstance.Visible</Name>
-      <Value xsi:type="xsd:boolean">true</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>ListBoxInstance.Width</Name>
+      <Name>SelectionInstance.Y</Name>
       <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>ListBoxInstance.Width Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>ListBoxInstance.Y</Name>
-      <Value xsi:type="xsd:float">28</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>ColorCategory</Type>
-      <Name>Background.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">DarkGray</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Background.Height</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>Background.Height Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>StyleCategory</Type>
-      <Name>Background.StyleCategoryState</Name>
-      <Value xsi:type="xsd:string">Solid</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Background.Width</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>Background.Width Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Background.X</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>HorizontalAlignment</Type>
-      <Name>Background.X Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>Background.X Units</Name>
-      <Value xsi:type="xsd:int">6</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Background.Y</Name>
-      <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>Background.Y Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>Background.Y Units</Name>
-      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -236,6 +243,12 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>TextInstance.Height</Name>
+      <Value xsi:type="xsd:float">-4</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>DimensionUnitType</Type>
       <Name>TextInstance.Height Units</Name>
       <Value xsi:type="xsd:int">2</Value>
@@ -244,19 +257,13 @@
     <Variable>
       <Type>StyleCategory</Type>
       <Name>TextInstance.StyleCategoryState</Name>
-      <Value xsi:type="xsd:string">Strong</Value>
+      <Value xsi:type="xsd:string">Normal</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
       <Name>TextInstance.Text</Name>
-      <Value xsi:type="xsd:string">Selected Item</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>TextInstance.VerticalAlignment</Name>
-      <Value xsi:type="xsd:int">1</Value>
+      <Value xsi:type="xsd:string"></Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -303,19 +310,25 @@
     </Variable>
   </State>
   <Category>
-    <Name>ComboBoxCategory</Name>
+    <Name>TextBoxCategory</Name>
     <State>
       <Name>Enabled</Name>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>IconInstance.IconColor</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
+        <Name>PlaceholderTextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>Background.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">DarkGray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -329,7 +342,7 @@
       <Name>Disabled</Name>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>IconInstance.IconColor</Name>
+        <Name>PlaceholderTextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -337,6 +350,12 @@
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>Background.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">DarkGray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -350,14 +369,20 @@
       <Name>Highlighted</Name>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>IconInstance.IconColor</Name>
-        <Value xsi:type="xsd:string">PrimaryLight</Value>
+        <Name>Background.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>PlaceholderTextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">PrimaryLight</Value>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -368,28 +393,13 @@
       </Variable>
     </State>
     <State>
-      <Name>Pushed</Name>
+      <Name>Selected</Name>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>IconInstance.IconColor</Name>
-        <Value xsi:type="xsd:string">PrimaryDark</Value>
+        <Name>Background.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">DarkGray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">PrimaryDark</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-    </State>
-    <State>
-      <Name>HighlightedFocused</Name>
       <Variable>
         <Type>bool</Type>
         <Name>FocusedIndicator.Visible</Name>
@@ -398,50 +408,8 @@
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>IconInstance.IconColor</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
+        <Name>PlaceholderTextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-    </State>
-    <State>
-      <Name>Focused</Name>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">true</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
-        <Name>IconInstance.IconColor</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-    </State>
-    <State>
-      <Name>DisabledFocused</Name>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">true</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
-        <Name>IconInstance.IconColor</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -452,8 +420,22 @@
       </Variable>
     </State>
   </Category>
+  <Category>
+    <Name>LineModeCategory</Name>
+    <State>
+      <Name>Single</Name>
+    </State>
+    <State>
+      <Name>Multi</Name>
+    </State>
+  </Category>
   <Instance>
     <Name>Background</Name>
+    <BaseType>NineSlice</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Instance>
+    <Name>SelectionInstance</Name>
     <BaseType>NineSlice</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
@@ -463,13 +445,13 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ListBoxInstance</Name>
-    <BaseType>Controls/ListBox</BaseType>
+    <Name>CaretInstance</Name>
+    <BaseType>Elements/Icon</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>IconInstance</Name>
-    <BaseType>Elements/Icon</BaseType>
+    <Name>PlaceholderTextInstance</Name>
+    <BaseType>Text</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
@@ -479,7 +461,7 @@
   </Instance>
   <Behaviors>
     <ElementBehaviorReference>
-      <BehaviorName>ComboBoxBehavior</BehaviorName>
+      <BehaviorName>TextBoxBehavior</BehaviorName>
     </ElementBehaviorReference>
   </Behaviors>
 </ComponentSave>

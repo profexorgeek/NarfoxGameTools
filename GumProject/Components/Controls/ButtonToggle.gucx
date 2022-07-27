@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ComponentSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Name>Controls/ButtonToggle</Name>
+  <BaseType>Container</BaseType>
+  <State>
+    <Name>Default</Name>
+    <Variable>
+      <Type>State</Type>
+      <Name>State</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>ColorCategory</Type>
+      <Name>TextInstance.ColorCategoryState</Name>
+      <Value xsi:type="xsd:string">Danger</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>TextInstance.Text</Name>
+      <Value xsi:type="xsd:string">Not Implemented</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+  </State>
+  <Category>
+    <Name>ToggleCategory</Name>
+    <State>
+      <Name>EnabledOn</Name>
+    </State>
+    <State>
+      <Name>EnabledOff</Name>
+    </State>
+    <State>
+      <Name>DisabledOn</Name>
+    </State>
+    <State>
+      <Name>DisabledOff</Name>
+    </State>
+    <State>
+      <Name>HighlightedOn</Name>
+    </State>
+    <State>
+      <Name>HighlightedOff</Name>
+    </State>
+    <State>
+      <Name>PushedOn</Name>
+    </State>
+    <State>
+      <Name>PushedOff</Name>
+    </State>
+  </Category>
+  <Instance>
+    <Name>TextInstance</Name>
+    <BaseType>Text</BaseType>
+    <DefinedByBase>false</DefinedByBase>
+  </Instance>
+  <Behaviors>
+    <ElementBehaviorReference>
+      <BehaviorName>ToggleBehavior</BehaviorName>
+    </ElementBehaviorReference>
+  </Behaviors>
+</ComponentSave>
