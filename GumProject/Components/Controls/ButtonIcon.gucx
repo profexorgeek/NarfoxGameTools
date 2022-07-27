@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ComponentSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>Controls/ButtonStandard</Name>
+  <Name>Controls/ButtonIcon</Name>
   <BaseType>Container</BaseType>
   <State>
     <Name>Default</Name>
@@ -20,6 +20,11 @@
       <Type>DimensionUnitType</Type>
       <Name>Background.Height Units</Name>
       <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>Background.Parent</Name>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -77,52 +82,69 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>ColorCategory</Type>
-      <Name>ButtonText.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">White</Value>
+      <Type>float</Type>
+      <Name>Height</Name>
+      <Value xsi:type="xsd:float">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ButtonText.Height Units</Name>
+      <Name>Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Icon.Height</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>Icon.Height Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>IconCategory</Type>
+      <Name>Icon.IconCategoryState</Name>
+      <ExposedAsName>IconCategory</ExposedAsName>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Icon.Width</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>Icon.Width Units</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>ButtonText.HorizontalAlignment</Name>
+      <Name>Icon.X Origin</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>SizeCategory</Type>
-      <Name>ButtonText.SizeCategoryState</Name>
-      <Value xsi:type="xsd:string">Strong</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>ButtonText.Text</Name>
-      <Value xsi:type="xsd:string">Click Me</Value>
-      <ExposedAsName>ButtonDisplayText</ExposedAsName>
+      <Type>PositionUnitType</Type>
+      <Name>Icon.X Units</Name>
+      <Value xsi:type="xsd:int">6</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>ButtonText.VerticalAlignment</Name>
+      <Name>Icon.Y Origin</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>DimensionUnitType</Type>
-      <Name>ButtonText.Width Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Height</Name>
-      <Value xsi:type="xsd:float">32</Value>
+      <Type>PositionUnitType</Type>
+      <Name>Icon.Y Units</Name>
+      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -133,7 +155,13 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">128</Value>
+      <Value xsi:type="xsd:float">32</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>Width Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
@@ -149,8 +177,9 @@
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>ButtonText.ColorCategoryState</Name>
+        <Name>Icon.IconColor</Name>
         <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -163,8 +192,8 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>ColorCategory</Type>
-        <Name>ButtonText.ColorCategoryState</Name>
+        <Type>string</Type>
+        <Name>Icon.IconColor</Name>
         <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -179,8 +208,9 @@
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>ButtonText.ColorCategoryState</Name>
+        <Name>Icon.IconColor</Name>
         <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -194,8 +224,9 @@
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>ButtonText.ColorCategoryState</Name>
+        <Name>Icon.IconColor</Name>
         <Value xsi:type="xsd:string">White</Value>
+        <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -206,8 +237,8 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ButtonText</Name>
-    <BaseType>Text</BaseType>
+    <Name>Icon</Name>
+    <BaseType>Elements/Icon</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Behaviors>

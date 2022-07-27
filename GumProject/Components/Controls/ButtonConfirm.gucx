@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ComponentSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>Controls/ButtonStandard</Name>
+  <Name>Controls/ButtonConfirm</Name>
   <BaseType>Container</BaseType>
   <State>
     <Name>Default</Name>
     <Variable>
       <Type>ColorCategory</Type>
       <Name>Background.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Primary</Value>
+      <Value xsi:type="xsd:string">Success</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -144,7 +144,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Background.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Primary</Value>
+        <Value xsi:type="xsd:string">Success</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -189,7 +189,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Background.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">PrimaryDark</Value>
+        <Value xsi:type="xsd:string">Warning</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
