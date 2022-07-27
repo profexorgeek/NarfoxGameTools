@@ -159,6 +159,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ScrollBarVisibility</Type>
+      <Name>ScrollBarVisibilityState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>State</Type>
       <Name>State</Name>
       <SetsValue>true</SetsValue>

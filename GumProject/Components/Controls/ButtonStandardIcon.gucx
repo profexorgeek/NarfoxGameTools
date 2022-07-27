@@ -146,39 +146,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>float</Type>
-      <Name>Height</Name>
-      <Value xsi:type="xsd:float">32</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>IconCategory</Type>
-      <Name>Icon.IconCategoryState</Name>
-      <ExposedAsName>ButtonIcon</ExposedAsName>
-      <SetsValue>false</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>Icon.Parent</Name>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>State</Type>
-      <Name>State</Name>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Width</Name>
-      <Value xsi:type="xsd:float">128</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>FocusedIndicator.Parent</Name>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>ColorCategory</Type>
       <Name>FocusedIndicator.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">Warning</Value>
@@ -194,6 +161,11 @@
       <Type>DimensionUnitType</Type>
       <Name>FocusedIndicator.Height Units</Name>
       <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>FocusedIndicator.Parent</Name>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -226,6 +198,34 @@
       <Value xsi:type="xsd:int">5</Value>
       <SetsValue>true</SetsValue>
     </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Height</Name>
+      <Value xsi:type="xsd:float">32</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>IconCategory</Type>
+      <Name>Icon.IconCategoryState</Name>
+      <ExposedAsName>ButtonIcon</ExposedAsName>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>Icon.Parent</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>State</Type>
+      <Name>State</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Width</Name>
+      <Value xsi:type="xsd:float">128</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
   </State>
   <Category>
     <Name>ButtonCategory</Name>
@@ -244,16 +244,16 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
         <Value xsi:type="xsd:string">White</Value>
         <ExposedAsName>IconColor</ExposedAsName>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -272,15 +272,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>string</Type>
-        <Name>Icon.IconColor</Name>
-        <Value xsi:type="xsd:string">Gray</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>FocusedIndicator.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>string</Type>
+        <Name>Icon.IconColor</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -299,16 +299,16 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
         <Value xsi:type="xsd:string">White</Value>
         <ExposedAsName>IconColor</ExposedAsName>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -327,16 +327,16 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
         <Value xsi:type="xsd:string">White</Value>
         <ExposedAsName>IconColor</ExposedAsName>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

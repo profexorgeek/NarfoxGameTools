@@ -10,12 +10,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>string</Type>
-      <Name>TextInstance.Text</Name>
-      <Value xsi:type="xsd:string">Not Implemented</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>ColorCategory</Type>
       <Name>TextInstance.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">Danger</Value>
@@ -24,6 +18,12 @@
     <Variable>
       <Type>string</Type>
       <Name>TextInstance.Parent</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>TextInstance.Text</Name>
+      <Value xsi:type="xsd:string">Not Implemented</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>

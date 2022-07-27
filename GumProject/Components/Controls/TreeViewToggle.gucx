@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ComponentSave xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <Name>Controls/ButtonToggle</Name>
+  <Name>Controls/TreeViewToggle</Name>
   <BaseType>Container</BaseType>
   <State>
     <Name>Default</Name>
@@ -20,6 +20,11 @@
       <Name>TextInstance.Text</Name>
       <Value xsi:type="xsd:string">Not Implemented</Value>
       <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>ToggleCategory</Type>
+      <Name>ToggleCategoryState</Name>
+      <SetsValue>false</SetsValue>
     </Variable>
   </State>
   <Category>

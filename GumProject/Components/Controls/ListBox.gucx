@@ -208,6 +208,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ListBoxCategory</Type>
+      <Name>ListBoxCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>State</Type>
       <Name>State</Name>
       <SetsValue>true</SetsValue>
@@ -249,14 +254,14 @@
       <Name>Enabled</Name>
       <Variable>
         <Type>bool</Type>
-        <Name>VerticalScrollBarInstance.Visible</Name>
-        <Value xsi:type="xsd:boolean">true</Value>
+        <Name>FocusedIndicator.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
+        <Name>VerticalScrollBarInstance.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -264,13 +269,13 @@
       <Name>Disabled</Name>
       <Variable>
         <Type>bool</Type>
-        <Name>VerticalScrollBarInstance.Visible</Name>
+        <Name>FocusedIndicator.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
         <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
+        <Name>VerticalScrollBarInstance.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>

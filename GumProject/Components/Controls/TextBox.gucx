@@ -112,6 +112,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>LineModeCategory</Type>
+      <Name>LineModeCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>PasswordBoxCategory</Type>
       <Name>PasswordBoxCategoryState</Name>
       <SetsValue>false</SetsValue>
@@ -237,6 +242,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>TextBoxCategory</Type>
+      <Name>TextBoxCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>TextInstance.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">White</Value>
@@ -315,8 +325,14 @@
       <Name>Enabled</Name>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Name>Background.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">DarkGray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -327,14 +343,8 @@
       </Variable>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>Background.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">DarkGray</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -342,18 +352,6 @@
       <Name>Disabled</Name>
       <Variable>
         <Type>ColorCategory</Type>
-        <Name>PlaceholderTextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Gray</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Gray</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>ColorCategory</Type>
         <Name>Background.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">DarkGray</Value>
         <SetsValue>true</SetsValue>
@@ -362,6 +360,18 @@
         <Type>bool</Type>
         <Name>FocusedIndicator.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>PlaceholderTextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>TextInstance.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -374,6 +384,12 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
+        <Type>bool</Type>
+        <Name>FocusedIndicator.Visible</Name>
+        <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
         <Type>ColorCategory</Type>
         <Name>PlaceholderTextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
@@ -383,12 +399,6 @@
         <Type>ColorCategory</Type>
         <Name>TextInstance.ColorCategoryState</Name>
         <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
-        <Type>bool</Type>
-        <Name>FocusedIndicator.Visible</Name>
-        <Value xsi:type="xsd:boolean">false</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>

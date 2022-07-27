@@ -109,6 +109,7 @@
       <Type>string</Type>
       <Name>CheckboxText.Text</Name>
       <Value xsi:type="xsd:string">Checkbox Label</Value>
+      <ExposedAsName>CheckboxDisplayText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -154,28 +155,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>float</Type>
-      <Name>Height</Name>
-      <Value xsi:type="xsd:float">32</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>State</Type>
-      <Name>State</Name>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>float</Type>
-      <Name>Width</Name>
-      <Value xsi:type="xsd:float">128</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>FocusedIndicator.Parent</Name>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>ColorCategory</Type>
       <Name>FocusedIndicator.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">Warning</Value>
@@ -191,6 +170,11 @@
       <Type>DimensionUnitType</Type>
       <Name>FocusedIndicator.Height Units</Name>
       <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>string</Type>
+      <Name>FocusedIndicator.Parent</Name>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -221,6 +205,23 @@
       <Type>PositionUnitType</Type>
       <Name>FocusedIndicator.Y Units</Name>
       <Value xsi:type="xsd:int">5</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Height</Name>
+      <Value xsi:type="xsd:float">32</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>State</Type>
+      <Name>State</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>Width</Name>
+      <Value xsi:type="xsd:float">128</Value>
       <SetsValue>true</SetsValue>
     </Variable>
   </State>
