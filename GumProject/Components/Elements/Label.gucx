@@ -17,11 +17,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>State</Type>
-      <Name>State</Name>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>ColorCategory</Type>
       <Name>LabelTextInstance.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">White</Value>
@@ -45,6 +40,11 @@
       <Type>DimensionUnitType</Type>
       <Name>LabelTextInstance.Width Units</Name>
       <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>State</Type>
+      <Name>State</Name>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

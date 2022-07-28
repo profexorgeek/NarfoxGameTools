@@ -147,6 +147,11 @@
       <SetsValue>false</SetsValue>
     </Variable>
     <Variable>
+      <Type>State</Type>
+      <Name>State</Name>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>TextInstance.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">White</Value>
@@ -211,11 +216,6 @@
       <Type>PositionUnitType</Type>
       <Name>TextInstance.X Units</Name>
       <Value xsi:type="xsd:int">6</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>State</Type>
-      <Name>State</Name>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

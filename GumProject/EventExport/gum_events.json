@@ -5747,6 +5747,482 @@
         "ElementType": "Screens",
         "EventType": 5,
         "TimestampUtc": "2022-07-27T23:47:20.139046Z"
+      },
+      {
+        "NewName": "Elements/CautionLines",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-28T19:28:13.2820557Z"
+      },
+      {
+        "NewName": "Elements/CautionLines (Container).SpriteInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:28:19.7010219Z"
+      },
+      {
+        "NewName": "Elements/CautionLines (Container).LinesSprite",
+        "OldName": "Elements/CautionLines (Container).SpriteInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:28:38.7906864Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).CautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:30:12.8475175Z"
+      },
+      {
+        "NewName": "BarDecorCategory",
+        "OldName": "BarDecor",
+        "ElementType": "Components",
+        "EventType": 4,
+        "TimestampUtc": "2022-07-28T19:30:56.5299194Z"
+      },
+      {
+        "NewName": "Elements/VerticalLines",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-28T19:31:25.0232095Z"
+      },
+      {
+        "NewName": "Elements/PercentBar (Container).VerticalLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:31:48.4324248Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon (Container).CautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:38:38.0726119Z"
+      },
+      {
+        "NewName": "Elements/PercentBarIcon (Container).VerticalLinesInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:38:40.8847363Z"
+      },
+      {
+        "NewName": "DemoScreenGum.PercentBarInstance6",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:42:44.2827903Z"
+      },
+      {
+        "NewName": "DemoScreenGum.PercentBarInstance7",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:43:33.3428518Z"
+      },
+      {
+        "NewName": "DemoScreenGum.PercentBarInstance8",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:43:47.0148677Z"
+      },
+      {
+        "NewName": "DemoScreenGum.HitpointsBar1",
+        "OldName": "DemoScreenGum.PercentBarInstance6",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:44:10.1912592Z"
+      },
+      {
+        "NewName": "DemoScreenGum.HitpointsBar2",
+        "OldName": "DemoScreenGum.PercentBarInstance7",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:44:17.1968269Z"
+      },
+      {
+        "NewName": "DemoScreenGum.HitpointsBar3",
+        "OldName": "DemoScreenGum.PercentBarInstance8",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:44:23.0849701Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-28T19:44:53.6165353Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:45:06.0738485Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.1808553Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.1828561Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.1908571Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.20086Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.2058613Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.209862Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.2158633Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).Background",
+        "OldName": "Controls/ButtonTab (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:45:10.2208645Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TextInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:46:07.0919604Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.484351Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.4873517Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.4953533Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.5013547Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.5063562Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.5113572Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.5163583Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).TabText",
+        "OldName": "Controls/ButtonTab (Container).TextInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:47:25.5213597Z"
+      },
+      {
+        "NewName": "Controls/ButtonTab (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:49:02.0539918Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:49:53.4172374Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TabDemo",
+        "OldName": "DemoScreenGum.ContainerInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:50:01.4210748Z"
+      },
+      {
+        "NewName": "DemoScreenGum.DemoTabbedMenu",
+        "OldName": "DemoScreenGum.TabDemo",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:50:13.876979Z"
+      },
+      {
+        "NewName": "DemoScreenGum.DemoHud",
+        "OldName": "DemoScreenGum.Hud",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:50:20.6846167Z"
+      },
+      {
+        "NewName": "DemoScreenGum.NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:50:53.2086844Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TabBackground",
+        "OldName": "DemoScreenGum.NineSliceInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:51:06.1406783Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:51:31.7139111Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TabMarginContainer",
+        "OldName": "DemoScreenGum.ContainerInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:51:44.4210095Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ButtonCloseInstance3",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:51:58.4328137Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:52:07.5537082Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TabMenuTitle",
+        "OldName": "DemoScreenGum.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:52:30.0132848Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TabMenuClose",
+        "OldName": "DemoScreenGum.ButtonCloseInstance3",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:52:35.980394Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TabMenuBackground",
+        "OldName": "DemoScreenGum.TabBackground",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:52:40.9009851Z"
+      },
+      {
+        "NewName": "DemoScreenGum.DividerInstance6",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:52:54.366234Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TabHeaderDivider",
+        "OldName": "DemoScreenGum.DividerInstance6",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:53:16.9966403Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:53:23.4392854Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ListContainer",
+        "OldName": "DemoScreenGum.ContainerInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:54:22.0369344Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ButtonStandardIconInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:54:26.2013487Z"
+      },
+      {
+        "NewName": "DemoScreenGum.PlayButton",
+        "OldName": "DemoScreenGum.ButtonStandardIconInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:54:52.9323198Z"
+      },
+      {
+        "NewName": "DemoScreenGum.PlayButton1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:54:57.3770871Z"
+      },
+      {
+        "NewName": "DemoScreenGum.SettingsButton",
+        "OldName": "DemoScreenGum.PlayButton1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:55:02.309194Z"
+      },
+      {
+        "NewName": "DemoScreenGum.VideoSettingsButton",
+        "OldName": "DemoScreenGum.SettingsButton",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:55:32.2878494Z"
+      },
+      {
+        "NewName": "DemoScreenGum.VideoSettingsButton1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:55:34.5789321Z"
+      },
+      {
+        "NewName": "DemoScreenGum.AudioSettingsButton",
+        "OldName": "DemoScreenGum.VideoSettingsButton1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:55:38.8869274Z"
+      },
+      {
+        "NewName": "DemoScreenGum.AudioSettingsButton1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:56:23.9451216Z"
+      },
+      {
+        "NewName": "DemoScreenGum.CreditsButton",
+        "OldName": "DemoScreenGum.AudioSettingsButton1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:56:28.6045597Z"
+      },
+      {
+        "NewName": "DemoScreenGum.CreditsButton1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:56:50.7285133Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ExitButton",
+        "OldName": "DemoScreenGum.CreditsButton1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:56:54.5162827Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TabMenuTitle in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T19:57:18.7070496Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ButtonTabInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:57:28.1332524Z"
+      },
+      {
+        "NewName": "DemoScreenGum.Tab1",
+        "OldName": "DemoScreenGum.ButtonTabInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T19:58:01.5491482Z"
+      },
+      {
+        "NewName": "DemoScreenGum.Tab2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:58:05.1099146Z"
+      },
+      {
+        "NewName": "DemoScreenGum.Tab3",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T19:58:14.8961661Z"
       }
     ],
     "justi": [],
