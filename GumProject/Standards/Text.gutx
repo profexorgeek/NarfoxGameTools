@@ -153,11 +153,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>SizeCategory</Type>
-      <Name>SizeCategoryState</Name>
-      <SetsValue>false</SetsValue>
-    </Variable>
-    <Variable>
       <Type>State</Type>
       <Name>State</Name>
       <Value xsi:type="xsd:string">Default</Value>
