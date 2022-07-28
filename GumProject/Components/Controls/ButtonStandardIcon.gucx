@@ -211,6 +211,12 @@
       <SetsValue>false</SetsValue>
     </Variable>
     <Variable>
+      <Type>ColorCategory</Type>
+      <Name>Icon.IconColor</Name>
+      <Value xsi:type="xsd:string">PrimaryDark</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
       <Name>Icon.Parent</Name>
       <SetsValue>true</SetsValue>
@@ -252,7 +258,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">PrimaryDark</Value>
         <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -307,7 +313,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">Primary</Value>
         <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -335,7 +341,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">Primary</Value>
         <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -363,7 +369,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">Primary</Value>
         <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
@@ -391,7 +397,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>Icon.IconColor</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">PrimaryDark</Value>
         <ExposedAsName>IconColor</ExposedAsName>
         <SetsValue>true</SetsValue>
       </Variable>
