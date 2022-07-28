@@ -92,7 +92,7 @@
     <Variable>
       <Type>float</Type>
       <Name>BarContainer.Width</Name>
-      <Value xsi:type="xsd:float">-16</Value>
+      <Value xsi:type="xsd:float">-18</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

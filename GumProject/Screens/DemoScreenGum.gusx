@@ -1830,7 +1830,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Tab2.X</Name>
-      <Value xsi:type="xsd:float">-138</Value>
+      <Value xsi:type="xsd:float">-124</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -1854,7 +1854,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Tab3.X</Name>
-      <Value xsi:type="xsd:float">-100</Value>
+      <Value xsi:type="xsd:float">-72</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

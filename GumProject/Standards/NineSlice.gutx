@@ -567,6 +567,68 @@
       </Variable>
     </State>
     <State>
+      <Name>BracketHorizontal</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Height</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Left</Name>
+        <Value xsi:type="xsd:int">72</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Top</Name>
+        <Value xsi:type="xsd:int">72</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Width</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>BracketVertical</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Height</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Left</Name>
+        <Value xsi:type="xsd:int">48</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Top</Name>
+        <Value xsi:type="xsd:int">72</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>Texture Width</Name>
+        <Value xsi:type="xsd:int">24</Value>
+        <Category>Source</Category>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
       <Name>Tab</Name>
       <Variable>
         <Type>int</Type>

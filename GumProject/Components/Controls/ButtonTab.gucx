@@ -19,7 +19,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Background.Width</Name>
-      <Value xsi:type="xsd:float">16</Value>
+      <Value xsi:type="xsd:float">32</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -163,7 +163,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Width</Name>
-      <Value xsi:type="xsd:float">64</Value>
+      <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

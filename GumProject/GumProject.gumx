@@ -18,6 +18,11 @@
     <ElementType>Screen</ElementType>
     <LinkType>ReferenceOriginal</LinkType>
   </ScreenReference>
+  <ScreenReference>
+    <Name>StylesScreen</Name>
+    <ElementType>Screen</ElementType>
+    <LinkType>ReferenceOriginal</LinkType>
+  </ScreenReference>
   <ComponentReference>
     <Name>Controls/ButtonClose</Name>
     <ElementType>Component</ElementType>

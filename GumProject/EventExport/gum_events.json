@@ -6272,6 +6272,965 @@
         "ElementType": "Components",
         "EventType": 7,
         "TimestampUtc": "2022-07-28T20:21:00.1013357Z"
+      },
+      {
+        "NewName": "BracketVertical",
+        "OldName": "BracketHorizontal1",
+        "ElementType": "Standards",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-28T20:24:11.5522372Z"
+      },
+      {
+        "NewName": "DemoScreenGum.ContainerInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:24:37.7698662Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextStyleContainer",
+        "OldName": "DemoScreenGum.ContainerInstance1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:24:43.7978023Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:24:47.1519752Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextTiny",
+        "OldName": "DemoScreenGum.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:25:18.2053459Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextTiny1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:25:23.6544113Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextSmall",
+        "OldName": "DemoScreenGum.TextTiny1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:25:38.9254317Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextSmall1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:26:17.3823024Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextNormal",
+        "OldName": "DemoScreenGum.TextSmall1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:26:30.9413952Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextNormal1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:26:37.4968446Z"
+      },
+      {
+        "NewName": "DemoScreenGum.Emphasis",
+        "OldName": "DemoScreenGum.TextNormal1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:26:48.5978183Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextEmphasis",
+        "OldName": "DemoScreenGum.Emphasis",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:26:57.7254811Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextEmphasis1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:27:01.5229392Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextStrong",
+        "OldName": "DemoScreenGum.TextEmphasis1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:27:11.5246067Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextStrong1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:27:50.4969361Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextH3",
+        "OldName": "DemoScreenGum.TextStrong1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:28:02.0112711Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextH4",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:28:05.424809Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextH2",
+        "OldName": "DemoScreenGum.TextH4",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:28:16.389882Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextH1",
+        "OldName": "DemoScreenGum.TextH2",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:28:20.0694251Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextTitle",
+        "OldName": "DemoScreenGum.TextH3",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:28:27.15719Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextH2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:29:07.0134375Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextH3",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:29:17.3908996Z"
+      },
+      {
+        "NewName": "DemoScreenGum.TextStrong1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:29:51.4519099Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextStrong1 in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:30:02.2293827Z"
+      },
+      {
+        "NewName": "StylesScreen",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 0,
+        "TimestampUtc": "2022-07-28T20:32:00.2550274Z"
+      },
+      {
+        "NewName": "StylesScreen.TextStyleContainer",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:07.0989785Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "StylesScreen.Container TextStyleContainer in StylesScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:19.5368866Z"
+      },
+      {
+        "NewName": "StylesScreen.TextStyleContainer",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.1908286Z"
+      },
+      {
+        "NewName": "StylesScreen.TextTitle",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.1938292Z"
+      },
+      {
+        "NewName": "StylesScreen.TextH1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.2008296Z"
+      },
+      {
+        "NewName": "StylesScreen.TextH2",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.205832Z"
+      },
+      {
+        "NewName": "StylesScreen.TextH3",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.2108326Z"
+      },
+      {
+        "NewName": "StylesScreen.TextNormal",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.2158335Z"
+      },
+      {
+        "NewName": "StylesScreen.TextStrong",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.219835Z"
+      },
+      {
+        "NewName": "StylesScreen.TextEmphasis",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.224836Z"
+      },
+      {
+        "NewName": "StylesScreen.TextSmall",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.2288371Z"
+      },
+      {
+        "NewName": "StylesScreen.TextTiny",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:24.2328377Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Container TextStyleContainer in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.4478286Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextEmphasis in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8419195Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextH1 in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8449195Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextH2 in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8509211Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextH3 in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8559223Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextNormal in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8599229Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextSmall in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.864924Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextStrong in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8699252Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextTiny in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8749264Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "DemoScreenGum.Text TextTitle in DemoScreenGum",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:32:39.8799275Z"
+      },
+      {
+        "NewName": "StylesScreen.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:32:49.1725103Z"
+      },
+      {
+        "NewName": "StylesScreen.NineSliceStyleContainer",
+        "OldName": "StylesScreen.ContainerInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:32:55.0458141Z"
+      },
+      {
+        "NewName": "StylesScreen.NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:33:02.5646917Z"
+      },
+      {
+        "NewName": "StylesScreen.Solid",
+        "OldName": "StylesScreen.NineSliceInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:33:45.6138696Z"
+      },
+      {
+        "NewName": "StylesScreen.Solid1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:33:48.8710577Z"
+      },
+      {
+        "NewName": "StylesScreen.Bordered",
+        "OldName": "StylesScreen.Solid1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:34:32.9099183Z"
+      },
+      {
+        "NewName": "StylesScreen.Bordered1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:34:36.4947079Z"
+      },
+      {
+        "NewName": "StylesScreen.BracketHorizontal",
+        "OldName": "StylesScreen.Bordered1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:34:45.3421356Z"
+      },
+      {
+        "NewName": "StylesScreen.BracketHorizontal1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:34:49.783047Z"
+      },
+      {
+        "NewName": "StylesScreen.BracketVertical",
+        "OldName": "StylesScreen.BracketHorizontal1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:34:54.1496243Z"
+      },
+      {
+        "NewName": "StylesScreen.BracketVertical1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:35:03.3350508Z"
+      },
+      {
+        "NewName": "StylesScreen.Tab",
+        "OldName": "StylesScreen.BracketVertical1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:35:11.8378987Z"
+      },
+      {
+        "NewName": "StylesScreen.Tab1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:35:15.5083608Z"
+      },
+      {
+        "NewName": "StylesScreen.TabBordered",
+        "OldName": "StylesScreen.Tab1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:35:21.5498215Z"
+      },
+      {
+        "NewName": "StylesScreen.TabBordered1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:35:25.7829597Z"
+      },
+      {
+        "NewName": "StylesScreen.Outlined",
+        "OldName": "StylesScreen.TabBordered1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:35:32.2935971Z"
+      },
+      {
+        "NewName": "StylesScreen.Outlined1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:35:35.7295613Z"
+      },
+      {
+        "NewName": "StylesScreen.OutlinedHeavy",
+        "OldName": "StylesScreen.Outlined1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:35:40.3213277Z"
+      },
+      {
+        "NewName": "StylesScreen.OutlinedHeavy1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:35:45.3758312Z"
+      },
+      {
+        "NewName": "StylesScreen.Panel",
+        "OldName": "StylesScreen.OutlinedHeavy1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:35:48.197439Z"
+      },
+      {
+        "NewName": "StylesScreen.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:36:41.5773866Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonsContainer",
+        "OldName": "StylesScreen.ContainerInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:36:45.8859117Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonStandardInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:36:53.7171391Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonStandard",
+        "OldName": "StylesScreen.ButtonStandardInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:36:58.0626837Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonStandardIconInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:37:24.9899141Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonStandardIcon",
+        "OldName": "StylesScreen.ButtonStandardIconInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:37:30.1579076Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonTabInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:37:52.699129Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonIconInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:39:24.2909977Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonConfirmInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:39:33.175837Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonStandardIconInstance",
+        "OldName": "StylesScreen.ButtonStandardIcon",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:39:38.4936951Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonStandardInstance",
+        "OldName": "StylesScreen.ButtonStandard",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:39:45.101785Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonDenyInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:40:10.1449111Z"
+      },
+      {
+        "NewName": "StylesScreen.ButtonCloseInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:40:24.4600371Z"
+      },
+      {
+        "NewName": "StylesScreen.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:41:22.1316633Z"
+      },
+      {
+        "NewName": "StylesScreen.BarsContainer",
+        "OldName": "StylesScreen.ContainerInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:41:27.5341139Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:41:39.2849728Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarPrimary",
+        "OldName": "StylesScreen.PercentBarInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:41:58.5419968Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarPrimary1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:42:03.6972184Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarLinesDecor",
+        "OldName": "StylesScreen.PercentBarPrimary1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:42:28.2542289Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarLinesDecor1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:42:31.4288611Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarCautionDecor",
+        "OldName": "StylesScreen.PercentBarLinesDecor1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:42:37.8625249Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarIconInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:42:52.9448113Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarIconPrimary",
+        "OldName": "StylesScreen.PercentBarIconInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:42:59.7342383Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarIconPrimary1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:44:23.8411278Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarIconLinesDecor",
+        "OldName": "StylesScreen.PercentBarIconPrimary1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:44:33.0543368Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarIconLinesDecor1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:44:39.504898Z"
+      },
+      {
+        "NewName": "StylesScreen.PercentBarIconCautionDecor",
+        "OldName": "StylesScreen.PercentBarIconLinesDecor1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:44:44.5653053Z"
+      },
+      {
+        "NewName": "StylesScreen.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:45:29.0342884Z"
+      },
+      {
+        "NewName": "StylesScreen.ControlsContainer",
+        "OldName": "StylesScreen.ContainerInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:45:34.3978035Z"
+      },
+      {
+        "NewName": "StylesScreen.CheckBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:45:44.3614765Z"
+      },
+      {
+        "NewName": "StylesScreen.ComboBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:46:06.7123238Z"
+      },
+      {
+        "NewName": "StylesScreen.ListBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:46:18.2662323Z"
+      },
+      {
+        "NewName": "StylesScreen.SliderInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:47:04.6935164Z"
+      },
+      {
+        "NewName": "StylesScreen.RadioButtonInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:47:47.2903952Z"
+      },
+      {
+        "NewName": "StylesScreen.TextBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:48:07.4907807Z"
+      },
+      {
+        "NewName": "StylesScreen.PasswordBoxInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:48:14.3949123Z"
+      },
+      {
+        "NewName": "StylesScreen.ElementsContainer",
+        "OldName": "StylesScreen.BarsContainer",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:48:44.7900519Z"
+      },
+      {
+        "NewName": "StylesScreen.DividerVerticalInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:48:50.7441994Z"
+      },
+      {
+        "NewName": "StylesScreen.DividerHorizontalInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:49:06.0823477Z"
+      },
+      {
+        "NewName": "StylesScreen.IconInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:49:33.3325232Z"
+      },
+      {
+        "NewName": "StylesScreen.LabelInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:49:40.6244465Z"
+      },
+      {
+        "NewName": "StylesScreen.CautionLinesInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:50:05.9970109Z"
+      },
+      {
+        "NewName": "StylesScreen.DividerVerticalInstance1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:50:25.068518Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "StylesScreen.Elements/DividerVertical DividerVerticalInstance1 in StylesScreen",
+        "ElementType": "Screens",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-28T20:50:50.2599277Z"
+      },
+      {
+        "NewName": "StylesScreen.VerticalLinesInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:51:00.2317255Z"
+      },
+      {
+        "NewName": "StylesScreen.ContainerInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:51:56.6530771Z"
+      },
+      {
+        "NewName": "StylesScreen.ColorContainer",
+        "OldName": "StylesScreen.ContainerInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:52:00.8940429Z"
+      },
+      {
+        "NewName": "StylesScreen.TextInstance",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:52:08.6545221Z"
+      },
+      {
+        "NewName": "StylesScreen.TextBlack",
+        "OldName": "StylesScreen.TextInstance",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:52:44.14985Z"
+      },
+      {
+        "NewName": "StylesScreen.TextBlack1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:52:52.9891852Z"
+      },
+      {
+        "NewName": "StylesScreen.TextDarkGray",
+        "OldName": "StylesScreen.TextBlack1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:53:04.4779864Z"
+      },
+      {
+        "NewName": "StylesScreen.TextDarkGray1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:53:23.2582622Z"
+      },
+      {
+        "NewName": "StylesScreen.TextGray",
+        "OldName": "StylesScreen.TextDarkGray1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:53:34.1375221Z"
+      },
+      {
+        "NewName": "StylesScreen.TextGray1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:53:40.8852987Z"
+      },
+      {
+        "NewName": "StylesScreen.TextLightGray",
+        "OldName": "StylesScreen.TextGray1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:53:45.5634948Z"
+      },
+      {
+        "NewName": "StylesScreen.TextLightGray1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:54:01.4492177Z"
+      },
+      {
+        "NewName": "StylesScreen.TextWhite",
+        "OldName": "StylesScreen.TextLightGray1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:54:12.345972Z"
+      },
+      {
+        "NewName": "StylesScreen.TextWhite1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:54:17.4715641Z"
+      },
+      {
+        "NewName": "StylesScreen.TextPrimaryDark",
+        "OldName": "StylesScreen.TextWhite1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:54:28.8460631Z"
+      },
+      {
+        "NewName": "StylesScreen.TextPrimaryDark1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:54:34.0645193Z"
+      },
+      {
+        "NewName": "StylesScreen.TextPrimary",
+        "OldName": "StylesScreen.TextPrimaryDark1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:54:38.6325446Z"
+      },
+      {
+        "NewName": "StylesScreen.TextPrimary1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:54:47.0244058Z"
+      },
+      {
+        "NewName": "StylesScreen.TextPrimaryLight",
+        "OldName": "StylesScreen.TextPrimary1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:54:56.4905331Z"
+      },
+      {
+        "NewName": "StylesScreen.TextPrimaryLight1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:54:59.3513204Z"
+      },
+      {
+        "NewName": "StylesScreen.TextAccent",
+        "OldName": "StylesScreen.TextPrimaryLight1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:55:13.1896634Z"
+      },
+      {
+        "NewName": "StylesScreen.TextAccent1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:55:16.8494126Z"
+      },
+      {
+        "NewName": "StylesScreen.TextSuccess",
+        "OldName": "StylesScreen.TextAccent1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:55:26.768043Z"
+      },
+      {
+        "NewName": "StylesScreen.TextSuccess1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:55:33.9698653Z"
+      },
+      {
+        "NewName": "StylesScreen.TextWarning",
+        "OldName": "StylesScreen.TextSuccess1",
+        "ElementType": "Screens",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-28T20:55:39.2238445Z"
+      },
+      {
+        "NewName": "StylesScreen.TextWarning1",
+        "OldName": null,
+        "ElementType": "Screens",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-28T20:55:46.9948722Z"
       }
     ],
     "justi": [],
