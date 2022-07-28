@@ -5,6 +5,18 @@
   <State>
     <Name>Default</Name>
     <Variable>
+      <Type>float</Type>
+      <Name>Check.Height</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>Check.Height Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>IconCategory</Type>
       <Name>Check.IconCategoryState</Name>
       <Value xsi:type="xsd:string">Check</Value>
@@ -23,6 +35,18 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>Check.Width</Name>
+      <Value xsi:type="xsd:float">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>Check.Width Units</Name>
+      <Value xsi:type="xsd:int">2</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>CheckboxBackground.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">Primary</Value>
@@ -31,7 +55,7 @@
     <Variable>
       <Type>float</Type>
       <Name>CheckboxBackground.Height</Name>
-      <Value xsi:type="xsd:float">32</Value>
+      <Value xsi:type="xsd:float">24</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -49,7 +73,7 @@
     <Variable>
       <Type>float</Type>
       <Name>CheckboxBackground.Width</Name>
-      <Value xsi:type="xsd:float">32</Value>
+      <Value xsi:type="xsd:float">24</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -121,7 +145,7 @@
     <Variable>
       <Type>float</Type>
       <Name>CheckboxText.Width</Name>
-      <Value xsi:type="xsd:float">-36</Value>
+      <Value xsi:type="xsd:float">-28</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -210,7 +234,7 @@
     <Variable>
       <Type>float</Type>
       <Name>Height</Name>
-      <Value xsi:type="xsd:float">32</Value>
+      <Value xsi:type="xsd:float">24</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
