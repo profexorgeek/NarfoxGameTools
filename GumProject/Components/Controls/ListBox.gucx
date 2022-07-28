@@ -192,7 +192,7 @@
     <Variable>
       <Type>DimensionUnitType</Type>
       <Name>InnerPanelInstance.Height Units</Name>
-      <Value xsi:type="xsd:int">2</Value>
+      <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

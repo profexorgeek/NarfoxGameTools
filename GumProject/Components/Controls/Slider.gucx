@@ -70,6 +70,18 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>float</Type>
+      <Name>NineSliceInstance.Height</Name>
+      <Value xsi:type="xsd:float">8</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>DimensionUnitType</Type>
+      <Name>NineSliceInstance.Height Units</Name>
+      <Value xsi:type="xsd:int">0</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
       <Type>string</Type>
       <Name>NineSliceInstance.Parent</Name>
       <Value xsi:type="xsd:string">TrackInstance</Value>
@@ -79,6 +91,12 @@
       <Type>StyleCategory</Type>
       <Name>NineSliceInstance.StyleCategoryState</Name>
       <Value xsi:type="xsd:string">Bordered</Value>
+      <SetsValue>true</SetsValue>
+    </Variable>
+    <Variable>
+      <Type>float</Type>
+      <Name>NineSliceInstance.Width</Name>
+      <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -124,7 +142,7 @@
     <Variable>
       <Type>float</Type>
       <Name>ThumbInstance.X</Name>
-      <Value xsi:type="xsd:float">25</Value>
+      <Value xsi:type="xsd:float">0</Value>
       <ExposedAsName>SliderPercent</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -155,7 +173,7 @@
     <Variable>
       <Type>float</Type>
       <Name>TrackInstance.Height</Name>
-      <Value xsi:type="xsd:float">-16</Value>
+      <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

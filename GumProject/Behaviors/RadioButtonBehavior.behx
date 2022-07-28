@@ -40,6 +40,12 @@
     <State>
       <Name>HighlightedFocusedOff</Name>
     </State>
+    <State>
+      <Name>DisabledFocusedOn</Name>
+    </State>
+    <State>
+      <Name>DisabledFocusedOff</Name>
+    </State>
   </Category>
   <RequiredInstances>
     <InstanceSave>
