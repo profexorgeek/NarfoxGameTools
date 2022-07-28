@@ -148,68 +148,68 @@
     </Variable>
     <Variable>
       <Type>ColorCategory</Type>
-      <Name>ListItemText.ColorCategoryState</Name>
+      <Name>TextInstance.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">White</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ListItemText.Height</Name>
+      <Name>TextInstance.Height</Name>
       <Value xsi:type="xsd:float">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ListItemText.Height Units</Name>
+      <Name>TextInstance.Height Units</Name>
       <Value xsi:type="xsd:int">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>ListItemText.HorizontalAlignment</Name>
+      <Name>TextInstance.HorizontalAlignment</Name>
       <Value xsi:type="xsd:int">0</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>StyleCategory</Type>
-      <Name>ListItemText.StyleCategoryState</Name>
+      <Name>TextInstance.StyleCategoryState</Name>
       <Value xsi:type="xsd:string">Normal</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
-      <Name>ListItemText.Text</Name>
+      <Name>TextInstance.Text</Name>
       <Value xsi:type="xsd:string">ListBox Item</Value>
       <ExposedAsName>ListItemDisplayText</ExposedAsName>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>VerticalAlignment</Type>
-      <Name>ListItemText.VerticalAlignment</Name>
+      <Name>TextInstance.VerticalAlignment</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
-      <Name>ListItemText.Width</Name>
+      <Name>TextInstance.Width</Name>
       <Value xsi:type="xsd:float">-8</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>DimensionUnitType</Type>
-      <Name>ListItemText.Width Units</Name>
+      <Name>TextInstance.Width Units</Name>
       <Value xsi:type="xsd:int">2</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>HorizontalAlignment</Type>
-      <Name>ListItemText.X Origin</Name>
+      <Name>TextInstance.X Origin</Name>
       <Value xsi:type="xsd:int">1</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>PositionUnitType</Type>
-      <Name>ListItemText.X Units</Name>
+      <Name>TextInstance.X Units</Name>
       <Value xsi:type="xsd:int">6</Value>
       <SetsValue>true</SetsValue>
     </Variable>
@@ -324,7 +324,7 @@
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
-    <Name>ListItemText</Name>
+    <Name>TextInstance</Name>
     <BaseType>Text</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
