@@ -7245,6 +7245,20 @@
         "ElementType": "Components",
         "EventType": 6,
         "TimestampUtc": "2022-07-29T21:07:52.3696411Z"
+      },
+      {
+        "NewName": "Controls/ListBox (Container).ListBoxItemInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-29T21:09:19.2922756Z"
+      },
+      {
+        "NewName": "Controls/ScrollViewer (Container).ListBoxItemInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-29T21:10:48.2240549Z"
       }
     ],
     "justi": [],
