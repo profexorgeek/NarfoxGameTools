@@ -1917,18 +1917,6 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>ColorCategory</Type>
-      <Name>TextTitle.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">White</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>TextTitle.Parent</Name>
-      <Value xsi:type="xsd:string">TextStyleContainer</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>string</Type>
       <Name>TextTitle.Parent</Name>
       <Value xsi:type="xsd:string">TextStyleContainer</Value>
@@ -1938,24 +1926,12 @@
       <Type>StyleCategory</Type>
       <Name>TextTitle.StyleCategoryState</Name>
       <Value xsi:type="xsd:string">Title</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>StyleCategory</Type>
-      <Name>TextTitle.StyleCategoryState</Name>
-      <Value xsi:type="xsd:string">H3</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>string</Type>
       <Name>TextTitle.Text</Name>
       <Value xsi:type="xsd:string">H2</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>string</Type>
-      <Name>TextTitle.Text</Name>
-      <Value xsi:type="xsd:string">Title</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>

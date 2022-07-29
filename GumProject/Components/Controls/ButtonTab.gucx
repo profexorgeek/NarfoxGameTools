@@ -29,6 +29,11 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
+      <Type>ButtonCategory</Type>
+      <Name>ButtonCategoryState</Name>
+      <SetsValue>false</SetsValue>
+    </Variable>
+    <Variable>
       <Type>ColorCategory</Type>
       <Name>FocusedIndicator.ColorCategoryState</Name>
       <Value xsi:type="xsd:string">Warning</Value>
@@ -202,15 +207,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TabText.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>FocusedIndicator.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>TabText.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -223,15 +228,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TabText.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">Gray</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>FocusedIndicator.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>TabText.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -244,15 +249,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TabText.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>FocusedIndicator.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>TabText.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
@@ -265,15 +270,15 @@
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
-        <Type>ColorCategory</Type>
-        <Name>TabText.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
-        <SetsValue>true</SetsValue>
-      </Variable>
-      <Variable>
         <Type>bool</Type>
         <Name>FocusedIndicator.Visible</Name>
         <Value xsi:type="xsd:boolean">false</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>ColorCategory</Type>
+        <Name>TabText.ColorCategoryState</Name>
+        <Value xsi:type="xsd:string">White</Value>
         <SetsValue>true</SetsValue>
       </Variable>
     </State>
