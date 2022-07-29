@@ -17,15 +17,9 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>ColorCategory</Type>
-      <Name>CaretInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">Primary</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
       <Name>CaretInstance.Height</Name>
-      <Value xsi:type="xsd:float">14</Value>
+      <Value xsi:type="xsd:float">24</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -43,13 +37,13 @@
     <Variable>
       <Type>float</Type>
       <Name>CaretInstance.Width</Name>
-      <Value xsi:type="xsd:float">1</Value>
+      <Value xsi:type="xsd:float">24</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
       <Type>float</Type>
       <Name>CaretInstance.X</Name>
-      <Value xsi:type="xsd:float">9</Value>
+      <Value xsi:type="xsd:float">4</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -59,27 +53,9 @@
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>CaretInstance.X Units</Name>
-      <Value xsi:type="xsd:int">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
       <Type>float</Type>
       <Name>CaretInstance.Y</Name>
       <Value xsi:type="xsd:float">0</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>VerticalAlignment</Type>
-      <Name>CaretInstance.Y Origin</Name>
-      <Value xsi:type="xsd:int">1</Value>
-      <SetsValue>true</SetsValue>
-    </Variable>
-    <Variable>
-      <Type>PositionUnitType</Type>
-      <Name>CaretInstance.Y Units</Name>
-      <Value xsi:type="xsd:int">7</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -154,7 +130,7 @@
     <Variable>
       <Type>ColorCategory</Type>
       <Name>PlaceholderTextInstance.ColorCategoryState</Name>
-      <Value xsi:type="xsd:string">White</Value>
+      <Value xsi:type="xsd:string">Gray</Value>
       <SetsValue>true</SetsValue>
     </Variable>
     <Variable>
@@ -392,7 +368,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>PlaceholderTextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -446,7 +422,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>PlaceholderTextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">DarkGray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -473,7 +449,7 @@
       <Variable>
         <Type>ColorCategory</Type>
         <Name>PlaceholderTextInstance.ColorCategoryState</Name>
-        <Value xsi:type="xsd:string">White</Value>
+        <Value xsi:type="xsd:string">Gray</Value>
         <SetsValue>true</SetsValue>
       </Variable>
       <Variable>
@@ -510,7 +486,7 @@
   </Instance>
   <Instance>
     <Name>CaretInstance</Name>
-    <BaseType>ColoredRectangle</BaseType>
+    <BaseType>Elements/Icon</BaseType>
     <DefinedByBase>false</DefinedByBase>
   </Instance>
   <Instance>
