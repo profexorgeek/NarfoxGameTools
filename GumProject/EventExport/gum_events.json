@@ -7231,6 +7231,20 @@
         "ElementType": "Screens",
         "EventType": 5,
         "TimestampUtc": "2022-07-28T20:55:46.9948722Z"
+      },
+      {
+        "NewName": "Controls/ListBox (Container).ListBoxItemInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-29T20:58:04.8587753Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Controls/ListBox (Container).Controls/ListBoxItem ListBoxItemInstance in Controls/ListBox (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-29T21:07:52.3696411Z"
       }
     ],
     "justi": [],
