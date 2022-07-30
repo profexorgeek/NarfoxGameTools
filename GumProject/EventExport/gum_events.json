@@ -7259,6 +7259,244 @@
         "ElementType": "Components",
         "EventType": 5,
         "TimestampUtc": "2022-07-29T21:10:48.2240549Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey",
+        "OldName": "DefaultForms/KeyboardKey",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-30T17:27:20.378747Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey",
+        "OldName": "DefaultForms/KeyboardKey",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-30T17:27:24.2088819Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Controls/KeyboardKey (Container).Elements/Fill KeyBackground in Controls/KeyboardKey (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-30T17:28:47.3283904Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T17:28:53.399591Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T17:35:54.9948024Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.6904358Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.6994373Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.7064391Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.7114402Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.7164416Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.7204424Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.7244435Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).KeyBackground",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:37:41.7294442Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Controls/KeyboardKey",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-30T17:37:51.4379757Z"
+      },
+      {
+        "NewName": "Controls/Keyboard",
+        "OldName": "DefaultForms/Keyboard",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-30T17:38:06.0860172Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Controls/KeyboardKey",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-30T17:40:29.0619869Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Controls/KeyboardKey",
+        "ElementType": "Components",
+        "EventType": 1,
+        "TimestampUtc": "2022-07-30T17:40:46.6881881Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey",
+        "OldName": "DefaultForms/KeyboardKey",
+        "ElementType": "Components",
+        "EventType": 2,
+        "TimestampUtc": "2022-07-30T17:41:20.9920985Z"
+      },
+      {
+        "NewName": null,
+        "OldName": "Controls/KeyboardKey (Container).Elements/Fill KeyBackground in Controls/KeyboardKey (Container)",
+        "ElementType": "Components",
+        "EventType": 6,
+        "TimestampUtc": "2022-07-30T17:41:44.2504401Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T17:41:51.1761617Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4023528Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4113549Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4173565Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4223576Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4283605Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4333606Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4383618Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).Background",
+        "OldName": "Controls/KeyboardKey (Container).NineSliceInstance",
+        "ElementType": "Components",
+        "EventType": 7,
+        "TimestampUtc": "2022-07-30T17:42:47.4433631Z"
+      },
+      {
+        "NewName": "Controls/KeyboardKey (Container).FocusedIndicator",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T17:46:47.4188872Z"
+      },
+      {
+        "NewName": "Controls/Keyboard (Container).IconInstance",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T17:57:09.988855Z"
+      },
+      {
+        "NewName": "Enter",
+        "OldName": "Delete1",
+        "ElementType": "Components",
+        "EventType": 3,
+        "TimestampUtc": "2022-07-30T18:09:31.12241Z"
+      },
+      {
+        "NewName": "Controls/Keyboard (Container).IconInstance1",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T18:10:06.5649738Z"
+      },
+      {
+        "NewName": "Controls/Keyboard (Container).IconInstance2",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T18:10:31.4855606Z"
+      },
+      {
+        "NewName": "Controls/Keyboard (Container).IconInstance3",
+        "OldName": null,
+        "ElementType": "Components",
+        "EventType": 5,
+        "TimestampUtc": "2022-07-30T18:10:49.2200245Z"
       }
     ],
     "justi": [],

@@ -657,6 +657,72 @@
       </Variable>
     </State>
     <State>
+      <Name>Delete</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Height</Name>
+        <Value xsi:type="xsd:int">32</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Left</Name>
+        <Value xsi:type="xsd:int">288</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Top</Name>
+        <Value xsi:type="xsd:int">320</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Width</Name>
+        <Value xsi:type="xsd:int">32</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>IconSprite.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
+      <Name>Enter</Name>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Height</Name>
+        <Value xsi:type="xsd:int">32</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Left</Name>
+        <Value xsi:type="xsd:int">320</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Top</Name>
+        <Value xsi:type="xsd:int">320</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>int</Type>
+        <Name>IconSprite.Texture Width</Name>
+        <Value xsi:type="xsd:int">32</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+      <Variable>
+        <Type>bool</Type>
+        <Name>IconSprite.Visible</Name>
+        <Value xsi:type="xsd:boolean">true</Value>
+        <SetsValue>true</SetsValue>
+      </Variable>
+    </State>
+    <State>
       <Name>Expand</Name>
       <Variable>
         <Type>int</Type>
