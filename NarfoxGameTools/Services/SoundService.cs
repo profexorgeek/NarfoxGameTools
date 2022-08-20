@@ -32,10 +32,6 @@ namespace NarfoxGameTools.Services
             public double Duration;
         }
 
-        // how much the pitch is allowed to vary
-        // in sound requests
-        const float PitchVariance = 0.25f;
-
         static SoundService instance;
         List<SoundRequest> soundQueue = new List<SoundRequest>();
         Dictionary<SoundEffectInstance, PositionedObject> ownedInstances = new Dictionary<SoundEffectInstance, PositionedObject>();
@@ -65,8 +61,8 @@ namespace NarfoxGameTools.Services
         /// Positioned sound will attenuate linearly
         /// over this distance.
         /// </summary>
-        public float VolumeMaxDistance { get; set; }
-        
+        public float VolumeMaxDistance { get; set; } = 800;
+
         /// <summary>
         /// The target "listener" to use when determining audio
         /// position. This is usually the camera but may need
@@ -77,7 +73,7 @@ namespace NarfoxGameTools.Services
         {
             get
             {
-                if(target == null)
+                if (target == null)
                 {
                     target = Camera.Main;
                 }
@@ -87,20 +83,20 @@ namespace NarfoxGameTools.Services
             {
                 target = value;
 
-                if(target == null)
+                if (target == null)
                 {
                     target = Camera.Main;
                 }
             }
         }
-        
+
         /// <summary>
         /// The maximum number of sounds to play at the same time. This may need to be 
         /// set differently for mobile or lowspec devices that have low limits on
         /// simultaneous sounds
         /// </summary>
         public float MaxConcurrentSounds { get; set; } = 32f;
-        
+
         /// <summary>
         /// The number of sounds in the queue
         /// </summary>
@@ -131,7 +127,7 @@ namespace NarfoxGameTools.Services
                 }
             }
         }
-        
+
         /// <summary>
         /// The folder where sounds are located.
         /// </summary>
@@ -141,7 +137,7 @@ namespace NarfoxGameTools.Services
         /// The folder where music is located.
         /// </summary>
         public string MusicFolder { get; set; } = @"Content/GlobalContent/Music";
-        
+
         /// <summary>
         /// The mix volume of the music: how loud it should be in the mix, from 0 - 1
         /// </summary>
@@ -151,7 +147,7 @@ namespace NarfoxGameTools.Services
         /// The mix volume of the sound: how loud it should be in the mix, from 0 - 1
         /// </summary>
         public float SoundMixVolume { get; set; } = 1f;
-        
+
         /// <summary>
         /// The volume of music in the game, this is usually set by the user in some type
         /// of settings menu
@@ -190,6 +186,12 @@ namespace NarfoxGameTools.Services
         /// </summary>
         public bool IsMuted { get; set; } = false;
 
+        /// <summary>
+        /// How much the pitch can vary (up or down so total range is double the setting)
+        /// when playing sounds with pitch variance
+        /// </summary>
+        public float PitchVariance { get; set; } = 0.25f;
+
 
 
         /// <summary>
@@ -206,7 +208,7 @@ namespace NarfoxGameTools.Services
         public void Initialize(string managerName = null)
         {
             ContentManagerName = managerName ?? FlatRedBallServices.GlobalContentManager;
-            
+
             // use camera for default volume distance and target
             VolumeMaxDistance = Camera.Main.AbsoluteRightXEdgeAt(0);
 
@@ -219,7 +221,7 @@ namespace NarfoxGameTools.Services
         /// </summary>
         public void Update()
         {
-            if(!initialized)
+            if (!initialized)
             {
                 throw new Exception("Attempted to update SoundService before calling Initialize()!");
             }
@@ -228,7 +230,7 @@ namespace NarfoxGameTools.Services
             for (int i = soundQueue.Count - 1; i > -1; i--)
             {
                 var req = soundQueue[i];
-                if(TimeManager.CurrentTime - req.TimeRequested > req.Duration)
+                if (TimeManager.CurrentTime - req.TimeRequested > req.Duration)
                 {
                     soundQueue.Remove(req);
                 }
@@ -237,7 +239,7 @@ namespace NarfoxGameTools.Services
             // manage named instances
             foreach (var kvp in ownedInstances)
             {
-                if(!kvp.Key.IsDisposed && kvp.Value != null)
+                if (!kvp.Key.IsDisposed && kvp.Value != null)
                 {
                     kvp.Key.Pan = GetPanForPosition(kvp.Value.Position);
                     kvp.Key.Volume = IsMuted ? 0 : GetVolumeForPosition(kvp.Value.Position);
@@ -256,13 +258,13 @@ namespace NarfoxGameTools.Services
         /// <param name="randomizePitch">Whether or not to randomize pitch, defaults to true</param>
         public void RequestPlayEffect(string effectName, Vector3? position = null, bool randomizePitch = true)
         {
-            if(!initialized)
+            if (!initialized)
             {
                 throw new Exception("Attempted to play effect before initializing the SoundService.");
             }
 
             // EARLY OUT: null name
-            if(string.IsNullOrWhiteSpace(effectName))
+            if (string.IsNullOrWhiteSpace(effectName))
             {
                 LogService.Log.Debug($"Empty sound name requested!");
                 return;
@@ -361,12 +363,12 @@ namespace NarfoxGameTools.Services
                 instance.Pan = 0;
                 instance.IsLooped = isLooped;
 
-                if(playImmediately)
+                if (playImmediately)
                 {
                     instance.Play();
                 }
 
-                if(requestor != null)
+                if (requestor != null)
                 {
                     ownedInstances.Add(instance, requestor);
                 }
@@ -381,7 +383,7 @@ namespace NarfoxGameTools.Services
         /// <param name="instance">The instance to unload</param>
         public void UnloadOwnedInstance(SoundEffectInstance instance)
         {
-            if(ownedInstances.ContainsKey(instance))
+            if (ownedInstances.ContainsKey(instance))
             {
                 instance.Stop();
                 ownedInstances.Remove(instance);
@@ -418,7 +420,7 @@ namespace NarfoxGameTools.Services
 
             // if we got a position, calculate the sound based
             // on max distance
-            if(nullablePosition != null)
+            if (nullablePosition != null)
             {
                 var position = nullablePosition.Value;
                 var dist = Target.DistanceTo(position.X, position.Y);
@@ -486,7 +488,7 @@ namespace NarfoxGameTools.Services
                     // https://github.com/MonoGame/MonoGame/issues/6876
                     // https://github.com/MonoGame/MonoGame/issues/6543
                     // https://github.com/MonoGame/MonoGame/issues/5739
-                    
+
                     // One potential hack is to play two sounds at once and fake panning:
                     //float panVolumeCompensation = // figure out the calc for this;
                     //var leftVolume = (1 - request.Pan).Clamp(0, 1) * request.Volume * panVolumeCompensation;
