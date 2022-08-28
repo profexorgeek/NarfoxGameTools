@@ -150,7 +150,7 @@ namespace NarfoxGameTools.Services
 
         /// <summary>
         /// The volume of music in the game, this is usually set by the user in some type
-        /// of settings menu
+        /// of settings menu. Values range between 0 to 1, inclusive;
         /// </summary>
         public float MusicVolume
         {
@@ -166,8 +166,8 @@ namespace NarfoxGameTools.Services
         }
 
         /// <summary>
-        /// The volume of sound in the game, this is usually set by the user in some tyupe
-        /// of settings menu
+        /// The volume of sound in the game, this is usually set by the user in some type
+        /// of settings menu.  Values range between 0 to 1, inclusive;
         /// </summary>
         public float SoundVolume { get; set; } = 1f;
 
