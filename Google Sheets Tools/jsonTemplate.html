@@ -1,0 +1,47 @@
+<!--
+    Add this file to your Google Sheets app script.
+    This is a simple frame for displaying converted
+    JSON data as a side panel. This is called by
+    JS functions when converting spreadsheets to
+    JSON
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      html, body {
+        font-family:sans-serif;
+      }
+      textarea {
+        width:100%;
+        height:300px;
+      }
+      a#download {
+        display:block;
+        padding:10px;
+        background:#CCC;
+        border-radius:5px;
+        border:1px solid #444;
+        color:#444;
+        text-decoration:none;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JSON Output</h1>
+    <textarea id="jsonData">{json}</textarea>
+    <br />
+    <a href="" id="download">Download</a>
+    <script>
+      var fileName = 'data.json';
+      var fileContent = document.getElementById("jsonData").value;
+      var myFile = new Blob([fileContent], {type: 'application/json'});
+      window.URL = window.URL || window.webkitURL;
+      document.getElementById('download').setAttribute('href', window.URL.createObjectURL(myFile));
+      document.getElementById('download').setAttribute('download', fileName);
+    </script>
+  </body>
+</html>
