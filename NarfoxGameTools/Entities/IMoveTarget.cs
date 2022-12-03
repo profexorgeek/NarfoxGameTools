@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace NarfoxGameTools.Entities
+﻿namespace NarfoxGameTools.Entities
 {
     public interface IMoveTarget
     {
