@@ -15,17 +15,28 @@ namespace NarfoxGameTools.Extensions
         // https://www.easyrgb.com/en/math.php
 
         /// <summary>
-        /// Hue
+        /// Hue, a value between 0 and 1. Example values are (roughly)
+        /// Red: 0
+        /// Orange: 0.5
+        /// Yellow: 0.15
+        /// Green: 0.35
+        /// Blue: 0.65
+        /// Purple: 0.75
+        /// Magenta: 0.8
         /// </summary>
         public float H;
 
         /// <summary>
-        /// Saturation
+        /// Saturation, a value between 0 and 1. A value of 0 will be black, white, or gray depending on Luminance.
+        /// A value of 1 will be fully saturated, displaying the color determined by Hue and Luminance.
         /// </summary>
         public float S;
 
         /// <summary>
-        /// Luminance (brightness)
+        /// Luminance (brightness), a value between 0 and 1. 
+        /// 0: Black
+        /// 0.5: Color depends on Hue and Saturation, but will draw the pure color at full brightness
+        /// 1: White
         /// </summary>
         public float L;
 
@@ -52,6 +63,11 @@ namespace NarfoxGameTools.Extensions
             H = h;
             S = s;
             L = l;
+        }
+
+        public override string ToString()
+        {
+            return $"H: {H}, S: {S}, L: {L}";
         }
     }
 
