@@ -1,5 +1,4 @@
 ﻿using FlatRedBall.AI.Pathfinding;
-using FlatRedBall.Math.Geometry;
 using NarfoxGameTools.Services;
 using System;
 using System.Collections.Generic;
@@ -59,12 +58,26 @@ namespace NarfoxGameTools.Extensions
             return o;
         }
 
+        /// <summary>
+        /// Gets a random note from a TileNodeNetwork. This is usually used
+        /// in the context of AI to get a bot to path to a random node.
+        /// </summary>
+        /// <param name="network">The tile node network</param>
+        /// <param name="rand">The random object to be ued, defaults to RandomService</param>
+        /// <returns>A random node</returns>
         public static PositionedNode Random(this TileNodeNetwork network, Random rand = null)
         {
             rand = rand ?? RandomService.Random;
             return network.Nodes.Random(rand);
         }
 
+        /// <summary>
+        /// Converts any IEnumerable into an ObservableCollection. This is handy for
+        /// converting standard lists into an MVVM-friendly bound collection
+        /// </summary>
+        /// <typeparam name="T">The list Type</typeparam>
+        /// <param name="list">The list to convert</param>
+        /// <returns>An observable collection of the objects in the provided list</returns>
         public static ObservableCollection<T> AsObservable<T>(this IEnumerable<T> list)
         {
             var collection = new ObservableCollection<T>();
@@ -80,7 +93,7 @@ namespace NarfoxGameTools.Extensions
         /// Dictionaries are easier to use, especially when merging and
         /// checking for overriding keys. This allows easy conversion
         /// of a dictionary to the NameValueCollection object
-        /// expected by WebClient.UploadValues()
+        /// expected by WebClient.UploadValues() in the GoogleAnalyticsService
         /// </summary>
         /// <param name="dict">The dictionary</param>
         /// <returns>NameValueCollection created from dictionary</returns>

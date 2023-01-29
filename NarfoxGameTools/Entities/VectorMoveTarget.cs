@@ -1,7 +1,4 @@
-﻿using FlatRedBall.Math;
-using Microsoft.Xna.Framework;
-using NarfoxGameTools.Entities;
-using System;
+﻿using Microsoft.Xna.Framework;
 
 namespace NarfoxGameTools.Entities
 {

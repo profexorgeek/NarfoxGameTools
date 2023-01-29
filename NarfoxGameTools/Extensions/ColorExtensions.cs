@@ -1,18 +1,21 @@
 ﻿using Microsoft.Xna.Framework;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace NarfoxGameTools.Extensions
 {
+    /// <summary>
+    /// HSL stands for Hue, Saturation, and Luminance.
+    /// HSL may also referred to as HSB, where the B
+    /// stands for Brightness. This color space makes
+    /// it easier to do calculations that operate on
+    /// these channels and is supported by most major
+    /// graphics applications.
+    /// 
+    /// Helpful color math can be found here:
+    /// https://www.easyrgb.com/en/math.php
+    /// </summary>
     public struct HSLColor
     {
-
-        // HSL stands for Hue, Saturation and Luminance. HSL
-        // color space makes it easier to do calculations
-        // that operate on these channels
-        // Helpful color math can be found here:
-        // https://www.easyrgb.com/en/math.php
 
         /// <summary>
         /// Hue, a value between 0 and 1. Example values are (roughly)
@@ -40,6 +43,9 @@ namespace NarfoxGameTools.Extensions
         /// </summary>
         public float L;
 
+        /// <summary>
+        /// Gets this colors complementary color
+        /// </summary>
         public HSLColor Complement
         {
             get
@@ -58,6 +64,12 @@ namespace NarfoxGameTools.Extensions
             }
         }
 
+        /// <summary>
+        /// Constructor for a new HSL color
+        /// </summary>
+        /// <param name="h">Hue parameter, 0 to 1</param>
+        /// <param name="s">Saturation parameter, 0 to 1</param>
+        /// <param name="l">Luminosity/Brightness parameter, 0 to 1</param>
         public HSLColor(float h, float s, float l)
         {
             H = h;
@@ -73,6 +85,15 @@ namespace NarfoxGameTools.Extensions
 
     public static class ColorExtensions
     {
+        /// <summary>
+        /// Tints a color by the provided percent, which can be
+        /// negative or positive.
+        /// 
+        /// A positive value will darken the color, a negative value will lighten it.
+        /// </summary>
+        /// <param name="color">The color to tint.</param>
+        /// <param name="percent">The tint amount as a percent from -1 to 1</param>
+        /// <returns>A tinted color</returns>
         public static Color Tint(this Color color, float percent = 0.1f)
         {
             var newColor = new Color();
@@ -83,6 +104,13 @@ namespace NarfoxGameTools.Extensions
             return newColor;
         }
 
+        /// <summary>
+        /// Gets an HSL color from an RGB color
+        /// </summary>
+        /// <param name="R">Red byte value</param>
+        /// <param name="G">Green byte value</param>
+        /// <param name="B">Blue byte value</param>
+        /// <returns>An HSL color that approximates the RGB values</returns>
         public static HSLColor FromRgb(byte R, byte G, byte B)
         {
             var hsl = new HSLColor();
@@ -144,11 +172,23 @@ namespace NarfoxGameTools.Extensions
             return hsl;
         }
 
+        /// <summary>
+        /// Gets an HSL color from an RGB color.
+        /// 
+        /// Wraps FromRgb for convenience
+        /// </summary>
+        /// <param name="color">The color to convert</param>
+        /// <returns>An HSL color that approximates the RGB values</returns>
         public static HSLColor ToHsl(this Color color)
         {
             return FromRgb(color.R, color.G, color.B);
         }
 
+        /// <summary>
+        /// Gets an RGB color from an HSL color
+        /// </summary>
+        /// <param name="hsl"></param>
+        /// <returns></returns>
         public static Color ToRgb(this HSLColor hsl)
         {
             var c = new Color();
@@ -178,6 +218,11 @@ namespace NarfoxGameTools.Extensions
             return c;
         }
 
+        /// <summary>
+        /// Internal math function that is part of the conversion
+        /// process. For details see:
+        /// https://www.easyrgb.com/en/math.php
+        /// </summary>
         private static float HueToRgb(float v1, float v2, float vH)
         {
             vH += (vH < 0) ? 1 : 0;
@@ -201,6 +246,5 @@ namespace NarfoxGameTools.Extensions
 
             return ret.Clamp(0, 1);
         }
-
     }
 }

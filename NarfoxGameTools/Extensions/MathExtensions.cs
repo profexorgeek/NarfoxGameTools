@@ -34,6 +34,11 @@ namespace NarfoxGameTools.Extensions
             return radians * DegreesPerRadian;
         }
 
+        /// <summary>
+        /// Normalizes an angle to be between 0 and Two Pi
+        /// </summary>
+        /// <param name="radians">The angle to normalize</param>
+        /// <returns>A normalized angle</returns>
         public static float NormalizeAngle(this float radians)
         {
             return FlatRedBall.Math.MathFunctions.RegulateAngle(radians);

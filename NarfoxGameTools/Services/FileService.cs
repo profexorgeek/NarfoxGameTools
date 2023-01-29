@@ -18,6 +18,11 @@ namespace NarfoxGameTools.Services
         static FileService instance;
         string appVersion = null;
 
+
+        /// <summary>
+        /// The current application version as set in its assembly information. Makes
+        /// it easy to render the version string in game!
+        /// </summary>
         public string AppVersion
         {
             get
@@ -42,6 +47,10 @@ namespace NarfoxGameTools.Services
                 appVersion = value;
             }
         }
+
+        /// <summary>
+        /// Singleton instance of this service.
+        /// </summary>
         public static FileService Instance
         {
             get
@@ -53,6 +62,11 @@ namespace NarfoxGameTools.Services
                 return instance;
             }
         }
+        
+        /// <summary>
+        /// The AppData directory as provided by the environment,
+        /// returned as a path string for convenience.
+        /// </summary>
         public string AppDataDirectory
         {
             get
@@ -60,6 +74,14 @@ namespace NarfoxGameTools.Services
                 return Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
             }
         }
+
+        /// <summary>
+        /// The default place for your game to save user data. This is not your
+        /// game's content folder but rather where you'd put a saved game or
+        /// settings file. It will create a directory in AppData/Roaming
+        /// that matches your assembly name. If your assembly name cannot
+        /// be resolved, the directory will be called "narfox".
+        /// </summary>
         public string DefaultSaveDirectory
         {
             get
@@ -85,13 +107,33 @@ namespace NarfoxGameTools.Services
                 return fullpath;
             }
         }
+
+        /// <summary>
+        /// The extension to use when saving data. Defaults to ".sav"
+        /// </summary>
         public string Extension { get; set; } = ".sav";
+        
+        /// <summary>
+        /// The ILogger instance to use when logging
+        /// </summary>
         public ILogger Logger { get; set; }
 
 
+
+        /// <summary>
+        /// Private constructor for Singleton pattern access
+        /// </summary>
         private FileService() { }
 
 
+        /// <summary>
+        /// Returns a list of all files in a directory with the option to filter
+        /// for a specific extension. Often used to find all player save files in
+        /// the save directory.
+        /// </summary>
+        /// <param name="path">The directory path to search</param>
+        /// <param name="extension">The specific extension to filter for</param>
+        /// <returns>A list of file paths, limited to a specific extension if one was provided.</returns>
         public List<string> GetDirectoryFiles(string path, string extension = "")
         {
             var files = new List<string>();
@@ -108,28 +150,71 @@ namespace NarfoxGameTools.Services
             return files;
         }
 
+        /// <summary>
+        /// Loads text from the provided path, decrypts it if the decrypt argument
+        /// is true, and deserializes the result into an instance of T.
+        /// 
+        /// Decryption requires the SimpleCryptoService to be initialized.
+        /// </summary>
+        /// <typeparam name="T">The expected type to deserialize</typeparam>
+        /// <param name="path">The path to a JSON file</param>
+        /// <param name="decrypt">Whether to decrypt the file contents, requires the SimpleCryptoService to be initialized.</param>
+        /// <returns>An object of type T</returns>
         public T LoadFile<T>(string path, bool decrypt = false)
         {
             var filetext = LoadText(path);
             var json = decrypt ? filetext.Decrypt() : filetext;
             return Deserialize<T>(json);
         }
+
+        /// <summary>
+        /// Serializes and object and saves it to the provided path.
+        /// 
+        /// Can encrypt JSON but requires the SimpleCryptoService to be
+        /// initialized.
+        /// 
+        /// Will overwrite if a file already exists at the provided path.
+        /// </summary>
+        /// <param name="model">The object to serialize</param>
+        /// <param name="path">The file path to save the serialized object</param>
+        /// <param name="encrypt">Whether to encrypt the JSON before saving</param>
         public void SaveFile(object model, string path, bool encrypt = false)
         {
             var data = Serialize(model, !encrypt);
             var savetext = encrypt ? data.Encrypt() : data;
             SaveText(path, savetext);
         }
+        
+        /// <summary>
+        /// Deletes the file at the provided path.
+        /// 
+        /// Just a wrapper for File.Delete
+        /// </summary>
+        /// <param name="path">The path to delete.</param>
         public void DeleteFile(string path)
         {
             File.Delete(path);
         }
+
+        /// <summary>
+        /// Loads, encrypts, and saves a file. Requires
+        /// the SimpleCryptoService to be initialized.
+        /// </summary>
+        /// <param name="srcPath">The path to load and encrypt</param>
+        /// <param name="destPath">The path to save</param>
         public void EncryptFile(string srcPath, string destPath)
         {
             var src = LoadText(srcPath);
             var encrypted = src.Encrypt();
             SaveText(destPath, encrypted);
         }
+
+        /// <summary>
+        /// Loads, decrypts, and saves a file. Requires the
+        /// SimpleCryptoService to be initialized.
+        /// </summary>
+        /// <param name="srcPath">The path to load and decrypt</param>
+        /// <param name="destPath">The path to save</param>
         public void DecryptFile(string srcPath, string destPath)
         {
             var src = LoadText(srcPath);
@@ -137,18 +222,41 @@ namespace NarfoxGameTools.Services
             SaveText(destPath, decrypted);
         }
 
+        /// <summary>
+        /// Does a deep clone by serializing the provided object
+        /// to JSON and deserializing it back into a new object.
+        /// </summary>
+        /// <typeparam name="T">The type of object that will be cloned</typeparam>
+        /// <param name="obj">The object to clone</param>
+        /// <returns>A deep clone of the provided object</returns>
         public T Clone<T>(T obj)
         {
             var json = Serialize(obj);
             var cloned = Deserialize<T>(json);
             return cloned;
         }
+
+        /// <summary>
+        /// Serializes a provided object and returns a JSON string
+        /// using JSON.Net.
+        /// </summary>
+        /// <param name="obj">The object to serialize</param>
+        /// <param name="prettyFormat">Minifies if fales, prettifies if true</param>
+        /// <returns>A JSON string representation of the provided object</returns>
         public string Serialize(Object obj, bool prettyFormat = false)
         {
             var formatting = prettyFormat ? Formatting.Indented : Formatting.None;
             var json = JsonConvert.SerializeObject(obj, formatting);
             return json;
         }
+
+        /// <summary>
+        /// Deserializes the provided string and returns an object using
+        /// JSON.Net.
+        /// </summary>
+        /// <typeparam name="T">The destination type</typeparam>
+        /// <param name="json">The JSON string to deserialize</param>
+        /// <returns>An object of type T</returns>
         public T Deserialize<T>(string json)
         {
             T runtime = JsonConvert.DeserializeObject<T>(json);
@@ -156,6 +264,13 @@ namespace NarfoxGameTools.Services
         }
 
 
+
+        /// <summary>
+        /// Saves the provided text to the specified path.
+        /// </summary>
+        /// <param name="path">The path to save</param>
+        /// <param name="text">The text to save</param>
+        /// <returns>A boolean indicating success (true) or failure (false)</returns>
         bool SaveText(string path, string text)
         {
             bool success = false;
@@ -174,6 +289,13 @@ namespace NarfoxGameTools.Services
 
             return success;
         }
+
+        /// <summary>
+        /// Loads the text in a provided file path and returns
+        /// it as a string.
+        /// </summary>
+        /// <param name="path">The path to load</param>
+        /// <returns>The text contents of the file at the specified path</returns>
         string LoadText(string path)
         {
             string text;
