@@ -120,11 +120,39 @@ namespace NarfoxGameTools.Services
 
 
 
+
         /// <summary>
         /// Private constructor for Singleton pattern access
         /// </summary>
         private FileService() { }
 
+
+
+        /// <summary>
+        /// Converts the provided name into a lower case
+        /// string and converts spaces to underscores and appends
+        /// the save extension
+        /// </summary>
+        /// <param name="name">The save file name to convert.</param>
+        /// <returns></returns>
+        public string GetSaveFileName(string name)
+        {
+            var safeName = name.ToLower().Replace(" ", "_");
+            return safeName + Extension;
+        }
+
+        /// <summary>
+        /// Checks if the provided path is absolute by checking if
+        /// it contains the default save directory. Returns a path
+        /// that is reliably absolute.
+        /// </summary>
+        /// <param name="unknownPath">A path that may or may not be absolute</param>
+        /// <returns>A path that is absolute</returns>
+        public string GetAbsoluteSavePath(string unknownPath)
+        {
+            bool isAbsolute = unknownPath.Contains(DefaultSaveDirectory);
+            return isAbsolute ? unknownPath : Path.Combine(DefaultSaveDirectory, unknownPath);
+        }
 
         /// <summary>
         /// Returns a list of all files in a directory with the option to filter
@@ -148,6 +176,23 @@ namespace NarfoxGameTools.Services
             }
 
             return files;
+        }
+
+        /// <summary>
+        /// Copies a file from the srcPath to the destPath and overwrites
+        /// any existing file with the same name by default.
+        /// 
+        /// Noop if file doesn't exist
+        /// </summary>
+        /// <param name="srcPath">The path of the file to copy</param>
+        /// <param name="destPath">The path where the file should be copied to</param>
+        /// <param name="overwrite">Whether to overwrite existing file at destination path</param>
+        public void CopyFile(string srcPath, string destPath, bool overwrite = true)
+        {
+            if (File.Exists(srcPath))
+            {
+                File.Copy(srcPath, destPath, overwrite);
+            }
         }
 
         /// <summary>
