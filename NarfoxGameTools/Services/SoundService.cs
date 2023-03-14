@@ -12,18 +12,6 @@ using System.IO;
 
 namespace NarfoxGameTools.Services
 {
-    // TODO: per conversation with Vic, this service should
-    // have a way to play named instances that can be compile-time
-    // checked. I should:
-    // 1) Rewrite struct to hold a SoundEffect instead of the string Name
-    // 2) Resolve the string name to a SoundEffect in the current RequestPlayEffect method
-    // 3) Create an overload method that can directly take a sound effect
-    // 4) Wrap play call in a try/catch in case the SE is disposed
-    //
-    // This will allow users to pass effects directly from global content more efficiently
-
-
-
     /// <summary>
     /// This class wraps FlatRedBall and MonoGame audio utilities
     /// to provide more advanced functionality like positioned audio
