@@ -182,7 +182,10 @@ namespace NarfoxGameTools.Services
         float CalcSoundVolume => SoundVolume * SoundMixVolume;
 
         /// <summary>
-        /// Whether or not sound will play. If true, no sound will play at all
+        /// Whether or not sound will play. If true, no sound will play at all.
+        /// 
+        /// NOTE: does not affect music. Music should be managed with volume or by
+        /// stopping/playing songs.
         /// </summary>
         public bool IsMuted { get; set; } = false;
 
@@ -192,6 +195,10 @@ namespace NarfoxGameTools.Services
         /// </summary>
         public float PitchVariance { get; set; } = 0.25f;
 
+        /// <summary>
+        /// The name of the song that is currently playing
+        /// </summary>
+        public string CurrentSongName => AudioManager.CurrentlyPlayingSong?.Name;
 
 
         /// <summary>
@@ -326,13 +333,34 @@ namespace NarfoxGameTools.Services
 
             // if we have no song, or our current song has a different name, or we're forcing
             // a song restart - stop other music and start playing the new song
-            if (current == null || current.Name != song.Name || forceRestart)
+            if (CurrentSongName == null || CurrentSongName != song.Name || forceRestart)
             {
                 AudioManager.StopSong();
                 MediaPlayer.Volume = CalcMusicVolume;
                 MediaPlayer.IsRepeating = loop;
                 AudioManager.PlaySong(song, true, true);
             }
+        }
+
+        /// <summary>
+        /// Resumes playing the current song if there is one.
+        /// 
+        /// No operation if there is no current song.
+        /// </summary>
+        public void ResumeSong()
+        {
+            if(AudioManager.CurrentSong != null)
+            {
+                AudioManager.PlaySong();
+            }
+        }
+
+        /// <summary>
+        /// Stops playing the current song
+        /// </summary>
+        public void StopSong()
+        {
+            AudioManager.StopSong();
         }
 
         /// <summary>
@@ -383,7 +411,7 @@ namespace NarfoxGameTools.Services
         /// <param name="instance">The instance to unload</param>
         public void UnloadOwnedInstance(SoundEffectInstance instance)
         {
-            if (ownedInstances.ContainsKey(instance))
+            if (instance != null && ownedInstances.ContainsKey(instance))
             {
                 instance.Stop();
                 ownedInstances.Remove(instance);
@@ -406,7 +434,7 @@ namespace NarfoxGameTools.Services
         /// </summary>
         /// <param name="nullablePosition">The position to use for calculation</param>
         /// <returns>A float representing the volume from 0 to 1</returns>
-        protected float GetVolumeForPosition(Vector3? nullablePosition)
+        public float GetVolumeForPosition(Vector3? nullablePosition)
         {
             // EARLY OUT: null position
             if (IsMuted)
@@ -445,7 +473,7 @@ namespace NarfoxGameTools.Services
         /// </summary>
         /// <param name="nullablePosition">The position to use for calculation</param>
         /// <returns>A float from -1 to 1</returns>
-        protected float GetPanForPosition(Vector3? nullablePosition)
+        public float GetPanForPosition(Vector3? nullablePosition)
         {
             // EARLY OUT: null position
             if (nullablePosition == null)
@@ -522,6 +550,5 @@ namespace NarfoxGameTools.Services
             var effect = contentManager.Load<SoundEffect>(path);
             return effect;
         }
-
     }
 }
