@@ -38,6 +38,15 @@ namespace NarfoxGameTools.Extensions
             return vector;
         }
 
+        public static Vector3 PositionInRectangle(this Random random, float sectorSize, float minZ, float maxZ)
+        {
+            var halfSize = sectorSize / 2f;
+            return new Vector3(
+                random.InRange(-halfSize, halfSize),
+                random.InRange(-halfSize, halfSize),
+                random.InRange(minZ, maxZ));
+        }
+
         public static float Sign(this Random rand)
         {
             return rand.NextDouble() < 0.5 ? 1f : -1f;

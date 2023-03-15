@@ -73,22 +73,18 @@ namespace NarfoxGameTools.Extensions
         {
             return o1.Position.ToVector2().DistanceTo(o2.Position.ToVector2());
         }
-
         public static float DistanceTo(this PositionedObject o1, PositionedNode node)
         {
             return o1.Position.ToVector2().DistanceTo(node.Position.ToVector2());
         }
-
         public static float DistanceTo(this PositionedObject o1, Vector2 target)
         {
             return o1.Position.ToVector2().DistanceTo(target);
         }
-
         public static float DistanceTo(this Vector2 vector, Vector2 vector2)
         {
             return (vector2 - vector).Length();
         }
-
         public static float DistanceTo(this Vector3 vector, Vector3 vector2)
         {
             return vector.ToVector2().DistanceTo(vector2.ToVector2());
