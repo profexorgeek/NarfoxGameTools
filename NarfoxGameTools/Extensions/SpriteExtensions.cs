@@ -38,5 +38,31 @@ namespace NarfoxGameTools.Extensions
         {
             return new Color(sprite.Red, sprite.Green, sprite.Blue);
         }
+
+        /// <summary>
+        /// Scales the sprite to the specified texture scale
+        /// </summary>
+        /// <param name="sprite">The sprite to scale</param>
+        /// <param name="scaleFactor">The scale factor to apply</param>
+        public static void ScaleTo(this Sprite sprite, float scaleFactor)
+        {
+            ScaleTo(sprite, scaleFactor, scaleFactor);
+        }
+
+        /// <summary>
+        /// Scales the sprite to the specified texture scale
+        /// </summary>
+        /// <param name="sprite">The sprite to scale</param>
+        /// <param name="xScale">The x scale to apply</param>
+        /// <param name="yScale">The y scale to apply</param>
+        public static void ScaleTo(this Sprite sprite, float xScale, float yScale)
+        {
+            // first make sure the texture starts at 1x scale
+            sprite.TextureScale = 1f;
+
+            // now apply scale factors
+            sprite.Width *= xScale;
+            sprite.Height *= yScale;
+        }
     }
 }
