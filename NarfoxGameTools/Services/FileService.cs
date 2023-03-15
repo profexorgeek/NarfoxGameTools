@@ -217,7 +217,25 @@ namespace NarfoxGameTools.Services
         public T LoadFile<T>(string path, bool decrypt = false)
         {
             var filetext = LoadText(path);
-            var json = decrypt ? filetext.Decrypt() : filetext;
+            string json;
+
+            if(decrypt)
+            {
+                try
+                {
+                    json = filetext.Decrypt();
+                }
+                catch(Exception e)
+                {
+                    LogService.Log.Error($"Problem encountered while trying to decrypt save: {path}. File may not be encrypted, attempting to load without decrypting.");
+                    LogService.Log.Error($"Decryption error: {e.Message}");
+                    json = filetext;
+                }
+            }
+            else
+            {
+                json = filetext;
+            }
             return Deserialize<T>(json);
         }
 
