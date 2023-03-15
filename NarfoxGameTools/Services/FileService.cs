@@ -75,6 +75,20 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        public string AppName
+        {
+            get
+            {
+                var assembly = Assembly.GetEntryAssembly();
+                string name = assembly == null ? "" : Assembly.GetEntryAssembly().FullName;
+                if(!string.IsNullOrEmpty(name))
+                {
+                    name = name.Substring(0, name.IndexOf(','));
+                }
+                return name;
+            }
+        }
+
         /// <summary>
         /// The default place for your game to save user data. This is not your
         /// game's content folder but rather where you'd put a saved game or
@@ -86,15 +100,10 @@ namespace NarfoxGameTools.Services
         {
             get
             {
-                var assembly = Assembly.GetEntryAssembly();
-                string defaultSaveDirectory = assembly == null ? "" : Assembly.GetEntryAssembly().FullName;
+                var defaultSaveDirectory = AppName.ToLower();
                 if (string.IsNullOrEmpty(defaultSaveDirectory))
                 {
                     defaultSaveDirectory = "narfox";
-                }
-                else
-                {
-                    defaultSaveDirectory = defaultSaveDirectory.Substring(0, defaultSaveDirectory.IndexOf(','));
                 }
 
                 var fullpath = Path.Combine(AppDataDirectory, defaultSaveDirectory);
