@@ -16,37 +16,31 @@ namespace NarfoxGameTools.Services
     public class FileService
     {
         static FileService instance;
-        string appVersion = null;
+        string appVersionString = null;
 
 
         /// <summary>
-        /// The current application version as set in its assembly information. Makes
-        /// it easy to render the version string in game!
+        /// The application Version as a string with Major.Minor.Build
+        /// and the specific platform build prepended. For example:
+        /// PC 1.23.5
         /// </summary>
-        public string AppVersion
+        public string AppVersionString
         {
             get
             {
-                if (appVersion == null)
+                if (appVersionString == null)
                 {
-                    try
-                    {
-                        var version = Assembly.GetEntryAssembly().GetName().Version;
-                        var versionString = string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
-                        appVersion = $"PC {versionString}";
-                    }
-                    catch(Exception e)
-                    {
-                        appVersion = "v0.0.0";
-                    }
+                    var versionString = AppVersion.ToString(3);
+                    appVersionString = $"PC {versionString}";
                 }
-                return appVersion;
-            }
-            private set
-            {
-                appVersion = value;
+                return appVersionString;
             }
         }
+
+        /// <summary>
+        /// The application Version
+        /// </summary>
+        public Version AppVersion => Assembly.GetEntryAssembly().GetName().Version;
 
         /// <summary>
         /// Singleton instance of this service.
