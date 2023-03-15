@@ -91,6 +91,27 @@ namespace NarfoxGameTools.Extensions
         }
 
 
+        public static Vector2 PositionAsVector2(this IPositionable entity)
+        {
+            Vector2 returnVector;
+            if (entity != null)
+            {
+                returnVector = new Vector2(entity.X, entity.Y);
+            }
+            else
+            {
+                returnVector = Vector2.Zero;
+            }
+            return returnVector;
+        }
+
+        public static Vector2 GetPositionInTime(this IPositionable entity, float seconds)
+        {
+            var dx = entity.XVelocity * seconds;
+            var dy = entity.YVelocity * seconds;
+            return new Vector2(entity.X + dx, entity.Y + dy);
+        }
+
         public static float RotationTo(this PositionedObject source, PositionedObject target)
         {
             return RotationTo(source, target.X, target.Y);
