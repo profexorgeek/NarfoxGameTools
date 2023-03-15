@@ -105,6 +105,33 @@ namespace NarfoxGameTools.Extensions
         }
 
         /// <summary>
+        /// Returns the inverse color (white minus color) for the
+        /// provided color
+        /// </summary>
+        /// <param name="color">The color to invert</param>
+        /// <returns>An inverted color</returns>
+        public static Color Inverse(this Color color)
+        {
+            return new Color(
+                255 - color.R,
+                255 - color.G,
+                255 - color.B,
+                color.A
+            );
+        }
+
+        /// <summary>
+        /// Gets the complement of the provided color
+        /// </summary>
+        /// <param name="color">The color to get the complement of</param>
+        /// <returns>A complementary color</returns>
+        public static Color Complement(this Color color)
+        {
+            var hsl = color.ToHsl();
+            return hsl.Complement.ToRgb();
+        }
+
+        /// <summary>
         /// Gets an HSL color from an RGB color
         /// </summary>
         /// <param name="R">Red byte value</param>
