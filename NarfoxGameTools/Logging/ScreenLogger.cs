@@ -33,6 +33,18 @@ namespace NarfoxGameTools.Logging
             Write(LogLevel.Error, msg);
         }
 
+        public void Purge()
+        {
+            // no-op, this logger doesn't save messages
+        }
+
+        public void Save()
+        {
+            // no-op, this logger doesn't save messsages
+        }
+
+
+
         void Write(LogLevel level, string msg)
         {
             if (Level <= level)
