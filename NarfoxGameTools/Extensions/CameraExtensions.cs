@@ -13,6 +13,19 @@ namespace NarfoxGameTools.Extensions
     public static class CameraExtensions
     {
         /// <summary>
+        /// Gets the "zoom position" of a 3D camera as a
+        /// percentage assuming that 100% would be the
+        /// pixel perfect distance
+        /// </summary>
+        /// <param name="cam"></param>
+        /// <returns></returns>
+        public static float GetZoomPercentage(this Camera cam)
+        {
+            var pixelPerfectZ = cam.GetZDistanceForPixelPerfect();
+            return cam.Position.Z / pixelPerfectZ;
+        }
+
+        /// <summary>
         /// Gets a random position within view of the camera.
         /// Can specify a Z position for 3D cameras and a custom
         /// random object. If no random object is specified, it will
