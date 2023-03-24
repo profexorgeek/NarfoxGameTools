@@ -130,9 +130,20 @@ namespace NarfoxGameTools.Services
 
         private string GetFilename(string name = null)
         {
-            name = name ?? DateTime.Now.ToString("G");
-            var cleanName = Regex.Replace(name, "[^0-9A-Za-z]", "_");
-            return Path.GetFileNameWithoutExtension(cleanName) + ".png";
+            // Old, but we're going to match the windows recording naming convention
+            //name = name ?? DateTime.Now.ToString("G");
+            //var cleanName = Regex.Replace(name, "[^0-9A-Za-z]", "_");
+            //return Path.GetFileNameWithoutExtension(cleanName) + ".png";
+            if(name != null)
+            {
+                var cleanName = Regex.Replace(name, "[^0-9A-Za-z]", "_");
+                return Path.GetFileNameWithoutExtension(cleanName) + ".png";
+            }
+            else
+            {
+                var now = DateTime.Now;
+                return now.ToString("yyyy-mm-dd HH-mm-ss") + ".png";
+            }
         }
     }
 }
