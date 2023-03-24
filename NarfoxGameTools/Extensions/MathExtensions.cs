@@ -73,27 +73,44 @@ namespace NarfoxGameTools.Extensions
         {
             return o1.Position.ToVector2().DistanceTo(o2.Position.ToVector2());
         }
-
         public static float DistanceTo(this PositionedObject o1, PositionedNode node)
         {
             return o1.Position.ToVector2().DistanceTo(node.Position.ToVector2());
         }
-
         public static float DistanceTo(this PositionedObject o1, Vector2 target)
         {
             return o1.Position.ToVector2().DistanceTo(target);
         }
-
         public static float DistanceTo(this Vector2 vector, Vector2 vector2)
         {
             return (vector2 - vector).Length();
         }
-
         public static float DistanceTo(this Vector3 vector, Vector3 vector2)
         {
             return vector.ToVector2().DistanceTo(vector2.ToVector2());
         }
 
+
+        public static Vector2 PositionAsVector2(this IPositionable entity)
+        {
+            Vector2 returnVector;
+            if (entity != null)
+            {
+                returnVector = new Vector2(entity.X, entity.Y);
+            }
+            else
+            {
+                returnVector = Vector2.Zero;
+            }
+            return returnVector;
+        }
+
+        public static Vector2 GetPositionInTime(this IPositionable entity, float seconds)
+        {
+            var dx = entity.XVelocity * seconds;
+            var dy = entity.YVelocity * seconds;
+            return new Vector2(entity.X + dx, entity.Y + dy);
+        }
 
         public static float RotationTo(this PositionedObject source, PositionedObject target)
         {

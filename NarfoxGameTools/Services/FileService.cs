@@ -16,37 +16,31 @@ namespace NarfoxGameTools.Services
     public class FileService
     {
         static FileService instance;
-        string appVersion = null;
+        string appVersionString = null;
 
 
         /// <summary>
-        /// The current application version as set in its assembly information. Makes
-        /// it easy to render the version string in game!
+        /// The application Version as a string with Major.Minor.Build
+        /// and the specific platform build prepended. For example:
+        /// PC 1.23.5
         /// </summary>
-        public string AppVersion
+        public string AppVersionString
         {
             get
             {
-                if (appVersion == null)
+                if (appVersionString == null)
                 {
-                    try
-                    {
-                        var version = Assembly.GetEntryAssembly().GetName().Version;
-                        var versionString = string.Format("{0}.{1}.{2}", version.Major, version.Minor, version.Build);
-                        appVersion = $"PC {versionString}";
-                    }
-                    catch(Exception e)
-                    {
-                        appVersion = "v0.0.0";
-                    }
+                    var versionString = AppVersion.ToString(3);
+                    appVersionString = $"PC {versionString}";
                 }
-                return appVersion;
-            }
-            private set
-            {
-                appVersion = value;
+                return appVersionString;
             }
         }
+
+        /// <summary>
+        /// The application Version
+        /// </summary>
+        public Version AppVersion => Assembly.GetEntryAssembly().GetName().Version;
 
         /// <summary>
         /// Singleton instance of this service.
@@ -75,6 +69,20 @@ namespace NarfoxGameTools.Services
             }
         }
 
+        public string AppName
+        {
+            get
+            {
+                var assembly = Assembly.GetEntryAssembly();
+                string name = assembly == null ? "" : Assembly.GetEntryAssembly().FullName;
+                if(!string.IsNullOrEmpty(name))
+                {
+                    name = name.Substring(0, name.IndexOf(','));
+                }
+                return name;
+            }
+        }
+
         /// <summary>
         /// The default place for your game to save user data. This is not your
         /// game's content folder but rather where you'd put a saved game or
@@ -86,15 +94,10 @@ namespace NarfoxGameTools.Services
         {
             get
             {
-                var assembly = Assembly.GetEntryAssembly();
-                string defaultSaveDirectory = assembly == null ? "" : Assembly.GetEntryAssembly().FullName;
+                var defaultSaveDirectory = AppName.ToLower();
                 if (string.IsNullOrEmpty(defaultSaveDirectory))
                 {
                     defaultSaveDirectory = "narfox";
-                }
-                else
-                {
-                    defaultSaveDirectory = defaultSaveDirectory.Substring(0, defaultSaveDirectory.IndexOf(','));
                 }
 
                 var fullpath = Path.Combine(AppDataDirectory, defaultSaveDirectory);
@@ -120,11 +123,39 @@ namespace NarfoxGameTools.Services
 
 
 
+
         /// <summary>
         /// Private constructor for Singleton pattern access
         /// </summary>
         private FileService() { }
 
+
+
+        /// <summary>
+        /// Converts the provided name into a lower case
+        /// string and converts spaces to underscores and appends
+        /// the save extension
+        /// </summary>
+        /// <param name="name">The save file name to convert.</param>
+        /// <returns></returns>
+        public string GetSaveFileName(string name)
+        {
+            var safeName = name.ToLower().Replace(" ", "_");
+            return safeName + Extension;
+        }
+
+        /// <summary>
+        /// Checks if the provided path is absolute by checking if
+        /// it contains the default save directory. Returns a path
+        /// that is reliably absolute.
+        /// </summary>
+        /// <param name="unknownPath">A path that may or may not be absolute</param>
+        /// <returns>A path that is absolute</returns>
+        public string GetAbsoluteSavePath(string unknownPath)
+        {
+            bool isAbsolute = unknownPath.Contains(DefaultSaveDirectory);
+            return isAbsolute ? unknownPath : Path.Combine(DefaultSaveDirectory, unknownPath);
+        }
 
         /// <summary>
         /// Returns a list of all files in a directory with the option to filter
@@ -151,6 +182,23 @@ namespace NarfoxGameTools.Services
         }
 
         /// <summary>
+        /// Copies a file from the srcPath to the destPath and overwrites
+        /// any existing file with the same name by default.
+        /// 
+        /// Noop if file doesn't exist
+        /// </summary>
+        /// <param name="srcPath">The path of the file to copy</param>
+        /// <param name="destPath">The path where the file should be copied to</param>
+        /// <param name="overwrite">Whether to overwrite existing file at destination path</param>
+        public void CopyFile(string srcPath, string destPath, bool overwrite = true)
+        {
+            if (File.Exists(srcPath))
+            {
+                File.Copy(srcPath, destPath, overwrite);
+            }
+        }
+
+        /// <summary>
         /// Loads text from the provided path, decrypts it if the decrypt argument
         /// is true, and deserializes the result into an instance of T.
         /// 
@@ -163,7 +211,25 @@ namespace NarfoxGameTools.Services
         public T LoadFile<T>(string path, bool decrypt = false)
         {
             var filetext = LoadText(path);
-            var json = decrypt ? filetext.Decrypt() : filetext;
+            string json;
+
+            if(decrypt)
+            {
+                try
+                {
+                    json = filetext.Decrypt();
+                }
+                catch(Exception e)
+                {
+                    LogService.Log.Error($"Problem encountered while trying to decrypt save: {path}. File may not be encrypted, attempting to load without decrypting.");
+                    LogService.Log.Error($"Decryption error: {e.Message}");
+                    json = filetext;
+                }
+            }
+            else
+            {
+                json = filetext;
+            }
             return Deserialize<T>(json);
         }
 

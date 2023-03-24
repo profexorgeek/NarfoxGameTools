@@ -79,11 +79,16 @@ namespace NarfoxGameTools.Services
 
         private ScreenshotService() { }
 
-        public void Initialize(string savePath = null)
+        public void Initialize(string saveLocation = null)
         {
             if (!FlatRedBallServices.IsInitialized)
             {
                 throw new Exception("FlatRedBall must be fully initialized you can initialize this service!");
+            }
+
+            if(saveLocation != null)
+            {
+                savePath = saveLocation;
             }
 
             initialized = true;

@@ -60,11 +60,28 @@ namespace NarfoxGameTools.Services
             }
         }
 
-        public static void Initialize(string keyString, string keyVector)
+        /// <summary>
+        /// Initialize the crypto service with a raw string and vector.
+        /// </summary>
+        /// <param name="keyString">A UTF8 string that's exactly 8 characters (64bit)</param>
+        /// <param name="keyVector">A UTF8 string with exactly 8 characters (64bit)</param>
+        /// <param name="convert">Whether the provided strings are base64 already or need to be converted.
+        /// If false is passed and the strings are not valid 64bit strings, errors will be thrown when
+        /// trying to decrypt!</param>
+        public static void Initialize(string keyString, string keyVector, bool convert = true)
         {
             algo = DES.Create();
-            KeyBase64String = GetValidBase64StringOrError(keyString);
-            IvBase64String = GetValidBase64StringOrError(keyVector);
+
+            if (convert)
+            {
+                KeyBase64String = GetValidBase64StringOrError(keyString);
+                IvBase64String = GetValidBase64StringOrError(keyVector);
+            }
+            else
+            {
+                KeyBase64String = keyString;
+                IvBase64String = keyVector;
+            }
             initialized = true;
         }
 
@@ -114,6 +131,13 @@ namespace NarfoxGameTools.Services
             return Encoding.UTF8.GetString(outputBuffer);
         }
 
+        /// <summary>
+        /// Gets a base64 string from the provided UTF8 string that
+        /// is exactly 64bits in length, otherwise throws an error
+        /// </summary>
+        /// <param name="str">A UTF8 string that should be 64bits or 8 characters long</param>
+        /// <returns>A valid 64bit base64 string</returns>
+        /// <exception cref="Exception">Throws exception when string is incorrect number of bits</exception>
         static string GetValidBase64StringOrError(string str)
         {
             var bytes = Encoding.UTF8.GetBytes(str);

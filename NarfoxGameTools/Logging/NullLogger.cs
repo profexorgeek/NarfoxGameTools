@@ -23,5 +23,15 @@
         {
             // swallow
         }
+
+        public void Purge()
+        {
+            // no-op
+        }
+
+        public void Save()
+        {
+            // no-op
+        }
     }
 }

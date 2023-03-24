@@ -3,6 +3,7 @@ using FlatRedBall.Audio;
 using FlatRedBall.Content;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 using NarfoxGameTools.Extensions;
 using System;
@@ -11,7 +12,6 @@ using System.IO;
 
 namespace NarfoxGameTools.Services
 {
-
     /// <summary>
     /// This class wraps FlatRedBall and MonoGame audio utilities
     /// to provide more advanced functionality like positioned audio
@@ -24,7 +24,7 @@ namespace NarfoxGameTools.Services
         /// </summary>
         protected struct SoundRequest
         {
-            public string Name;
+            public SoundEffect Effect;
             public float Volume;
             public float Pitch;
             public float Pan;
@@ -182,7 +182,10 @@ namespace NarfoxGameTools.Services
         float CalcSoundVolume => SoundVolume * SoundMixVolume;
 
         /// <summary>
-        /// Whether or not sound will play. If true, no sound will play at all
+        /// Whether or not sound will play. If true, no sound will play at all.
+        /// 
+        /// NOTE: does not affect music. Music should be managed with volume or by
+        /// stopping/playing songs.
         /// </summary>
         public bool IsMuted { get; set; } = false;
 
@@ -192,6 +195,10 @@ namespace NarfoxGameTools.Services
         /// </summary>
         public float PitchVariance { get; set; } = 0.25f;
 
+        /// <summary>
+        /// The name of the song that is currently playing
+        /// </summary>
+        public string CurrentSongName => AudioManager.CurrentlyPlayingSong?.Name;
 
 
         /// <summary>
@@ -258,11 +265,6 @@ namespace NarfoxGameTools.Services
         /// <param name="randomizePitch">Whether or not to randomize pitch, defaults to true</param>
         public void RequestPlayEffect(string effectName, Vector3? position = null, bool randomizePitch = true)
         {
-            if (!initialized)
-            {
-                throw new Exception("Attempted to play effect before initializing the SoundService.");
-            }
-
             // EARLY OUT: null name
             if (string.IsNullOrWhiteSpace(effectName))
             {
@@ -270,20 +272,17 @@ namespace NarfoxGameTools.Services
                 return;
             }
 
+            var volume = GetVolumeForPosition(position);
+            var pan = GetPanForPosition(position);
             var pitch = randomizePitch ? RandomService.Random.InRange(-PitchVariance, PitchVariance) : 0f;
-            var request = new SoundRequest
-            {
-                Name = effectName,
-                Volume = GetVolumeForPosition(position),
-                Pan = GetPanForPosition(position),
-                Pitch = pitch,
-                TimeRequested = TimeManager.CurrentScreenTime,
-            };
-            PlaySound(request);
+            RequestPlayEffect(effectName, volume, pan, pitch);
         }
 
         /// <summary>
-        /// Fire-and-forget method to play a single sound effect with specific volume, pan, and pitch
+        /// Fire-and-forget method to play a single sound effect. Passing the Position will pan
+        /// and attenuate the sound based on the Target position. This method doesn't
+        /// keep a handle to the sound effect and so effects played this way can not be
+        /// stopped or altered once started.
         /// </summary>
         /// <param name="effectName">The name of the effect, which will be resolved from the base directories</param>
         /// <param name="volume">The volume of the effect from 0 to 1</param>
@@ -291,11 +290,6 @@ namespace NarfoxGameTools.Services
         /// <param name="pitch">The pitch of the effect</param>
         public void RequestPlayEffect(string effectName, float volume, float pan, float pitch)
         {
-            if (!initialized)
-            {
-                throw new Exception("Attempted to play effect before initializing the SoundService.");
-            }
-
             // EARLY OUT: null name
             if (string.IsNullOrWhiteSpace(effectName))
             {
@@ -303,9 +297,42 @@ namespace NarfoxGameTools.Services
                 return;
             }
 
+            var effect = GetEffect(effectName);
+            RequestPlayEffect(effect, volume, pan, pitch);
+        }
+
+        /// <summary>
+        /// Fire-and-forget method to play a single sound effect. Passing the Position will pan
+        /// and attenuate the sound based on the Target position. This method doesn't
+        /// keep a handle to the sound effect and so effects played this way can not be
+        /// stopped or altered once started.
+        /// </summary>
+        /// <param name="effect">The effect to play</param>
+        /// <param name="position">The position the effect is emitting from</param>
+        /// <param name="randomizePitch">Whether to randomize the effect pitch</param>
+        public void RequestPlayEffect(SoundEffect effect, Vector3? position = null, bool randomizePitch = true)
+        {
+            var volume = GetVolumeForPosition(position);
+            var pan = GetPanForPosition(position);
+            var pitch = randomizePitch ? RandomService.Random.InRange(-PitchVariance, PitchVariance) : 0f;
+            RequestPlayEffect(effect, volume, pan, pitch);
+        }
+
+        /// <summary>
+        /// Fire-and-forget method to play a single sound effect.Passing the Position will pan
+        /// and attenuate the sound based on the Target position. This method doesn't
+        /// keep a handle to the sound effect and so effects played this way can not be
+        /// stopped or altered once started.
+        /// </summary>
+        /// <param name="effect">The effect to play</param>
+        /// <param name="volume">The volume of the effect from 0 to 1</param>
+        /// <param name="pan">The pan of the effect from -1 to 1</param>
+        /// <param name="pitch">The pitch of the effect</param>
+        public void RequestPlayEffect(SoundEffect effect, float volume, float pan, float pitch)
+        {
             var request = new SoundRequest
             {
-                Name = effectName,
+                Effect = effect,
                 Volume = volume,
                 Pan = pan,
                 Pitch = pitch,
@@ -326,13 +353,34 @@ namespace NarfoxGameTools.Services
 
             // if we have no song, or our current song has a different name, or we're forcing
             // a song restart - stop other music and start playing the new song
-            if (current == null || current.Name != song.Name || forceRestart)
+            if (CurrentSongName == null || CurrentSongName != song.Name || forceRestart)
             {
                 AudioManager.StopSong();
                 MediaPlayer.Volume = CalcMusicVolume;
                 MediaPlayer.IsRepeating = loop;
                 AudioManager.PlaySong(song, true, true);
             }
+        }
+
+        /// <summary>
+        /// Resumes playing the current song if there is one.
+        /// 
+        /// No operation if there is no current song.
+        /// </summary>
+        public void ResumeSong()
+        {
+            if(AudioManager.CurrentSong != null)
+            {
+                AudioManager.PlaySong();
+            }
+        }
+
+        /// <summary>
+        /// Stops playing the current song
+        /// </summary>
+        public void StopSong()
+        {
+            AudioManager.StopSong();
         }
 
         /// <summary>
@@ -383,7 +431,7 @@ namespace NarfoxGameTools.Services
         /// <param name="instance">The instance to unload</param>
         public void UnloadOwnedInstance(SoundEffectInstance instance)
         {
-            if (ownedInstances.ContainsKey(instance))
+            if (instance != null && ownedInstances.ContainsKey(instance))
             {
                 instance.Stop();
                 ownedInstances.Remove(instance);
@@ -406,7 +454,7 @@ namespace NarfoxGameTools.Services
         /// </summary>
         /// <param name="nullablePosition">The position to use for calculation</param>
         /// <returns>A float representing the volume from 0 to 1</returns>
-        protected float GetVolumeForPosition(Vector3? nullablePosition)
+        public float GetVolumeForPosition(Vector3? nullablePosition)
         {
             // EARLY OUT: null position
             if (IsMuted)
@@ -445,7 +493,7 @@ namespace NarfoxGameTools.Services
         /// </summary>
         /// <param name="nullablePosition">The position to use for calculation</param>
         /// <returns>A float from -1 to 1</returns>
-        protected float GetPanForPosition(Vector3? nullablePosition)
+        public float GetPanForPosition(Vector3? nullablePosition)
         {
             // EARLY OUT: null position
             if (nullablePosition == null)
@@ -465,17 +513,18 @@ namespace NarfoxGameTools.Services
         /// <param name="request">The sound request object to play</param>
         protected void PlaySound(SoundRequest request)
         {
-            var effect = GetEffect(request.Name);
-            //var effectLeft = GetEffect(request.Name);
-            //var effectRight = GetEffect(request.Name);
-
-            if (effect == null)
+            if (!initialized)
             {
-                LogService.Log.Debug($"Bad effect requested: {request.Name}!");
+                throw new Exception("Attempted to play a sound effect before initializing the SoundService.");
+            }
+
+            if (request.Effect == null)
+            {
+                LogService.Log.Debug($"Bad effect requested: {request.Effect}!");
             }
             else if (IsMuted == false && CurrentlyPlayingSounds < MaxConcurrentSounds)
             {
-                request.Duration = effect.Duration.TotalMilliseconds / 1000f;
+                request.Duration = request.Effect.Duration.TotalMilliseconds / 1000f;
                 request.TimeRequested = TimeManager.CurrentTime;
                 soundQueue.Add(request);
 
@@ -488,19 +537,16 @@ namespace NarfoxGameTools.Services
                     // https://github.com/MonoGame/MonoGame/issues/6876
                     // https://github.com/MonoGame/MonoGame/issues/6543
                     // https://github.com/MonoGame/MonoGame/issues/5739
-
-                    // One potential hack is to play two sounds at once and fake panning:
-                    //float panVolumeCompensation = // figure out the calc for this;
-                    //var leftVolume = (1 - request.Pan).Clamp(0, 1) * request.Volume * panVolumeCompensation;
-                    //var rightVolume = (1 + request.Pan).Clamp(0, 1) * request.Volume * panVolumeCompensation;
-                    //effectLeft.Play(leftVolume, request.Pitch, -1);
-                    //effectRight.Play(rightVolume, request.Pitch, 1);
-
                     // This is how the sound should actually be played
-                    effect.Play(request.Volume, request.Pitch, request.Pan);
+                    request.Effect.Play(request.Volume, request.Pitch, request.Pan);
                 }
                 catch (Exception e)
                 {
+                    // TODO: re-throw exception with more detailed information?
+                    // The main reason exceptions could happen is if the developer
+                    // queues up a sound request but then the sound is unloaded before
+                    // the request is actually played. This might happen if the screen
+                    // or content manager unload.
                     LogService.Log.Error(e.Message);
                 }
             }
@@ -522,6 +568,5 @@ namespace NarfoxGameTools.Services
             var effect = contentManager.Load<SoundEffect>(path);
             return effect;
         }
-
     }
 }
