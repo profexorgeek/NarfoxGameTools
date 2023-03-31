@@ -246,6 +246,19 @@ namespace NarfoxGameTools.Extensions
         }
 
         /// <summary>
+        /// Converts a color to a six-character hex string
+        /// </summary>
+        /// <param name="color">The color to convert</param>
+        /// <returns>A six-character hex string representing the color</returns>
+        public static string ToHexString(this Color color) {
+            var r = color.R.ToString("X2");
+            var g = color.G.ToString("X2");
+            var b = color.B.ToString("X2");
+
+            return $"{r}{g}{b}";
+        }
+
+        /// <summary>
         /// Internal math function that is part of the conversion
         /// process. For details see:
         /// https://www.easyrgb.com/en/math.php
