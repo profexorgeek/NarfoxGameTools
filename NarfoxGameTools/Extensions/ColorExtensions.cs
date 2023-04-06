@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using NarfoxGameTools.Services;
 using System;
 
 namespace NarfoxGameTools.Extensions
@@ -243,6 +244,45 @@ namespace NarfoxGameTools.Extensions
             c.A = 255;
 
             return c;
+        }
+
+        /// <summary>
+        /// Converts the provided color into a six-digit hexidecimal string
+        /// such as used in CSS and graphics programs
+        /// </summary>
+        /// <param name="color">The color to convert</param>
+        /// <returns>A six-digit hex string</returns>
+        public static string ToHexString(this Color color)
+        {
+            return $"{color.R.ToString("X2")}{color.G.ToString("X2")}{color.B.ToString("X2")}";
+        }
+
+        /// <summary>
+        /// Converts a 6-character hexidecimal string to an RGB Color.
+        /// 
+        /// Will return black if bad values are provided
+        /// </summary>
+        /// <param name="str">A valid, 6-digit hex string</param>
+        /// <returns>The color from the provided string, will return pure black on error.</returns>
+        public static Color HexStringToColor(this string str)
+        {
+            Color outColor = Color.Black;
+            if(str.Length == 6)
+            {
+                try
+                {
+                    var R = Convert.ToInt16(str.Substring(0, 2), 16);
+                    var G = Convert.ToInt16(str.Substring(2, 2), 16);
+                    var B = Convert.ToInt16(str.Substring(4, 2), 16);
+                    outColor = new Color(R, G, B);
+                }
+                catch(Exception e)
+                {
+                    LogService.Log.Error($"Could not convert {str} to a valid color");
+                }
+                
+            }
+            return outColor;
         }
 
         /// <summary>
