@@ -51,6 +51,12 @@ namespace NarfoxGameTools.Extensions
         /// <param name="min">The minimum value to clamp to</param>
         /// <param name="max">The maximum value to clamp to</param>
         /// <returns>A float that falls within the provided range</returns>
+        public static double Clamp(this double d, double min, double max)
+        {
+            d = Math.Max(min, d);
+            d = Math.Min(max, d);
+            return d;
+        }
         public static float Clamp(this float f, float min, float max)
         {
             f = Math.Max(min, f);
