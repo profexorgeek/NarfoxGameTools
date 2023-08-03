@@ -13,6 +13,8 @@
   <ItemGroup>
     <Compile Remove="..\obj\Debug\netstandard2.0\.NETStandard,Version=v2.0.AssemblyAttributes.cs" />
     <Compile Remove="..\obj\Debug\netstandard2.0\NarfoxGameTools.AssemblyInfo.cs" />
+    <Compile Remove="..\obj\Release\netstandard2.0\.NETStandard,Version=v2.0.AssemblyAttributes.cs" />
+    <Compile Remove="..\obj\Release\netstandard2.0\NarfoxGameTools.AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MonoGame.Framework.DesktopGL" Version="3.8.1.303">

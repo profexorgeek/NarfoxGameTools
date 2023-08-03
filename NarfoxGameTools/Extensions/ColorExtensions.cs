@@ -267,21 +267,34 @@ namespace NarfoxGameTools.Extensions
         public static Color HexStringToColor(this string str)
         {
             Color outColor = Color.Black;
-            if(str.Length == 6)
+
+            if (String.IsNullOrWhiteSpace(str) == false)
             {
-                try
+                if (str.Length == 3)
                 {
-                    var R = Convert.ToInt16(str.Substring(0, 2), 16);
-                    var G = Convert.ToInt16(str.Substring(2, 2), 16);
-                    var B = Convert.ToInt16(str.Substring(4, 2), 16);
-                    outColor = new Color(R, G, B);
+                    var r = str.Substring(0, 1);
+                    var g = str.Substring(1, 1);
+                    var b = str.Substring(2, 1);
+                    str = r + r + g + g + b + b;
                 }
-                catch(Exception e)
+
+                if (str.Length == 6)
                 {
-                    LogService.Log.Error($"Could not convert {str} to a valid color");
+                    try
+                    {
+                        var R = Convert.ToInt16(str.Substring(0, 2), 16);
+                        var G = Convert.ToInt16(str.Substring(2, 2), 16);
+                        var B = Convert.ToInt16(str.Substring(4, 2), 16);
+                        outColor = new Color(R, G, B);
+                    }
+                    catch (Exception e)
+                    {
+                        LogService.Log.Error($"Could not convert {str} to a valid color");
+                    }
+
                 }
-                
             }
+
             return outColor;
         }
 

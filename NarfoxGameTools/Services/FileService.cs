@@ -115,6 +115,11 @@ namespace NarfoxGameTools.Services
         /// The extension to use when saving data. Defaults to ".sav"
         /// </summary>
         public string Extension { get; set; } = ".sav";
+
+        /// <summary>
+        /// The extension to use when saving a backup. Defaults to ".bak"
+        /// </summary>
+        public string BackupExtension { get; set; } = ".bak";
         
         /// <summary>
         /// The ILogger instance to use when logging

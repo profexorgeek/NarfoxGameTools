@@ -1,4 +1,5 @@
-﻿using FlatRedBall.Math;
+﻿using FlatRedBall;
+using FlatRedBall.Math;
 using Microsoft.Xna.Framework;
 using System;
 
@@ -49,7 +50,8 @@ namespace NarfoxGameTools.Extensions
         /// velocity to zero. This is helpful for determining when a bot should
         /// quit accelerating to arrive near a specific point.
         /// 
-        /// Note that this is only crudely accurate for a range of speeds.
+        /// See:
+        /// https://flatredball.com/documentation/api/flatredball/flatredball-positionedobject/flatredball-positionedobject-drag/
         /// </summary>
         /// <param name="velocityLength">The linear velocity/length/vector magnitude</param>
         /// <param name="drag">The applied drag</param>
@@ -60,6 +62,17 @@ namespace NarfoxGameTools.Extensions
             // the drag each frame. However, for most velocities used in
             // games it is precise enough to do this fast and simple calculation
             return velocityLength / drag;
+        }
+
+        /// <summary>
+        /// Finds the distance it will take for the provided entity's velocity length
+        /// to reach zero, assuming it is not accelerating.
+        /// </summary>
+        /// <param name="entity">The entity to check</param>
+        /// <returns>The distance it will take for this entity to stop</returns>
+        public static float DistanceToStop(this PositionedObject entity)
+        {
+            return DistanceToStop(entity.Velocity.Length(), entity.Drag);
         }
 
         /// <summary>

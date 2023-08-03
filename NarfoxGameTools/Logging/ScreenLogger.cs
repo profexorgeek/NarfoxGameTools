@@ -10,7 +10,7 @@ namespace NarfoxGameTools.Logging
 
         public ScreenLogger()
         {
-            FlatRedBall.Debugging.Debugger.TextCorner = FlatRedBall.Debugging.Debugger.Corner.BottomLeft;
+            FlatRedBall.Debugging.Debugger.TextCorner = FlatRedBall.Debugging.Debugger.Corner.BottomRight;
         }
 
         public void Debug(string msg)
