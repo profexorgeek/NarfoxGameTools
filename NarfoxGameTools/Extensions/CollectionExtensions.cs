@@ -67,8 +67,10 @@ namespace NarfoxGameTools.Extensions
         /// <param name="list">A list to search</param>
         /// <param name="x">The target X coordinate</param>
         /// <param name="y">The target Y coordinate</param>
+        /// <param name="isEntityValid">A function that determines if an object should be filtered out. 
+        /// True means the object is valid and should NOT be filtered</param>
         /// <returns></returns>
-        public static T GetNearestToPoint<T>(this PositionedObjectList<T> list, float x, float y) where T : PositionedObject
+        public static T GetNearestToPoint<T>(this PositionedObjectList<T> list, float x, float y, Func<T, bool> isEntityValid = null) where T : PositionedObject
         {
             T nearest = null;
             float distToNearest = 0;
@@ -76,6 +78,13 @@ namespace NarfoxGameTools.Extensions
             for (var i = list.Count - 1; i > -1; i--)
             {
                 var current = list[i];
+
+                // if we have a filter function and the filter function
+                // returns a false value, we should skip this entity
+                if(isEntityValid != null && isEntityValid(current) == false)
+                {
+                    continue;
+                }
 
                 distToCurrent = current.DistanceTo(x, y);
 
