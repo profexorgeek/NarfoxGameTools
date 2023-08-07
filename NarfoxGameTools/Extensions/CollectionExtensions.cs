@@ -1,4 +1,6 @@
-﻿using FlatRedBall.AI.Pathfinding;
+﻿using FlatRedBall;
+using FlatRedBall.AI.Pathfinding;
+using FlatRedBall.Math;
 using NarfoxGameTools.Services;
 using System;
 using System.Collections.Generic;
@@ -59,6 +61,43 @@ namespace NarfoxGameTools.Extensions
         }
 
         /// <summary>
+        /// Gets the nearest PositionedObject of type T to the X and Y coordinates from 
+        /// </summary>
+        /// <typeparam name="T">The Type of object</typeparam>
+        /// <param name="list">A list to search</param>
+        /// <param name="x">The target X coordinate</param>
+        /// <param name="y">The target Y coordinate</param>
+        /// <returns></returns>
+        public static T GetNearestToPoint<T>(this PositionedObjectList<T> list, float x, float y) where T : PositionedObject
+        {
+            T nearest = null;
+            float distToNearest = 0;
+            float distToCurrent = 0;
+            for (var i = list.Count - 1; i > -1; i--)
+            {
+                var current = list[i];
+
+                distToCurrent = current.DistanceTo(x, y);
+
+                if (nearest == null)
+                {
+                    nearest = current;
+                    distToNearest = distToCurrent;
+                }
+                else
+                {
+                    if (distToCurrent < distToNearest)
+                    {
+                        nearest = current;
+                        distToNearest = distToCurrent;
+                    }
+                }
+            }
+            return nearest;
+        }
+
+
+        /// <summary>
         /// Gets a random note from a TileNodeNetwork. This is usually used
         /// in the context of AI to get a bot to path to a random node.
         /// </summary>
@@ -106,5 +145,6 @@ namespace NarfoxGameTools.Extensions
             }
             return nvc;
         }
+
     }
 }
