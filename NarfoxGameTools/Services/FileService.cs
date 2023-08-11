@@ -251,11 +251,24 @@ namespace NarfoxGameTools.Services
         /// <param name="encrypt">Whether to encrypt the JSON before saving</param>
         public void SaveFile(object model, string path, bool encrypt = false)
         {
-            var data = Serialize(model, !encrypt);
-            var savetext = encrypt ? data.Encrypt() : data;
-            SaveText(path, savetext);
+            var prettyFormat = !encrypt;
+            var data = Serialize(model, prettyFormat);
+            SaveFile(data, path, encrypt);
         }
         
+        /// <summary>
+        /// Saves text to the provided path, optionally encrypting using
+        /// the SimpleCryptoService
+        /// </summary>
+        /// <param name="text">The text to save</param>
+        /// <param name="path">The path to save</param>
+        /// <param name="encrypt">Whether to encrypt or not</param>
+        public void SaveFile(string text, string path, bool encrypt = false)
+        {
+            var savetext = encrypt ? text.Encrypt() : text;
+            SaveText(path, savetext);
+        }
+
         /// <summary>
         /// Deletes the file at the provided path.
         /// 
