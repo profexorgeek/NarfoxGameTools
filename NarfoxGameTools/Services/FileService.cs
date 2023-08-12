@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Text.RegularExpressions;
 
 namespace NarfoxGameTools.Services
 {
@@ -143,10 +144,16 @@ namespace NarfoxGameTools.Services
         /// </summary>
         /// <param name="name">The save file name to convert.</param>
         /// <returns></returns>
-        public string GetSaveFileName(string name)
+        public string GetSaveFileName(string name, string ext = null)
         {
-            var safeName = name.ToLower().Replace(" ", "_");
-            return safeName + Extension;
+            var safeName = Regex.Replace(name.ToLower(), "[^a-z0-9]", "_");
+
+            if(ext == null)
+            {
+                ext = Extension;
+            }
+
+            return safeName + ext;
         }
 
         /// <summary>
