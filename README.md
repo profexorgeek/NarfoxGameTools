@@ -1,7 +1,7 @@
 # Narfox Game Tools
 
 This is a collection of services and extensions that I have found helpful
-across multiple, released [Flat Red Ball](https://flatredball.com) games.
+across multiple, released [FlatRedBall](https://flatredball.com) games.
 
 ## Docs
 
