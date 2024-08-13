@@ -39,19 +39,11 @@ namespace NarfoxGameTools.Services
         /// </summary>
         public int Seed { get; set; }
 
-        public IntGridLayer()
-        {
-            Integer = 0;
-            Density = 0.5f;
-            NoiseScale = 0.5f;
-            Seed = 0;
-        }
-
-        public IntGridLayer(uint integer, float density, float scale, int seed)
+        public IntGridLayer(uint integer = 0, float density = 0.5f, float noiseScale = 0.5f, int seed = 0)
         {
             Integer = integer;
             Density = density;
-            NoiseScale = scale;
+            NoiseScale = noiseScale;
             Seed = seed;
         }
     }
