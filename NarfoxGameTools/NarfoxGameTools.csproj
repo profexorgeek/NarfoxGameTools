@@ -12,6 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="Services\GoogleAnalyticsService.cs" />
+    <Compile Remove="Services\SimpleCryptoService.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="SimplexNoise" Version="2.0.0" />
   </ItemGroup>
