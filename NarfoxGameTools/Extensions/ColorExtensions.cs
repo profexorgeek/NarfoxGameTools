@@ -98,9 +98,9 @@ namespace NarfoxGameTools.Extensions
         public static Color Tint(this Color color, float percent = 0.1f)
         {
             var newColor = new Color();
-            newColor.R = (color.R * (1f - percent)).Clamp();
-            newColor.G = (color.G * (1f - percent)).Clamp();
-            newColor.B = (color.B * (1f - percent)).Clamp();
+            newColor.R = (color.R * (1f - percent)).ClampTo();
+            newColor.G = (color.G * (1f - percent)).ClampTo();
+            newColor.B = (color.B * (1f - percent)).ClampTo();
             newColor.A = color.A;
             return newColor;
         }
@@ -324,7 +324,7 @@ namespace NarfoxGameTools.Extensions
                 ret = (v1 + (v2 - v1) * ((2f / 3f) - vH) * 6f);
             }
 
-            return ret.Clamp(0, 1);
+            return ret.ClampTo(0, 1);
         }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using FlatRedBall;
 using FlatRedBall.AI.Pathfinding;
 using FlatRedBall.Math;
+using FlatRedBall.Math.Geometry;
 using Microsoft.Xna.Framework;
 using System;
 
@@ -51,27 +52,27 @@ namespace NarfoxGameTools.Extensions
         /// <param name="min">The minimum value to clamp to</param>
         /// <param name="max">The maximum value to clamp to</param>
         /// <returns>A float that falls within the provided range</returns>
-        public static double Clamp(this double d, double min, double max)
+        public static double ClampTo(this double d, double min, double max)
         {
             d = Math.Max(min, d);
             d = Math.Min(max, d);
             return d;
         }
-        public static float Clamp(this float f, float min, float max)
+        public static float ClampTo(this float f, float min, float max)
         {
             f = Math.Max(min, f);
             f = Math.Min(max, f);
             return f;
         }
-        public static int Clamp(this int i, int min, int max)
+        public static int ClampTo(this int i, int min, int max)
         {
             i = Math.Max(min, i);
             i = Math.Min(max, i);
             return i;
         }
-        public static byte Clamp(this float f)
+        public static byte ClampTo(this float f)
         {
-            return (byte)f.Clamp(0, 255);
+            return (byte)f.ClampTo(0, 255);
         }
 
 

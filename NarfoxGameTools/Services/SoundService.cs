@@ -503,7 +503,7 @@ namespace NarfoxGameTools.Services
             var position = nullablePosition.Value;
             var deltaX = position.X - Target.X;
             var percent = deltaX / VolumeMaxDistance;
-            return percent.Clamp(-1f, 1f);
+            return percent.ClampTo(-1f, 1f);
         }
 
         /// <summary>
