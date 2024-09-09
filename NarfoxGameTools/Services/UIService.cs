@@ -1,6 +1,7 @@
 ﻿using FlatRedBall.Gui;
 using FlatRedBall.Screens;
 using NarfoxGameTools.Extensions;
+using NarfoxGameTools.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,8 +65,11 @@ namespace NarfoxGameTools.Services
     {
         public event EventHandler MenuShown;
         public event EventHandler MenuHidden;
-        static UIService instance;
-        List<IShowableMenu> menus;
+        
+        private static UIService instance;
+        private static readonly Object padlock = new object();
+        private List<IShowableMenu> menus;
+        private ILogger log;
 
         
         public bool PauseScreenOnShowMenu { get; set; } = true;
@@ -78,24 +82,34 @@ namespace NarfoxGameTools.Services
             {
                 if (instance == null)
                 {
-                    instance = new UIService();
+                    throw new InvalidOperationException("This service has not been initialized! Call Initialize before using.");
                 }
                 return instance;
             }
         }
 
 
-        private UIService() { }
-
+        private UIService(ILogger logger)
+        {
+            menus = new List<IShowableMenu>();
+            this.log = logger;
+        }
 
         /// <summary>
         /// Sets up the list of menus and prepares the
         /// service to be used. Should be called before
         /// using any other methods
         /// </summary>
-        public void Initialize()
+        public static void Initialize(ILogger logger)
         {
-            menus = new List<IShowableMenu>();
+            lock(padlock)
+            {
+                if(instance == null)
+                {
+                    instance = new UIService(logger);
+                }
+            }
+
         }
 
         /// <summary>
