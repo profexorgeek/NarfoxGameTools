@@ -253,7 +253,15 @@ namespace NarfoxGameTools.Services
         /// <param name="e">Event arguments</param>
         private void Menu_OnShow(object sender, EventArgs e)
         {
+            if(sender == null)
+            {
+                throw new Exception("Menu_OnShow was called but the sender arg was null. " +
+                    "This probably means that an IShowable menu is invoking its Show handler " +
+                    "without passing itself as an argument!");
+            }
+
             var window = (IWindow)sender;
+
             GuiManager.AddDominantWindow(window);
             GuiManager.Cursor.CenterOnScreen();
 
