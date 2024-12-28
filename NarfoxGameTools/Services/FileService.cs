@@ -161,7 +161,8 @@ namespace NarfoxGameTools.Services
         /// the save extension
         /// </summary>
         /// <param name="name">The save file name to convert.</param>
-        /// <returns></returns>
+        /// <param name="ext">The extension, including the prefixing dot</param>
+        /// <returns>A safe-for-disk filename</returns>
         public string GetSaveFileName(string name, string ext = null)
         {
             var safeName = Regex.Replace(name.ToLower(), "[^a-z0-9]", "_");
