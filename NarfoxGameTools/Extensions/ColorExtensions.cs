@@ -247,6 +247,26 @@ namespace NarfoxGameTools.Extensions
         }
 
         /// <summary>
+        /// Returns a premultiplied alpha version of the source color.
+        /// </summary>
+        /// <param name="color">The source color.</param>
+        /// <param name="alpha">The alpha value (0.0 to 1.0).</param>
+        /// <returns>A Color with premultiplied alpha.</returns>
+        public static Color GetPremul(this Color color, float alpha)
+        {
+            // Clamp alpha to valid range [0.0, 1.0]
+            alpha = MathHelper.Clamp(alpha, 0f, 1f);
+
+            // Premultiply RGB values by alpha
+            byte r = (byte)(color.R * alpha);
+            byte g = (byte)(color.G * alpha);
+            byte b = (byte)(color.B * alpha);
+            byte a = (byte)(alpha * 255);
+
+            return new Color(r, g, b, a);
+        }
+
+        /// <summary>
         /// Converts the provided color into a six-digit hexidecimal string
         /// such as used in CSS and graphics programs
         /// </summary>
