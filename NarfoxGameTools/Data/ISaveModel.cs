@@ -13,14 +13,7 @@ namespace NarfoxGameTools.Data
         /// <summary>
         /// The game version that this was saved under
         /// </summary>
-        string GameVersion { get; set; }
-
-        /// <summary>
-        /// The value of this item in case it cannot be serialized.
-        /// Allows the game to grant in-game value for items that
-        /// have been removed from the game
-        /// </summary>
-        float ItemValue { get; set; }
+        string Version { get; set; }
 
         /// <summary>
         /// The date this item was saved. Should usually be set
