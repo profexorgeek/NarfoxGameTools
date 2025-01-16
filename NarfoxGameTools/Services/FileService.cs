@@ -165,7 +165,8 @@ namespace NarfoxGameTools.Services
         /// <returns>A safe-for-disk filename</returns>
         public string GetSaveFileName(string name, string ext = null)
         {
-            var safeName = Regex.Replace(name.ToLower(), "[^a-z0-9]", "_");
+            var safeName = Regex.Replace(name.ToLower(), "[^a-z0-9\\s]", "");
+            safeName = Regex.Replace(safeName, "\\s", "_");
 
             if (ext == null)
             {
