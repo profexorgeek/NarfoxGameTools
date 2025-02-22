@@ -75,6 +75,22 @@ namespace NarfoxGameTools.Extensions
             return (byte)f.ClampTo(0, 255);
         }
 
+        /// <summary>
+        /// Rounds a provided floating point number to the nearest 0.5.
+        /// 
+        /// This is useful for finding the pixel-perfect midpoint of a rectangle
+        /// that has an odd height or width - requiring the midpoint to be at
+        /// exactly a half pixel.
+        /// </summary>
+        /// <param name="val">A float to be rounded</param>
+        /// <returns>The number, rounded to the nearest 0.5</returns>
+        public static float RoundToNearestHalf(this float val)
+        {
+            var doubled = val * 2;
+            var rounded = (int)Math.Round(doubled, MidpointRounding.AwayFromZero);
+            return rounded / 2f;
+        }
+
 
         public static float DistanceTo(this PositionedObject o1, PositionedObject o2)
         {
