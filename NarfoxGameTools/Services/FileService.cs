@@ -352,7 +352,7 @@ namespace NarfoxGameTools.Services
         /// <param name="path">The path to save</param>
         /// <param name="text">The text to save</param>
         /// <returns>A boolean indicating success (true) or failure (false)</returns>
-        bool SaveText(string path, string text)
+        public bool SaveText(string path, string text)
         {
             bool success = false;
             try
@@ -377,7 +377,7 @@ namespace NarfoxGameTools.Services
         /// </summary>
         /// <param name="path">The path to load</param>
         /// <returns>The text contents of the file at the specified path</returns>
-        string LoadText(string path)
+        public string LoadText(string path)
         {
             string text;
             try
