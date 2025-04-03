@@ -1,15 +1,9 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <Configurations>Debug;Release;DEMO</Configurations>
   </PropertyGroup>
-
-  <ItemGroup>
-    <Compile Remove="NarfoxGameTools.DesktopGlNet6\**" />
-    <EmbeddedResource Remove="NarfoxGameTools.DesktopGlNet6\**" />
-    <None Remove="NarfoxGameTools.DesktopGlNet6\**" />
-  </ItemGroup>
 
   <ItemGroup>
     <Compile Remove="Services\GoogleAnalyticsService.cs" />
@@ -22,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBall\FlatRedBallDesktopGL.csproj" />
+    <ProjectReference Include="..\..\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBallDesktopGLNet6\FlatRedBallDesktopGLNet6.csproj" />
   </ItemGroup>
 
   <ItemGroup>

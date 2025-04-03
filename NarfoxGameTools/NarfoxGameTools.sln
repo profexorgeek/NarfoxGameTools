@@ -5,14 +5,9 @@ VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarfoxGameTools", "NarfoxGameTools.csproj", "{B7ED3178-E862-46A0-9E7C-BA5654F6CB46}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NarfoxGametools.DesktopGlNet6", "NarfoxGameTools.DesktopGlNet6\NarfoxGametools.DesktopGlNet6.csproj", "{9BC80EAA-CDB2-4F4A-ACBC-9191FC9B638B}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FlatRedBallDesktopGLNet6", "..\..\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBallDesktopGLNet6\FlatRedBallDesktopGLNet6.csproj", "{D4915F56-73C4-49C9-965C-DE98856828B4}"
 EndProject
 Global
-	GlobalSection(SharedMSBuildProjectFiles) = preSolution
-		..\..\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBall\FlatRedBallShared.projitems*{d4915f56-73c4-49c9-965c-de98856828b4}*SharedItemsImports = 5
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		DEMO|Any CPU = DEMO|Any CPU
@@ -25,12 +20,6 @@ Global
 		{B7ED3178-E862-46A0-9E7C-BA5654F6CB46}.DEMO|Any CPU.Build.0 = DEMO|Any CPU
 		{B7ED3178-E862-46A0-9E7C-BA5654F6CB46}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7ED3178-E862-46A0-9E7C-BA5654F6CB46}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9BC80EAA-CDB2-4F4A-ACBC-9191FC9B638B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BC80EAA-CDB2-4F4A-ACBC-9191FC9B638B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9BC80EAA-CDB2-4F4A-ACBC-9191FC9B638B}.DEMO|Any CPU.ActiveCfg = Debug|Any CPU
-		{9BC80EAA-CDB2-4F4A-ACBC-9191FC9B638B}.DEMO|Any CPU.Build.0 = Debug|Any CPU
-		{9BC80EAA-CDB2-4F4A-ACBC-9191FC9B638B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9BC80EAA-CDB2-4F4A-ACBC-9191FC9B638B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D4915F56-73C4-49C9-965C-DE98856828B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D4915F56-73C4-49C9-965C-DE98856828B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D4915F56-73C4-49C9-965C-DE98856828B4}.DEMO|Any CPU.ActiveCfg = Debug|Any CPU
@@ -43,5 +32,8 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61EEDBB9-6424-4EDE-ABCE-4A8FB5821C11}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\FlatRedBall\Engines\FlatRedBallXNA\FlatRedBall\FlatRedBallShared.projitems*{d4915f56-73c4-49c9-965c-de98856828b4}*SharedItemsImports = 5
 	EndGlobalSection
 EndGlobal

@@ -121,6 +121,22 @@ namespace NarfoxGameTools.Extensions
         }
 
         /// <summary>
+        /// The Fisher-Yates or Knuth shuffle to randomize a small
+        /// array. Note that this mutates the array!
+        /// </summary>
+        /// <typeparam name="T">The type of array</typeparam>
+        /// <param name="rand">The random instance to use</param>
+        /// <param name="array">An array to shuffle, which will be mutated</param>
+        public static void Shuffle<T>(this Random rand, T[] array)
+        {
+            for (int i = array.Length - 1; i > 0; i--)
+            {
+                int j = rand.Next(i + 1); // Pick a random index from 0 to i
+                (array[i], array[j]) = (array[j], array[i]); // Swap elements
+            }
+        }
+
+        /// <summary>
         /// Generates a random boolean
         /// </summary>
         /// <param name="rand">The random instance to use</param>
