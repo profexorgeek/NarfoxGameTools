@@ -25,28 +25,9 @@ namespace Narfox.Data
     /// </summary>
     public class GameStateService
     {
-        /// <summary>
-        /// This class is used internally to package up model
-        /// change requests with metadata for a queue
-        /// </summary>
-        private class ModelChangeRequest
-        {
-            public ushort Id { get; set; }
-            public ActionType Action { get; set; }
-            public Client Requestor { get; set; }
-            public Dictionary<string, object> ChangedProperties { get; set; }
-
-            public ModelChangeRequest(ushort id, ActionType action, Client requestor, Dictionary<string, object> changes)
-            {
-                Id = id;
-                Action = action;
-                Requestor = requestor;
-                ChangedProperties = changes;
-            }
-        }
-
 
         List<IEntityData> trackedModels;
+        ushort entityIndex = 0;
 
 
         /// <summary>
@@ -279,6 +260,19 @@ namespace Narfox.Data
             }
         }
 
+        /// <summary>
+        /// Gets an entity Id that is unique and suitable for use even when multiple clients
+        /// are generating entity Ids as long as each client has a unqiue identifier.
+        /// 
+        /// Packs the ushort client ID into the upper bits and the ushort local entity index 
+        /// into the lower bits and increments the entity index.
+        /// </summary>
+        /// <returns>A unique ID</returns>
+        public uint GetUniqueEntityId()
+        {
+            var entityId = entityIndex++;
+            return ((uint)LocalClient.Id << 16) | entityId;
+        }
 
         /// <summary>
         /// Should be called in the main engine loop, performs any state service updates
