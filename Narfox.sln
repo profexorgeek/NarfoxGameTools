@@ -5,7 +5,7 @@ VisualStudioVersion = 17.13.35931.197 d17.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narfox", "Narfox\Narfox.csproj", "{3BBB7960-D9AE-24FE-4D93-3D910402E609}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narfox.Data", "Narfox.Network\Narfox.Data.csproj", "{8F47443C-3222-40B3-8A5E-403CE289922C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Narfox.Data", "Narfox.Data\Narfox.Data.csproj", "{8F47443C-3222-40B3-8A5E-403CE289922C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
