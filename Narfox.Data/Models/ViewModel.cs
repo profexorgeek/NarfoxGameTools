@@ -1,4 +1,5 @@
-﻿using System.Collections.Specialized;
+﻿using Newtonsoft.Json;
+using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Reflection;
 using System.Runtime.CompilerServices;

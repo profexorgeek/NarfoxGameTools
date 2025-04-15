@@ -83,12 +83,6 @@ namespace Narfox.Data
         /// </summary>
         public float LerpCompleteThreshold { get; set; } = 0.1f;
 
-        /// <summary>
-        /// When lerping properties, how much to lerp each update cycle.
-        /// </summary>
-        public float LerpAmountPerFrame { get; set; } = 0.1f;
-
-
 
 
         /// <summary>
@@ -167,6 +161,18 @@ namespace Narfox.Data
         /// <param name="requestor">The requesting client, whose authority over the model will be checked</param>
         public void TryEnqueueModelChange(IEntityModel updatedModel, ActionType action, Client requestor)
         {
+
+
+
+            // Are we the authority of this model?
+
+
+            // If so, we can create/update/delete immediately without queing
+
+            // We only need to queue
+
+
+
             // EARLY OUT: for a request to be honored, either the message must be a reckoning issued by the
             // authority OR the requestor must be the owner of the updated model
             if(updatedModel.OwnerId != requestor.Id &&
@@ -293,7 +299,10 @@ namespace Narfox.Data
             foreach (var prop in properties)
             {
                 // ignore properties we can't change
-                if (!prop.CanRead || prop.CanWrite)
+                if (prop.CanRead == false || 
+                    prop.CanWrite == false ||
+                    prop.Name == nameof(IEntityModel.Id) ||
+                    prop.Name == nameof(IEntityModel.OwnerId))
                     continue;
 
                 var existingValue = prop.GetValue(existing);
@@ -305,7 +314,7 @@ namespace Narfox.Data
                     targetValue != null &&
                     MathExtensions.IsNumericType(prop.PropertyType))
                 {
-                    var lerpedValue = MathExtensions.LerpNumeric(existingValue, targetValue, LerpAmountPerFrame);
+                    var lerpedValue = MathExtensions.LerpNumeric(existingValue, targetValue, lerpProperties[prop.Name]);
                     prop.SetValue(existing, lerpedValue);
 
                     // if our new value is still too far away from the target value, we mark this
@@ -318,7 +327,7 @@ namespace Narfox.Data
                 }
 
                 // otherwise we just snap to the new value
-                else
+                if(isComplete)
                 {
                     prop.SetValue(existing, targetValue);
                 }
