@@ -1,4 +1,5 @@
 ﻿using Narfox.Data.Enums;
+using Narfox.Data.Interfaces;
 using Narfox.Data.Models;
 using Narfox.Extensions;
 using System.Diagnostics;
@@ -45,7 +46,7 @@ namespace Narfox.Data
         }
 
 
-        List<IEntityModel> trackedModels;
+        List<IEntityData> trackedModels;
 
 
         /// <summary>
@@ -85,7 +86,7 @@ namespace Narfox.Data
         /// <param name="localClient">An optional local client. A default one will be created if not provided.</param>
         public GameStateService(Client localClient = null)
         {
-            trackedModels = new List<IEntityModel>();
+            trackedModels = new List<IEntityData>();
 
             if (localClient == null)
             {
@@ -122,12 +123,11 @@ namespace Narfox.Data
         {
             var model = trackedModels.FirstOrDefault(m => m.Id == id);
 
-            // EARLY OUT: can't change unknown model
-            if (model == null)
+            // EARLY OUT: model not found or requestor doesn't have permission
+            if (model == null || model.OwnerId != requestor.Id)
             {
                 return;
             }
-
 
             // reflect properties
             var properties = model.GetType().GetProperties(
@@ -141,9 +141,9 @@ namespace Narfox.Data
                 // ignore properties we can't or shouldn't change
                 if (prop.CanRead == false ||
                     prop.CanWrite == false ||
-                    prop.Name == nameof(IEntityModel.Id) ||
-                    prop.Name == nameof(IEntityModel.OwnerId) ||
-                    prop.Name == nameof(IEntityModel.EntityTypeName))
+                    prop.Name == nameof(IEntityData.Id) ||
+                    prop.Name == nameof(IEntityData.OwnerId) ||
+                    prop.Name == nameof(IEntityData.EntityTypeName))
                     continue;
 
                 foreach (var key in changes.Keys)
@@ -157,11 +157,67 @@ namespace Narfox.Data
         }
 
         /// <summary>
+        /// A special request usually only called by an IEngineEntity to re-apply changes the engine
+        /// made to the entity's local properties on the model.
+        /// </summary>
+        /// <param name="id">The tracked model Id</param>
+        /// <param name="requestor">The change requestor</param>
+        /// <param name="delta">The delta changes to each property</param>
+        /// <exception cref="InvalidCastException">Thrown if the model properties don't match the
+        /// property type defined in the delta</exception>
+        public void RequestApplyEngineDelta(ushort id, Client requestor, GameEntityFrameCache delta)
+        {
+            var model = trackedModels.FirstOrDefault(m => m.Id == id);
+
+            // EARLY OUT: model not found or requestor doesn't have permission
+            if (model == null || model.OwnerId != requestor.Id)
+            {
+                return;
+            }
+
+            // reflect properties
+            var properties = model.GetType().GetProperties(
+                BindingFlags.Public |
+                BindingFlags.Instance);
+
+            // set all properties on the existing model to match the target model, using reflection
+            // ensures that we don't break references to our list of registered entities
+            foreach (var prop in properties)
+            {
+                // ignore properties we can't or shouldn't change
+                if (prop.CanRead == false ||
+                    prop.CanWrite == false ||
+                    prop.Name == nameof(IEntityData.Id) ||
+                    prop.Name == nameof(IEntityData.OwnerId) ||
+                    prop.Name == nameof(IEntityData.EntityTypeName))
+                    continue;
+
+                // cast the model value as a float and add it to the model's existing value
+                var modelValue = prop.GetValue(model);
+                if (modelValue != null && modelValue is float modelValueAsFloat)
+                {
+                    if (prop.Name == nameof(GameEntityFrameCache.X))
+                    {
+                        prop.SetValue(model,modelValueAsFloat + delta.X);
+                    }
+                    else if (prop.Name == nameof(GameEntityFrameCache.Y))
+                    {
+                        prop.SetValue(model, modelValueAsFloat + delta.Y);
+                    }
+                    else if (prop.Name == nameof(GameEntityFrameCache.RotationRadians))
+                    {
+                        prop.SetValue(model, modelValueAsFloat + delta.RotationRadians);
+                    }
+                }
+            }
+        }
+
+        /// <summary>
         /// Requests a model to be created
         /// </summary>
         /// <param name="model">The model to add to the tracked models</param>
         /// <param name="requestor">The requestor</param>
-        public void RequestCreateModel(IEntityModel model, Client requestor)
+        public void RequestCreateModel(IEntityData model, Client requestor)
         {
             var exists = trackedModels.Any(t => t.Id == model.Id);
             if(exists == false && model.OwnerId == requestor.Id)
@@ -195,7 +251,7 @@ namespace Narfox.Data
         /// <param name="id">The ID of the target model</param>
         /// <param name="requestor">The reckoning requestor</param>
         /// <param name="incomingModel">The model to match</param>
-        public void RequestReckonModel(ushort id, Client requestor, IEntityModel incomingModel)
+        public void RequestReckonModel(ushort id, Client requestor, IEntityData incomingModel)
         {
             var existing = trackedModels.FirstOrDefault(t => t.Id == id);
             if(existing != null && requestor.Id == Authority.Id && incomingModel.GetType() == existing.GetType())
@@ -212,9 +268,9 @@ namespace Narfox.Data
                     // ignore properties we can't or shouldn't change
                     if (prop.CanRead == false ||
                         prop.CanWrite == false ||
-                        prop.Name == nameof(IEntityModel.Id) ||
-                        prop.Name == nameof(IEntityModel.OwnerId) ||
-                        prop.Name == nameof(IEntityModel.EntityTypeName))
+                        prop.Name == nameof(IEntityData.Id) ||
+                        prop.Name == nameof(IEntityData.OwnerId) ||
+                        prop.Name == nameof(IEntityData.EntityTypeName))
                         continue;
 
                     var newValue = prop.GetValue(incomingModel);

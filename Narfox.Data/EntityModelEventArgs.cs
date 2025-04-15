@@ -1,12 +1,12 @@
-﻿using Narfox.Data.Models;
+﻿using Narfox.Data.Interfaces;
 
 namespace Narfox.Data;
 
 public class EntityModelEventArgs : EventArgs
 {
-    public IEntityModel AffectedModel { get; set; }
+    public IEntityData AffectedModel { get; set; }
 
-    public EntityModelEventArgs(IEntityModel model)
+    public EntityModelEventArgs(IEntityData model)
     {
         AffectedModel = model;
     }
