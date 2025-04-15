@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 using System.Reflection;
 using System.Text.RegularExpressions;
 
-namespace NarfoxGameTools.Services
+namespace Narfox.Services
 {
 
     /// <summary>
