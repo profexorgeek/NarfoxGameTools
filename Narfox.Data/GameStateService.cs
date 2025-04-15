@@ -121,9 +121,9 @@ namespace Narfox.Data
         public void RequestUpdateModel(ushort id, Client requestor, Dictionary<string, object> changes)
         {
             var model = trackedModels.FirstOrDefault(m => m.Id == id);
-            
+
             // EARLY OUT: can't change unknown model
-            if(model == null)
+            if (model == null)
             {
                 return;
             }
