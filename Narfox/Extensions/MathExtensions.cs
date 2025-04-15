@@ -203,5 +203,85 @@ namespace Narfox.Extensions
             }
             return difference;
         }
+
+
+        /// <summary>
+        /// Checks if the provided type is a numeric type.
+        /// </summary>
+        /// <param name="type">An unknown type</param>
+        /// <returns>True or false depending on if the provided type is numeric</returns>
+        public static bool IsNumericType(Type type)
+        {
+            return type == typeof(byte) ||
+                   type == typeof(sbyte) ||
+                   type == typeof(short) ||
+                   type == typeof(ushort) ||
+                   type == typeof(int) ||
+                   type == typeof(uint) ||
+                   type == typeof(long) ||
+                   type == typeof(ulong) ||
+                   type == typeof(float) ||
+                   type == typeof(double) ||
+                   type == typeof(decimal);
+        }
+
+        /// <summary>
+        /// Lerps two unknown values if they are numeric and returns the lerped value.
+        /// 
+        /// If the objects are non-numeric, it will return the toValue.
+        /// </summary>
+        /// <param name="fromValue">The value to lerp from</param>
+        /// <param name="toValue">The value to lerp to</param>
+        /// <param name="t">The amount to lerp</param>
+        /// <returns>A lerped value if numeric or the "to" value if non-numeric</returns>
+        public static object LerpNumeric(object fromValue, object toValue, float t)
+        {
+            // EARLY OUT: null value or mismatched types returns a null value
+            if (fromValue == null || toValue == null)
+                return null;
+
+            if(IsNumericType(toValue.GetType()))
+            {
+                // We'll upcast everything to double for math precision
+                double fromDouble = Convert.ToDouble(fromValue);
+                double toDouble = Convert.ToDouble(toValue);
+                double lerped = fromDouble + (toDouble - fromDouble) * t;
+
+                // Now cast back to the original type
+                Type valueType = fromValue.GetType();
+
+                if (valueType == typeof(byte)) return (byte)lerped;
+                if (valueType == typeof(sbyte)) return (sbyte)lerped;
+                if (valueType == typeof(short)) return (short)lerped;
+                if (valueType == typeof(ushort)) return (ushort)lerped;
+                if (valueType == typeof(int)) return (int)lerped;
+                if (valueType == typeof(uint)) return (uint)lerped;
+                if (valueType == typeof(long)) return (long)lerped;
+                if (valueType == typeof(ulong)) return (ulong)lerped;
+                if (valueType == typeof(float)) return (float)lerped;
+                if (valueType == typeof(double)) return lerped;
+                if (valueType == typeof(decimal)) return (decimal)lerped;
+            }
+
+            return toValue;
+        }
+
+        /// <summary>
+        /// Gets the delta between two unknown types. If they are numeric it
+        /// will upcast them to doubles and return the absolute value of a
+        /// subtraction. If they are non-numeric, it returns 0 as the delta.
+        /// </summary>
+        /// <param name="a">An unknown type that should be numeric</param>
+        /// <param name="b">An unknown type that should be numeric</param>
+        /// <returns>The absolute value of the delta if arguments are numeric, otherwise returns 0</returns>
+        public static double GetDelta(object a, object b)
+        {
+            if(IsNumericType(a.GetType()) && IsNumericType(b.GetType()))
+            {
+                return Math.Abs(Convert.ToDouble(a) - Convert.ToDouble(b));
+            }
+
+            return 0;
+        }
     }
 }
