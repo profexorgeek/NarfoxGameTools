@@ -1,16 +1,32 @@
 ﻿using Narfox.Data.Enums;
 using Narfox.Data.Models;
 using Narfox.Extensions;
-using Newtonsoft.Json.Linq;
-using System;
 using System.Diagnostics;
 using System.Reflection;
-using static System.Collections.Specialized.BitVector32;
 
 namespace Narfox.Data
 {
+    /// <summary>
+    /// Centralizes an authoritative flat collection of all game objects. Provides
+    /// a method to request changes to a model and can register specific property
+    /// types to interpolate instead of directly changed.
+    /// 
+    /// The intended pattern is that the data model is the master state-holder for
+    /// all game entities owned by the engine. When the engine wants to change something
+    /// such as position, it should make a state change request and this state service
+    /// will manage updating the state. Then, the game engine entity should update itself
+    /// from the authoritative model at the end of every frame.
+    /// 
+    /// ModelAdded and ModelDestroyed events allow listening for critical events.
+    /// 
+    /// The Update method should be called by the game engine every frame.
+    /// </summary>
     public class GameStateService
     {
+        /// <summary>
+        /// This class is used internally to package up model
+        /// change requests with metadata for a queue
+        /// </summary>
         private class QueueModelAction
         {
             public ActionType Action { get; set; }
@@ -30,7 +46,6 @@ namespace Narfox.Data
         List<IEntityModel> trackedModels;
         List<QueueModelAction> modelChangeQueue;
         Dictionary<string, float> lerpProperties;
-
 
 
         /// <summary>
@@ -211,6 +226,8 @@ namespace Narfox.Data
             }
         }
 
+
+
         /// <summary>
         /// If the queued model doesn't already exist in our tracked models, we add
         /// it and raise the ModelAdded event for any subscribers.
@@ -219,7 +236,7 @@ namespace Narfox.Data
         /// <returns>True if this item has been fully processed and can be removed from the queue</returns>
         bool CreateQueuedItem(QueueModelAction q)
         {
-            var existing = trackedModels.Where(t => t.Id == q.Model.Id).FirstOrDefault();
+            var existing = trackedModels.FirstOrDefault(t => t.Id == q.Model.Id);
             if (existing == null)
             {
                 trackedModels.Add(q.Model);
@@ -245,15 +262,16 @@ namespace Narfox.Data
         /// the LerpCompleteThreshold
         /// </summary>
         /// <param name="q">A queued model to update</param>
-        /// <returns></returns>
+        /// <returns>True if this item has been fully processed and can be removed from the queue</returns>
         bool UpdateQueuedItem(QueueModelAction q)
         {
-            var existing = trackedModels.Where(t => t.Id == q.Model.Id).FirstOrDefault();
+            var existing = trackedModels.FirstOrDefault(t => t.Id == q.Model.Id);
 
-            // EARLY OUT: no model found so processing is not complete
+            // EARLY OUT: no model found, it may have been deleted so let's consider
+            // this processing complete
             if(existing == null)
             {
-                return false;
+                return true;
             }
 
             // EARLY OUT: models are the same reference or the new one is null
@@ -309,56 +327,52 @@ namespace Narfox.Data
             return isComplete;
         }
 
+        /// <summary>
+        /// Removes a registered model if it exists and raises the destroyed event
+        /// </summary>
+        /// <param name="q">A queued model to delete</param>
+        /// <returns>True if this item has been fully processed and can be removed from the queue</returns>
         bool DestroyQueuedItem(QueueModelAction q)
         {
-            // TODO: remove any other outstanding requests in case so we don't try to update models
-            // that no longer exist forever
-        }
+            var existing = trackedModels.FirstOrDefault(t => t.Id == q.Model.Id);
 
-        bool ReckonQueuedItem(QueueModelAction q)
-        {
-
-        }
-
-
-        protected virtual void CreateModel(IEntityModel model, Client requestor)
-        {
-            var existing = trackedModels.Where(t => t.Id == model.Id).FirstOrDefault();
+            // remove the model from tracked models
             if (existing != null)
             {
-                MergeModels(existing, model);
+                trackedModels.Remove(existing);
+
+                var ea = new EntityModelEventArgs(existing);
+                ModelDestroyed?.Invoke(q.Requestor, ea);
+            }
+
+            // NOTE: we should consider removing any other queued actions for this
+            // entity ID so that no actions try to execute on an entity that has
+            // been destroyed. However, we can't do that here because we're in the
+            // process of walking the queue. Updating will noop if the model doesn't
+            // exist but rapid create/destroy may result in out-of-sequence actions
+            // being taken.
+
+            return true;
+        }
+
+        /// <summary>
+        /// Updates a matching model if it exists, creates it if it does not.
+        /// </summary>
+        /// <param name="q">A queued model to update</param>
+        /// <returns>True if this item has been fully processed and can be removed from the queue</returns>
+        bool ReckonQueuedItem(QueueModelAction q)
+        {
+            var existing = trackedModels.FirstOrDefault(t => t.Id == q.Model.Id);
+            if (existing == null)
+            {
+                CreateQueuedItem(q);
             }
             else
             {
-                trackedModels.Add(model);
-                ModelAdded?.Invoke(requestor, new EntityModelEventArgs(model));
+                UpdateQueuedItem(q);
             }
+
+            return true;
         }
-
-        protected virtual void UpdateModel(IEntityModel model, Client requestor)
-        {
-
-        }
-
-        public virtual void MergeModels(IEntityModel existingModel, IEntityModel newModel)
-        {
-            if (existingModel == null || newModel == null || existingModel == newModel)
-                throw new ArgumentException("Attempted to merge data models where at least one model was null or they were the same model!");;
-
-            var properties = existingModel.GetType().GetProperties(
-                BindingFlags.Public |
-                BindingFlags.Instance);
-
-            foreach(var prop in properties)
-            {
-                if(prop.CanRead && prop.CanWrite)
-                {
-                    var value = prop.GetValue(newModel);
-                    prop.SetValue(existingModel, value);
-                }
-            }
-        }
-
-        
     }
 }

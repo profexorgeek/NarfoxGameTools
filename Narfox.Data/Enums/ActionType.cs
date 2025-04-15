@@ -2,9 +2,9 @@
 
 public enum ActionType
 {
-    None,
-    Create,
-    Update,
-    Destroy,
-    Reckon
+    None = 0,
+    Create = 1,
+    Update = 2,
+    Destroy = 3,
+    Reckon = 4,
 }

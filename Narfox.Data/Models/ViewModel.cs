@@ -74,8 +74,7 @@ public class PropertyChangedExtendedEventArgs : PropertyChangedEventArgs
 /// Standard implementation of an observable view model.
 /// This class implements the INotifyPropertyChanged interface 
 /// so it is suitable for use as a base class for any ViewModel
-/// in an MVVM architecture. Typically this is used with Gum and 
-/// FlatRedBall.Forms.
+/// in an MVVM architecture.
 /// </summary>
 public class ViewModel : INotifyPropertyChanged
 {
