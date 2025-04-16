@@ -2,6 +2,7 @@
 using LiteNetLib.Utils;
 using Narfox.Logging;
 using System.ComponentModel.Design;
+using System.Text;
 
 namespace Narfox.Network;
 
@@ -27,10 +28,12 @@ public class Server
         _log.Debug("Binding network events...");
         _listener.ConnectionRequestEvent += OnConnectionRequest;
         _listener.PeerConnectedEvent += OnPeerConnected;
+        _listener.PeerDisconnectedEvent += OnPeerDisconnected;
         
         _log.Info($"Server is now ready for up to {maxConnections} connections.");
     }
 
+    
 
     public void Start(ushort port)
     {
@@ -80,9 +83,33 @@ public class Server
 
     void OnPeerConnected(NetPeer peer)
     {
-        _log.Info($"Peer connected from: {peer.Address}:{peer.Port}({peer.Ping})");
+        _log.Info($"Peer {peer.Id} connected from: {peer.Address}:{peer.Port}({peer.Ping})");
         NetDataWriter writer = new NetDataWriter();
-        writer.Put("Hello new client");
+        writer.Put($"Welcome, your ID is #{peer.Id}");
         peer.Send(writer, DeliveryMethod.ReliableOrdered);
+
+        if(_log.Level == LogLevel.Debug)
+        {
+            var sb = new StringBuilder();
+            foreach (var p in _server.ConnectedPeerList)
+            {
+                sb.Append($"#{p.Id}({p.Ping}) - {p.Address}:{p.Port}\n");
+            }
+            _log.Debug($"We now have these connected peers:\n{sb.ToString()}");
+        }
+    }
+
+    private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
+    {
+        _log.Warn($"Peer #{peer.Id} from {peer.Address}:{peer.Port} disconnected.");
+        if (_log.Level == LogLevel.Debug)
+        {
+            var sb = new StringBuilder();
+            foreach (var p in _server.ConnectedPeerList)
+            {
+                sb.Append($"#{p.Id}({p.Ping}) - {p.Address}:{p.Port}\n");
+            }
+            _log.Debug($"We now have these connected peers:\n{sb.ToString()}");
+        }
     }
 }

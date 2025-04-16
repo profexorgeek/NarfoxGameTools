@@ -68,14 +68,30 @@ public class ConsoleWriter : ILogger
         Console.Clear();
     }
 
+    /// <summary>
+    /// Sets the foreground console color to the provided color
+    /// </summary>
+    /// <param name="color">Console text color</param>
     public void SetTextColor(ConsoleColor color)
     {
         Console.ForegroundColor = color;
     }
 
+    /// <summary>
+    /// Resets the foreground console color to the DefaultColor
+    /// </summary>
     public void ResetColor()
     {
         Console.ForegroundColor = DefaultColor;
+    }
+
+    /// <summary>
+    /// Notifies the writer that the cancellation request was
+    /// handled so IsAwaitingCancel is reset
+    /// </summary>
+    public void NotifyCancelHandled()
+    {
+        IsAwaitingCancel = false;
     }
 
 

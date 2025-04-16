@@ -45,16 +45,18 @@ void RunServer()
 {
     writer.ClearScreen();
     writer.WriteTitle("Running Server");
-    writer.WriteParagraph("Starting the Narfox.Server, press CTRL+C to stop");
-    var server = new Server(10, writer);
+    writer.WriteParagraph("Starting the Narfox.Server, press CTRL+C to stop.");
+    var server = new Server(2, writer);
     server.Start(7777);
 
     while(writer.IsAwaitingCancel == false)
     {
         server.Update();
+        Thread.Sleep(15);
     }
 
     server.Stop();
+    writer.NotifyCancelHandled();
     var c = writer.PromptForCharacter("Press any key to return to the menu...");
     writer.ClearScreen();
     DoMenu();
@@ -62,7 +64,23 @@ void RunServer()
 
 void RunClient()
 {
+    writer.ClearScreen();
+    writer.WriteTitle("Running Client");
+    writer.WriteParagraph("Starting the Narfox.Client and connecting via loopback. Press CTRL+C to stop.");
+    var client = new Client(writer);
+    client.Connect("127.0.0.1", 7777);
 
+    while(writer.IsAwaitingCancel == false)
+    {
+        client.Update();
+        Thread.Sleep(15);
+    }
+
+    client.Stop();
+    writer.NotifyCancelHandled();
+    var c = writer.PromptForCharacter("Press any key to return to the menu...");
+    writer.ClearScreen();
+    DoMenu();
 }
 
 void Exit()
