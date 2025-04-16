@@ -1,78 +1,34 @@
 ﻿using LiteNetLib;
 using LiteNetLib.Utils;
 using Narfox.Logging;
-using System.ComponentModel.Design;
 using System.Text;
 
 namespace Narfox.Network;
 
-public class Server
+public class Server : NetBase
 {
     static object _padlock = new object();
-    EventBasedNetListener _listener;
-    NetManager _server;
     ushort _maxConnections = 10;
-    ILogger _log;
 
     public Server(ushort maxConnections, ILogger logger)
+        : base(logger)
     {
-        _log = logger;
         _maxConnections = maxConnections;
-
-        _log.Debug("Creating network event listener...");
-        _listener = new EventBasedNetListener();
-
-        _log.Debug("Creating network manager...");
-        _server = new NetManager(_listener);
-
-        _log.Debug("Binding network events...");
-        _listener.ConnectionRequestEvent += OnConnectionRequest;
-        _listener.PeerConnectedEvent += OnPeerConnected;
-        _listener.PeerDisconnectedEvent += OnPeerDisconnected;
-        
-        _log.Info($"Server is now ready for up to {maxConnections} connections.");
     }
-
-    
 
     public void Start(ushort port)
     {
         _log.Debug("Starting server...");
-        _server.Start(port);
+        _manager.Start(port);
         _log.Info($"Server is listening on port {port}");
     }
 
-    public void Stop(string reason = null)
+    protected override void OnConnectionRequest(ConnectionRequest request)
     {
-        _server.Stop();
-
-        if(reason != null)
+        _log.Debug("Server received connection request...");
+        if (_manager.ConnectedPeersCount < _maxConnections)
         {
-            _log.Info($"Server stopped for: {reason}");
-        }
-        else
-        {
-            _log.Info($"Server stopped.");
-        }
-        
-    }
-
-    public void Update()
-    {
-        if(_server != null && _server.IsRunning)
-        {
-            _server.PollEvents();
-        }
-    }
-
-
-
-    void OnConnectionRequest(ConnectionRequest request)
-    {
-        _log.Debug("Received connection request...");
-        if (_server.ConnectedPeersCount < _maxConnections)
-        {
-            _log.Info($"Accepting connection, now at {_server.ConnectedPeersCount + 1}/{_maxConnections} connections.");
+            _log.Info($"Accepting connection, now at {_manager.ConnectedPeersCount + 1}/{_maxConnections} connections.");
             request.Accept();
         }
         else
@@ -81,31 +37,16 @@ public class Server
         }
     }
 
-    void OnPeerConnected(NetPeer peer)
+    protected override void OnPeerConnected(NetPeer peer)
     {
         _log.Info($"Peer {peer.Id} connected from: {peer.Address}:{peer.Port}({peer.Ping})");
         NetDataWriter writer = new NetDataWriter();
         writer.Put($"Welcome, your ID is #{peer.Id}");
         peer.Send(writer, DeliveryMethod.ReliableOrdered);
-
-        if(_log.Level == LogLevel.Debug)
-        {
-            var sb = new StringBuilder();
-            foreach (var p in _server.ConnectedPeerList)
-            {
-                sb.Append($"#{p.Id}({p.Ping}) - {p.Address}:{p.Port}\n");
-            }
-            _log.Debug($"We now have these connected peers:\n{sb.ToString()}");
-        }
-    }
-
-    private void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
-    {
-        _log.Warn($"Peer #{peer.Id} from {peer.Address}:{peer.Port} disconnected.");
         if (_log.Level == LogLevel.Debug)
         {
             var sb = new StringBuilder();
-            foreach (var p in _server.ConnectedPeerList)
+            foreach (var p in _manager.ConnectedPeerList)
             {
                 sb.Append($"#{p.Id}({p.Ping}) - {p.Address}:{p.Port}\n");
             }
