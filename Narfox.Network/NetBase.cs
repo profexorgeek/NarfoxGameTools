@@ -1,5 +1,8 @@
 ﻿using LiteNetLib;
+using LiteNetLib.Utils;
+using Narfox.Data.Models;
 using Narfox.Logging;
+using Newtonsoft.Json;
 using System.Text;
 using static LiteNetLib.EventBasedNetListener;
 
@@ -10,16 +13,27 @@ public abstract class NetBase
     protected EventBasedNetListener _listener;
     protected NetManager _manager;
     protected ILogger _log;
+    protected Dictionary<int, Client> _clients;
+    protected JsonSerializerSettings _serializerSettings;
+
 
     public NetBase(ILogger logger)
     {
         _log = logger;
+        _clients = new Dictionary<int, Client>();
 
         _log.Debug("Creating network listener...");
         _listener = new EventBasedNetListener();
 
         _log.Debug("Creating network manager...");
         _manager = new NetManager(_listener);
+
+        _log.Debug("Configuring serializer...");
+        _serializerSettings = new JsonSerializerSettings
+        {
+            NullValueHandling = NullValueHandling.Ignore,
+            DefaultValueHandling = DefaultValueHandling.Ignore,
+        };
 
         _log.Debug("Binding network events...");
         _listener.ConnectionRequestEvent += OnConnectionRequest;
@@ -43,6 +57,56 @@ public abstract class NetBase
         _log.Info("Network manager stopped.");
     }
 
+    protected void SendDataToPeer<T>(T data, NetPeer peer, NetMessageType msgType = NetMessageType.SerializedDataMessage, DeliveryMethod method = DeliveryMethod.ReliableSequenced)
+    {
+        NetDataWriter writer = new NetDataWriter();
+
+        // write the message overall type
+        writer.Put((byte)msgType);
+
+        // put the class name so we know how to deserialize on the other side
+        writer.Put(typeof(T).ToString(), 32);
+
+        // add the data payload
+        var json = JsonConvert.SerializeObject(data, _serializerSettings);
+        var bytes = Encoding.UTF8.GetBytes(json);
+        if(bytes.Length > 1024)
+        {
+            var error = $"Too large of message, tried to put {bytes.Length} in a single packet!";
+            _log.Error(error);
+            throw new Exception(error);
+        }
+        writer.Put(json);
+
+        // send the message
+        peer.Send(writer, method);
+    }
+
+    protected T GetPayloadFromMessage<T>(NetPacketReader reader)
+    {
+        // TODO: error handling
+        var className = reader.GetString(32);
+        var json = reader.GetString();
+        var obj = JsonConvert.DeserializeObject<T>(json);
+
+        return obj;
+    }
+
+    protected void DebugLogPeers()
+    {
+        if (_log.Level == LogLevel.Debug)
+        {
+            var sb = new StringBuilder();
+            foreach (var p in _manager.ConnectedPeerList)
+            {
+                var id = _clients.ContainsKey(p.Id) ? _clients[p.Id].Name : p.Id.ToString();
+                sb.Append($"{id} ({p.Ping}ms) @ {p.Address}:{p.Port}\n");
+            }
+            _log.Debug($"These are our known peers:\n{sb.ToString()}");
+        }
+    }
+
+
 
     protected virtual void OnConnectionRequest(ConnectionRequest request)
     {
@@ -52,15 +116,7 @@ public abstract class NetBase
     protected virtual void OnPeerConnected(NetPeer peer)
     {
         _log.Info($"Peer {peer.Id} connected from: {peer.Address}:{peer.Port}({peer.Ping})");
-        if (_log.Level == LogLevel.Debug)
-        {
-            var sb = new StringBuilder();
-            foreach (var p in _manager.ConnectedPeerList)
-            {
-                sb.Append($"#{p.Id}({p.Ping}) - {p.Address}:{p.Port}\n");
-            }
-            _log.Debug($"These are our known peers:\n{sb.ToString()}");
-        }
+        DebugLogPeers();
     }
 
     protected virtual void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
@@ -84,8 +140,6 @@ public abstract class NetBase
 
     protected virtual void OnNetworkDataReceived(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)
     {
-        var msg = reader.GetString(100);
-        reader.Recycle();
-        _log.Info($"{deliveryMethod.ToString()} message from {peer.Id} - {msg}");
+        throw new NotImplementedException("This code should not be reachable - client or server needs to implement this.");
     }
 }
