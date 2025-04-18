@@ -1,0 +1,424 @@
+﻿using LiteNetLib;
+using LiteNetLib.Utils;
+using Narfox.Data;
+using Narfox.Data.Models;
+using Narfox.Logging;
+using Narfox.Network.Enums;
+using Newtonsoft.Json;
+using System.Text;
+using static LiteNetLib.EventBasedNetListener;
+
+namespace Narfox.Network;
+
+public class NetGameStateService : GameStateService
+{
+    static object _padlock = new object();
+
+    EventBasedNetListener _listener;
+    NetManager _manager;
+    ILogger _log;
+    Dictionary<int, Client> _clients;
+    JsonSerializerSettings _serializerSettings;
+    NetRole _role = NetRole.Unknown;
+    ushort _clientId = 13;
+
+
+
+    public ushort MaxConnections { get; set; } = 10;
+
+
+
+    public NetGameStateService(ILogger logger)
+    {
+        _log = logger;
+        _clients = new Dictionary<int, Client>();
+
+        _log.Debug("Creating network listener...");
+        _listener = new EventBasedNetListener();
+
+        _log.Debug("Creating network manager...");
+        _manager = new NetManager(_listener);
+
+        _log.Debug("Configuring serializer...");
+        _serializerSettings = new JsonSerializerSettings
+        {
+            NullValueHandling = NullValueHandling.Ignore,
+            DefaultValueHandling = DefaultValueHandling.Ignore,
+        };
+
+        _log.Debug("Binding network events...");
+        _listener.ConnectionRequestEvent += OnConnectionRequest;
+        _listener.NetworkReceiveEvent += OnNetworkDataReceived;
+        _listener.NetworkErrorEvent += OnNetworkError;
+        _listener.PeerConnectedEvent += OnPeerConnected;
+        _listener.PeerDisconnectedEvent += OnPeerDisconnected;
+
+        _log.Info("Net manager created, ready to Connect");
+    }
+
+
+
+    /// <summary>
+    /// Starts this service in server mode
+    /// </summary>
+    /// <param name="port"></param>
+    public void StartServer(ushort port)
+    {
+        _log.Debug("Starting server...");
+        _manager.Start(port);
+        _role = NetRole.Server;
+    }
+
+    /// <summary>
+    /// Starts this service in client mode
+    /// </summary>
+    public void StartClient()
+    {
+        _log.Debug("Starting client...");
+        _manager.Start();
+        _role = NetRole.Client;
+    }
+
+    /// <summary>
+    /// Called to connect to a server when in client mode.
+    /// </summary>
+    /// <param name="address">The server address</param>
+    /// <param name="port">The server port</param>
+    /// <exception cref="InvalidOperationException">Invalid operation thrown if called as anything but Client</exception>
+    public void Connect(string address, ushort port)
+    {
+        if(_role != NetRole.Client)
+        {
+            var msg = "Connect should only be called by a NetRole.Client!";
+            _log.Error(msg);
+            throw new InvalidOperationException(msg);
+        }
+
+        var tempId = Guid.NewGuid().ToString("N");
+
+        _log.Debug($"Connecting to: {address}:{port}");
+        _manager.Connect(address, port, tempId);
+    }
+
+    /// <summary>
+    /// Called in the main game loop to poll all network events
+    /// </summary>
+    public void Update()
+    {
+        _manager.PollEvents();
+    }
+
+    /// <summary>
+    /// Called to shut down this service
+    /// </summary>
+    public void Stop()
+    {
+        _log.Debug("Stopping Network manager...");
+        _manager.Stop();
+        _log.Info("Network manager stopped.");
+
+        // TODO: force disconnect?
+        // TODO: clear all clients?
+    }
+
+
+
+    #region Network Listener Events
+    /// <summary>
+    /// Called when a connection request message is received. This should only
+    /// be handled by server instances.
+    /// </summary>
+    /// <param name="request">The incoming request</param>
+    void OnConnectionRequest(ConnectionRequest request)
+    {
+        switch (_role)
+        {
+            case NetRole.Server:
+                HandleConnectionRequest(request);
+                break;
+            default:
+                var msg = "Received a connection request while not running as server!";
+                _log.Error(msg);
+                throw new InvalidOperationException(msg);
+                break;
+        }
+
+    }
+
+    /// <summary>
+    /// Called when a new peer has connected. For a client, this will generally only
+    /// be called when they connect to the server.
+    /// </summary>
+    /// <param name="peer">The new peer</param>
+    void OnPeerConnected(NetPeer peer)
+    {
+        _log.Info($"Peer {peer.Id} connected from: {peer.Address}:{peer.Port}({peer.Ping})");
+
+        if (_role == NetRole.Server)
+        {
+            SendNewClientId(peer);
+        }
+
+
+        DebugLogPeers();
+    }
+
+    /// <summary>
+    /// Called when a peer has disconnected. For a client, this is called when the server
+    /// rejects a connection or they lose their connection.
+    /// </summary>
+    /// <param name="peer">The peer that disconnected</param>
+    /// <param name="disconnectInfo">Information about the disconnection</param>
+    void OnPeerDisconnected(NetPeer peer, DisconnectInfo disconnectInfo)
+    {
+        _log.Warn($"Peer #{peer.Id} from {peer.Address}:{peer.Port} disconnected.");
+        if (_log.Level == LogLevel.Debug)
+        {
+            var sb = new StringBuilder();
+            foreach (var p in _manager.ConnectedPeerList)
+            {
+                sb.Append($"#{p.Id}({p.Ping}) - {p.Address}:{p.Port}\n");
+            }
+            _log.Debug($"We now have these connected peers:\n{sb.ToString()}");
+        }
+    }
+
+    /// <summary>
+    /// Fired when there is a network error.
+    /// </summary>
+    /// <param name="endPoint">The error endpoint</param>
+    /// <param name="socketError">A socket error object</param>
+    void OnNetworkError(System.Net.IPEndPoint endPoint, System.Net.Sockets.SocketError socketError)
+    {
+        _log.Error($"Socket error on {endPoint.Address}:{endPoint.Port} - {socketError.ToString()}");
+    }
+
+    /// <summary>
+    /// Called when network data is received. This is the most common networking event once
+    /// a stable connection is formed. This method checks the first byte to see what type
+    /// of messgae it is, then calls the appropriate handler for that message type.
+    /// </summary>
+    /// <param name="peer">The message source.</param>
+    /// <param name="reader">The message data object</param>
+    /// <param name="channel">The receiving channel</param>
+    /// <param name="deliveryMethod">The message delivery method</param>
+    void OnNetworkDataReceived(NetPeer peer, NetPacketReader reader, byte channel, DeliveryMethod deliveryMethod)
+    {
+        var msgType = (NetMessageType)reader.GetByte();
+        _log.Info($"Got {msgType.ToString()} message ({deliveryMethod.ToString()}) from {peer.Id}");
+
+        switch (msgType)
+        {
+            case (NetMessageType.ConnectionAccepted):
+                HandleConnectionAcceptedMessage(peer, reader);
+                break;
+            case (NetMessageType.ClientDetails):
+                HandleClientDetailMessage(peer, reader);
+                break;
+            case (NetMessageType.DataPayload):
+                HandleDataPayloadMessage(peer, reader);
+                break;
+        }
+    }
+    #endregion
+
+
+
+    #region Send/Receive Helpers
+    /// <summary>
+    /// Sends a data message with the provided data payload to the specified peer
+    /// </summary>
+    /// <typeparam name="T">A data payload less than 1024 bytes</typeparam>
+    /// <param name="data">The data payload object</param>
+    /// <param name="peer">The peer to send the message to</param>
+    /// <param name="msgType">The type of message to send</param>
+    /// <param name="method">The send method</param>
+    /// <exception cref="Exception">Throws exception if serialized message is larger than 1024 bytes</exception>
+    void SendDataToPeer<T>(T data, NetPeer peer, NetMessageType msgType = NetMessageType.DataPayload, DeliveryMethod method = DeliveryMethod.ReliableSequenced)
+    {
+        NetDataWriter writer = new NetDataWriter();
+
+        // write the message overall type
+        writer.Put((byte)msgType);
+
+        // put the class name so we know how to deserialize on the other side
+        writer.Put(typeof(T).ToString(), 32);
+
+        // add the data payload
+        var json = JsonConvert.SerializeObject(data, _serializerSettings);
+        var bytes = Encoding.UTF8.GetBytes(json);
+        if (bytes.Length > 1024)
+        {
+            var error = $"Too large of message, tried to put {bytes.Length} in a single packet!";
+            _log.Error(error);
+            throw new Exception(error);
+        }
+        writer.Put(json);
+
+        // send the message
+        peer.Send(writer, method);
+    }
+
+    /// <summary>
+    /// Gets the payload from a data message
+    /// </summary>
+    /// <typeparam name="T">The type of incoming data</typeparam>
+    /// <param name="reader">The message data object</param>
+    /// <returns>The deserialized object</returns>
+    T GetPayloadFromMessage<T>(NetPacketReader reader)
+    {
+        // TODO: error handling
+        var className = reader.GetString(32);
+        var json = reader.GetString();
+        var obj = JsonConvert.DeserializeObject<T>(json);
+
+        return obj;
+    }
+
+    /// <summary>
+    /// Sends the provided client details to the network
+    /// </summary>
+    /// <param name="client"></param>
+    void SendClientInfo(Client client)
+    {
+        _log.Debug($"Sending client data ({client.Name}) to server...");
+        SendDataToPeer(client, _manager.FirstPeer, NetMessageType.ClientDetails, DeliveryMethod.ReliableOrdered);
+    }
+
+    /// <summary>
+    /// Sends an Id request to a newly connected client with
+    /// the new client's globally-unique Id defined by the server
+    /// </summary>
+    /// <param name="peer"></param>
+    void SendNewClientId(NetPeer peer)
+    {
+        var newConnectionId = _clientId++;
+
+        NetDataWriter writer = new NetDataWriter();
+        writer.Put((byte)NetMessageType.ConnectionAccepted);
+        writer.Put(newConnectionId);
+
+        // add a dictionary placeholder, we don't have any client data yet
+        _clients.Add(newConnectionId, null);
+
+        // send the message to the newly-connected client
+        peer.Send(writer, DeliveryMethod.ReliableOrdered);
+    }
+
+    /// <summary>
+    /// Lists all peers via logger IF the logger is in debug mode.
+    /// Otherwise it's a noop because building the string is a waste
+    /// of time if it's not going to be logged
+    /// </summary>
+    void DebugLogPeers()
+    {
+        if (_log.Level == LogLevel.Debug)
+        {
+            var sb = new StringBuilder();
+            foreach (var p in _manager.ConnectedPeerList)
+            {
+                var id = _clients.ContainsKey(p.Id) ? _clients[p.Id].Name : p.Id.ToString();
+                sb.Append($"{id} ({p.Ping}ms) @ {p.Address}:{p.Port}\n");
+            }
+            _log.Debug($"These are our known peers:\n{sb.ToString()}");
+        }
+    }
+    #endregion
+
+
+
+    #region Handlers For Specific NetMessage types
+    /// <summary>
+    /// Called by a server when a new client tries to connect. This is a unique
+    /// primitive message type that is not in the NetMessage enum
+    /// </summary>
+    /// <param name="request">The incoming request</param>
+    /// <exception cref="InvalidOperationException">Thrown if non-server tries to handle an incoming request</exception>
+    void HandleConnectionRequest(ConnectionRequest request)
+    {
+        if(_role != NetRole.Server)
+        {
+            var msg = "Trying to handle a connection request when not in Server mode!";
+            _log.Error(msg);
+            throw new InvalidOperationException(msg);
+        }
+
+        _log.Debug("Server received connection request...");
+        if (_manager.ConnectedPeersCount < MaxConnections)
+        {
+            _log.Info($"Accepting connection, now at {_manager.ConnectedPeersCount + 1}/{MaxConnections} connections.");
+            request.Accept();
+        }
+        else
+        {
+            _log.Warn("Too many connections, denied new connection request.");
+        }
+    }
+
+    /// <summary>
+    /// Should be overridden to handle a connection message depending on whether
+    /// the recipient is acting as client or server
+    /// </summary>
+    /// <param name="peer">The message source</param>
+    /// <param name="reader">The message data object</param>
+    void HandleConnectionAcceptedMessage(NetPeer peer, NetPacketReader reader)
+    {
+        var myId = reader.GetUShort();
+        _log.Debug($"Server accepted connection, my id is {myId}...");
+
+        // if we have a LocalClient defined, update the Id
+        if(LocalClient != null)
+        {
+            LocalClient.Id = myId;
+        }
+
+        // otherwise, spin up a client with a random name - implementations
+        // don't HAVE to define a name for clients
+        else
+        {
+            LocalClient = new Client()
+            {
+                Id = myId,
+                Name = Guid.NewGuid().ToString("N")
+            };
+        }
+
+        // send our more detailed data to the network
+        SendClientInfo(LocalClient);
+    }
+
+    /// <summary>
+    /// Called when a peer has sent new client data
+    /// </summary>
+    /// <param name="peer"></param>
+    /// <param name="reader"></param>
+    protected virtual void HandleClientDetailMessage(NetPeer peer, NetPacketReader reader)
+    {
+        var client = GetPayloadFromMessage<Client>(reader);
+
+        // lock to avoid accidental double insertion
+        lock(_padlock)
+        {
+            if (_clients.ContainsKey(peer.Id))
+            {
+                _log.Debug($"Updating client #{peer.Id} with client data ({client.Name})");
+                _clients[peer.Id] = client;
+            }
+            else
+            {
+                _log.Debug($"Adding client #{peer.Id} with client data ({client.Name})");
+                _clients.Add(peer.Id, client);
+            }
+        }
+        
+        DebugLogPeers();
+    }
+
+    /// <summary>
+    /// Called when a data message is received.
+    /// </summary>
+    /// <param name="peer">The message source</param>
+    /// <param name="reader">The message data object</param>
+    protected virtual void HandleDataPayloadMessage(NetPeer peer, NetPacketReader reader) { }
+    #endregion
+}

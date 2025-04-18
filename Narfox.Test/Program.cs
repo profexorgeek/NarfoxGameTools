@@ -46,8 +46,8 @@ void RunServer()
     writer.ClearScreen();
     writer.WriteTitle("Running Server");
     writer.WriteParagraph("Starting the Narfox.Server, press CTRL+C to stop.");
-    var server = new NetServer(2, writer);
-    server.Start(7777);
+    var server = new NetGameStateService(writer);
+    server.StartServer(7777);
 
     while(writer.IsAwaitingCancel == false)
     {
@@ -67,7 +67,8 @@ void RunClient()
     writer.ClearScreen();
     writer.WriteTitle("Running Client");
     writer.WriteParagraph("Starting the Narfox.Client and connecting via loopback. Press CTRL+C to stop.");
-    var client = new NetClient(writer);
+    var client = new NetGameStateService(writer);
+    client.StartClient();
     client.Connect("127.0.0.1", 7777);
 
     while(writer.IsAwaitingCancel == false)
