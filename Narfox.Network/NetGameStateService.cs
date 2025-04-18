@@ -6,24 +6,87 @@ using Narfox.Logging;
 using Narfox.Network.Enums;
 using Newtonsoft.Json;
 using System.Text;
-using static LiteNetLib.EventBasedNetListener;
 
 namespace Narfox.Network;
 
+/// <summary>
+/// This class extends the GameStateService to manage the
+/// state across multiple clients via LiteNetLib networking
+/// 
+/// 
+/// CONNECTION FORMING PROCESS
+/// 1. Client calls Connect and reaches out to server
+/// 2. Server receives ConnectionRequest event and accepts
+/// 3. Both Client and Server receive PeerConnected events
+/// 4. Server sends a new ID to new peer and increments ID counter
+/// 5. Peer receives new ID and sends it's Client detail data to server
+/// 6. Server propagates client detail to all clients
+/// 7. All clients should now know about new client, server is not stored in the Clients list
+/// 
+/// TODO: How to determine who has authority on the network?
+/// </summary>
 public class NetGameStateService : GameStateService
 {
     static object _padlock = new object();
 
+
+    /// <summary>
+    /// The EventBasedNetListener is a lightweight object that is
+    /// mostly used by the NetManager to raise network events while
+    /// it is polling the network. This class subscribes and reacts
+    /// to the events raised on this listener
+    /// </summary>
     EventBasedNetListener _listener;
+
+    /// <summary>
+    /// The NetManager does the heavy lifting in LiteNetLib and
+    /// can act as either a server or a client. This is the inner
+    /// library that this implementation wraps.
+    /// </summary>
     NetManager _manager;
+
+    /// <summary>
+    /// This library logs robust information to help debut realtime
+    /// networking via this log interface.
+    /// </summary>
     ILogger _log;
-    Dictionary<int, Client> _clients;
+
+    /// <summary>
+    /// This dictionary maps a peer Id number, which is not unique across
+    /// the network and may be different for every client, to a client
+    /// metadata object which carries a unique Id, client name, etc.
+    /// </summary>
+    List<Client> _clients;
+
+    /// <summary>
+    /// Only used in server mode to associate Peer data with client data
+    /// </summary>
+    Dictionary<NetPeer, Client> _peerClients;
+
+    /// <summary>
+    /// These settings should be used when serializing and deserializing
+    /// packet payloads to help minimize the packet sizes passed back and forth
+    /// </summary>
     JsonSerializerSettings _serializerSettings;
+
+    /// <summary>
+    /// This identifies the role of this client on the network
+    /// </summary>
     NetRole _role = NetRole.Unknown;
+
+    /// <summary>
+    /// This is the counter used to uniquely identify clients on the network.
+    /// It starts with an arbitrary offset from zero just to help avoid debug 
+    /// confusion between the LiteNetLib Id, which is only unique locally, and
+    /// the Client Id defined by this wrapper class, which is unique globally.
+    /// </summary>
     ushort _clientId = 13;
 
 
 
+    /// <summary>
+    /// The maximum number of accepted connections, only used by a server
+    /// </summary>
     public ushort MaxConnections { get; set; } = 10;
 
 
@@ -31,7 +94,7 @@ public class NetGameStateService : GameStateService
     public NetGameStateService(ILogger logger)
     {
         _log = logger;
-        _clients = new Dictionary<int, Client>();
+        _clients = new List<Client>();
 
         _log.Debug("Creating network listener...");
         _listener = new EventBasedNetListener();
@@ -65,6 +128,7 @@ public class NetGameStateService : GameStateService
     public void StartServer(ushort port)
     {
         _log.Debug("Starting server...");
+        _peerClients = new Dictionary<NetPeer, Client>();
         _manager.Start(port);
         _role = NetRole.Server;
     }
@@ -153,14 +217,11 @@ public class NetGameStateService : GameStateService
     void OnPeerConnected(NetPeer peer)
     {
         _log.Info($"Peer {peer.Id} connected from: {peer.Address}:{peer.Port}({peer.Ping})");
-
         if (_role == NetRole.Server)
         {
-            SendNewClientId(peer);
+            SendNewConnectionInfo(peer);
         }
-
-
-        DebugLogPeers();
+        DebugLogKnownClients();
     }
 
     /// <summary>
@@ -226,15 +287,16 @@ public class NetGameStateService : GameStateService
 
     #region Send/Receive Helpers
     /// <summary>
-    /// Sends a data message with the provided data payload to the specified peer
+    /// Sends a data message with the provided data payload to all peers. For a
+    /// client, this should just be the server. For the server, it's all connected
+    /// clients.
     /// </summary>
     /// <typeparam name="T">A data payload less than 1024 bytes</typeparam>
     /// <param name="data">The data payload object</param>
-    /// <param name="peer">The peer to send the message to</param>
     /// <param name="msgType">The type of message to send</param>
     /// <param name="method">The send method</param>
     /// <exception cref="Exception">Throws exception if serialized message is larger than 1024 bytes</exception>
-    void SendDataToPeer<T>(T data, NetPeer peer, NetMessageType msgType = NetMessageType.DataPayload, DeliveryMethod method = DeliveryMethod.ReliableSequenced)
+    void SendData<T>(T data, NetMessageType msgType = NetMessageType.DataPayload, DeliveryMethod method = DeliveryMethod.ReliableSequenced)
     {
         NetDataWriter writer = new NetDataWriter();
 
@@ -255,8 +317,8 @@ public class NetGameStateService : GameStateService
         }
         writer.Put(json);
 
-        // send the message
-        peer.Send(writer, method);
+        // send the message to all peers
+        _manager.SendToAll(writer, method);
     }
 
     /// <summary>
@@ -282,15 +344,15 @@ public class NetGameStateService : GameStateService
     void SendClientInfo(Client client)
     {
         _log.Debug($"Sending client data ({client.Name}) to server...");
-        SendDataToPeer(client, _manager.FirstPeer, NetMessageType.ClientDetails, DeliveryMethod.ReliableOrdered);
+        SendData(client, NetMessageType.ClientDetails, DeliveryMethod.ReliableOrdered);
     }
 
     /// <summary>
-    /// Sends an Id request to a newly connected client with
-    /// the new client's globally-unique Id defined by the server
+    /// Sends a newly-connected peer their unique ID and
+    /// sends information about every other connected client
     /// </summary>
-    /// <param name="peer"></param>
-    void SendNewClientId(NetPeer peer)
+    /// <param name="peer">The newly-connected client</param>
+    void SendNewConnectionInfo(NetPeer peer)
     {
         var newConnectionId = _clientId++;
 
@@ -299,10 +361,21 @@ public class NetGameStateService : GameStateService
         writer.Put(newConnectionId);
 
         // add a dictionary placeholder, we don't have any client data yet
-        _clients.Add(newConnectionId, null);
+        _peerClients.Add(peer, null);
 
         // send the message to the newly-connected client
         peer.Send(writer, DeliveryMethod.ReliableOrdered);
+
+        // also send any existing clients to the new client so they know about everyone
+        foreach(var client in _clients)
+        {
+            if(client != null && client.Id != newConnectionId)
+            {
+                SendClientInfo(client);
+            }
+        }
+
+        DebugLogKnownClients();
     }
 
     /// <summary>
@@ -310,17 +383,31 @@ public class NetGameStateService : GameStateService
     /// Otherwise it's a noop because building the string is a waste
     /// of time if it's not going to be logged
     /// </summary>
-    void DebugLogPeers()
+    void DebugLogKnownClients()
     {
         if (_log.Level == LogLevel.Debug)
         {
             var sb = new StringBuilder();
-            foreach (var p in _manager.ConnectedPeerList)
+            sb.AppendLine($"Listing known clients...");
+
+            if(_role != NetRole.Server)
             {
-                var id = _clients.ContainsKey(p.Id) ? _clients[p.Id].Name : p.Id.ToString();
-                sb.Append($"{id} ({p.Ping}ms) @ {p.Address}:{p.Port}\n");
+                sb.AppendLine($"{LocalClient.Id} - {LocalClient.Name} (ME!)");
             }
-            _log.Debug($"These are our known peers:\n{sb.ToString()}");
+
+            foreach (var client in _clients)
+            {
+                if(_role == NetRole.Server)
+                {
+                    var peer = _peerClients.FirstOrDefault(kvp => kvp.Value.Id == client.Id).Key;
+                    sb.AppendLine($"{client.Id} - {client.Name} ({peer.Id} {peer.Address}:{peer.Port})");
+                }
+                else
+                {
+                    sb.AppendLine($"{client.Id} - {client.Name}");
+                }
+            }
+            _log.Debug(sb.ToString());
         }
     }
     #endregion
@@ -366,22 +453,12 @@ public class NetGameStateService : GameStateService
         var myId = reader.GetUShort();
         _log.Debug($"Server accepted connection, my id is {myId}...");
 
-        // if we have a LocalClient defined, update the Id
-        if(LocalClient != null)
+        // Rebuild the LocalClient
+        LocalClient = new Client()
         {
-            LocalClient.Id = myId;
-        }
-
-        // otherwise, spin up a client with a random name - implementations
-        // don't HAVE to define a name for clients
-        else
-        {
-            LocalClient = new Client()
-            {
-                Id = myId,
-                Name = Guid.NewGuid().ToString("N")
-            };
-        }
+            Id = myId,
+            Name = LocalClient != null ? LocalClient.Name : Guid.NewGuid().ToString("N"),
+        };
 
         // send our more detailed data to the network
         SendClientInfo(LocalClient);
@@ -399,19 +476,32 @@ public class NetGameStateService : GameStateService
         // lock to avoid accidental double insertion
         lock(_padlock)
         {
-            if (_clients.ContainsKey(peer.Id))
+            if(client.Id != LocalClient.Id && _clients.Any(c => c.Id == client.Id) == false)
             {
-                _log.Debug($"Updating client #{peer.Id} with client data ({client.Name})");
-                _clients[peer.Id] = client;
+                _log.Debug($"Discovered new client: {client.Id} {client.Name}");
+                _clients.Add(client);
             }
-            else
+            
+            if(_role == NetRole.Server)
             {
-                _log.Debug($"Adding client #{peer.Id} with client data ({client.Name})");
-                _clients.Add(peer.Id, client);
+                if(_peerClients.ContainsKey(peer))
+                {
+                    _peerClients[peer] = client;
+                }
+                else
+                {
+                    _peerClients.Add(peer, client);
+                }
             }
         }
         
-        DebugLogPeers();
+        DebugLogKnownClients();
+
+        // if we are the server, pass this message on to all peers
+        if(_role == NetRole.Server)
+        {
+            SendClientInfo(client);
+        }
     }
 
     /// <summary>

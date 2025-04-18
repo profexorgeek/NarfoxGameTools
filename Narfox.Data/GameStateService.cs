@@ -74,7 +74,7 @@ namespace Narfox.Data
                 localClient = new Client
                 {
                     Id = 0,
-                    Name = "CLIENT",
+                    Name = Guid.NewGuid().ToString("N"),
                 };
             }
 
