@@ -1,10 +1,12 @@
 ﻿using LiteNetLib;
 using LiteNetLib.Utils;
 using Narfox.Data;
+using Narfox.Data.Interfaces;
 using Narfox.Data.Models;
 using Narfox.Logging;
 using Narfox.Network.Enums;
 using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Text;
 
 namespace Narfox.Network;
@@ -83,6 +85,11 @@ public class NetGameStateService : GameStateService
     ushort _clientId = 13;
 
 
+    /// <summary>
+    /// The minimum number of milliseconds before another update will be sent for
+    /// the same entity.
+    /// </summary>
+    ushort MinMillisecondsBetweenUpdates { get; set; } = 20;
 
     /// <summary>
     /// The maximum number of accepted connections, only used by a server
@@ -167,7 +174,7 @@ public class NetGameStateService : GameStateService
     /// <summary>
     /// Called in the main game loop to poll all network events
     /// </summary>
-    public void Update()
+    public override void Update()
     {
         _manager.PollEvents();
     }
@@ -185,6 +192,8 @@ public class NetGameStateService : GameStateService
         // TODO: clear all clients?
     }
 
+    #region GameStateService Overrides
+    #endregion
 
 
     #region Network Listener Events
@@ -276,8 +285,8 @@ public class NetGameStateService : GameStateService
             case (NetMessageType.ClientDetails):
                 HandleClientDetailMessage(peer, reader);
                 break;
-            case (NetMessageType.DataPayload):
-                HandleDataPayloadMessage(peer, reader);
+            case (NetMessageType.EntityData):
+                HandleEntityDataMessage(peer, reader);
                 break;
         }
     }
@@ -296,12 +305,15 @@ public class NetGameStateService : GameStateService
     /// <param name="msgType">The type of message to send</param>
     /// <param name="method">The send method</param>
     /// <exception cref="Exception">Throws exception if serialized message is larger than 1024 bytes</exception>
-    void SendData<T>(T data, NetMessageType msgType = NetMessageType.DataPayload, DeliveryMethod method = DeliveryMethod.ReliableSequenced)
+    void SendData<T>(T data, NetMessageType msgType = NetMessageType.EntityData, DeliveryMethod method = DeliveryMethod.ReliableSequenced)
     {
         NetDataWriter writer = new NetDataWriter();
 
         // write the message overall type
         writer.Put((byte)msgType);
+
+        // write the sender
+        writer.Put((ushort)LocalClient.Id);
 
         // put the class name so we know how to deserialize on the other side
         writer.Put(typeof(T).ToString(), 32);
@@ -469,7 +481,7 @@ public class NetGameStateService : GameStateService
     /// </summary>
     /// <param name="peer"></param>
     /// <param name="reader"></param>
-    protected virtual void HandleClientDetailMessage(NetPeer peer, NetPacketReader reader)
+    void HandleClientDetailMessage(NetPeer peer, NetPacketReader reader)
     {
         var client = GetPayloadFromMessage<Client>(reader);
 
@@ -509,6 +521,22 @@ public class NetGameStateService : GameStateService
     /// </summary>
     /// <param name="peer">The message source</param>
     /// <param name="reader">The message data object</param>
-    protected virtual void HandleDataPayloadMessage(NetPeer peer, NetPacketReader reader) { }
+    void HandleEntityDataMessage(NetPeer peer, NetPacketReader reader)
+    {
+        var typeName = reader.GetString();
+        var json = reader.GetString();
+        var obj = JsonConvert.DeserializeObject(json, Type.GetType(typeName), _serializerSettings);
+
+        if(obj is IEntityData entityData)
+        {
+            RequestUpdateModel(entityData.Id, );
+        }
+        else
+        {
+            var msg = "Got data message but it wasn't an IEntityData!";
+            _log.Error(msg);
+            Debug.Assert(false, msg);
+        }
+    }
     #endregion
 }

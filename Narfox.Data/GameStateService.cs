@@ -26,8 +26,8 @@ namespace Narfox.Data
     public class GameStateService
     {
 
-        List<IEntityData> trackedModels;
-        ushort entityIndex = 0;
+        List<IEntityData> _trackedModels;
+        ushort _entityIndex = 0;
 
 
         /// <summary>
@@ -67,7 +67,7 @@ namespace Narfox.Data
         /// <param name="localClient">An optional local client. A default one will be created if not provided.</param>
         public GameStateService(Client localClient = null)
         {
-            trackedModels = new List<IEntityData>();
+            _trackedModels = new List<IEntityData>();
 
             if (localClient == null)
             {
@@ -102,7 +102,7 @@ namespace Narfox.Data
         /// <param name="changes">A key value list of changes, the value type must match the target model.</param>
         public void RequestUpdateModel(ushort id, Client requestor, Dictionary<string, object> changes)
         {
-            var model = trackedModels.FirstOrDefault(m => m.Id == id);
+            var model = _trackedModels.FirstOrDefault(m => m.Id == id);
 
             // EARLY OUT: model not found or requestor doesn't have permission
             if (model == null || model.OwnerId != requestor.Id)
@@ -113,7 +113,7 @@ namespace Narfox.Data
             // reflect properties
             var properties = model.GetType().GetProperties(
                 BindingFlags.Public |
-                BindingFlags.Instance);
+                BindingFlags.Instance).OrderBy(p => p.Name);
 
             // set all properties on the existing model to match the target model, using reflection
             // ensures that we don't break references to our list of registered entities
@@ -135,6 +135,8 @@ namespace Narfox.Data
                     }
                 }
             }
+
+
         }
 
         /// <summary>
@@ -148,7 +150,7 @@ namespace Narfox.Data
         /// property type defined in the delta</exception>
         public void RequestApplyEngineDelta(ushort id, Client requestor, GameEntityFrameCache delta)
         {
-            var model = trackedModels.FirstOrDefault(m => m.Id == id);
+            var model = _trackedModels.FirstOrDefault(m => m.Id == id);
 
             // EARLY OUT: model not found or requestor doesn't have permission
             if (model == null || model.OwnerId != requestor.Id)
@@ -200,10 +202,10 @@ namespace Narfox.Data
         /// <param name="requestor">The requestor</param>
         public void RequestCreateModel(IEntityData model, Client requestor)
         {
-            var exists = trackedModels.Any(t => t.Id == model.Id);
+            var exists = _trackedModels.Any(t => t.Id == model.Id);
             if(exists == false && model.OwnerId == requestor.Id)
             {
-                trackedModels.Add(model);
+                _trackedModels.Add(model);
                 ModelAdded?.Invoke(requestor, new EntityModelEventArgs(model));
             }
         }
@@ -215,10 +217,10 @@ namespace Narfox.Data
         /// <param name="requestor"></param>
         public void RequestDeleteModel(ushort id, Client requestor)
         {
-            var existing = trackedModels.FirstOrDefault(t => t.Id == id);
+            var existing = _trackedModels.FirstOrDefault(t => t.Id == id);
             if(existing != null && existing.OwnerId == requestor.Id)
             {
-                trackedModels.Remove(existing);
+                _trackedModels.Remove(existing);
                 var args = new EntityModelEventArgs(existing);
                 ModelDestroyed?.Invoke(requestor, args);
             }
@@ -234,7 +236,7 @@ namespace Narfox.Data
         /// <param name="incomingModel">The model to match</param>
         public void RequestReckonModel(ushort id, Client requestor, IEntityData incomingModel)
         {
-            var existing = trackedModels.FirstOrDefault(t => t.Id == id);
+            var existing = _trackedModels.FirstOrDefault(t => t.Id == id);
             if(existing != null && requestor.Id == Authority.Id && incomingModel.GetType() == existing.GetType())
             {
                 // reflect properties
@@ -270,7 +272,7 @@ namespace Narfox.Data
         /// <returns>A unique ID</returns>
         public uint GetUniqueEntityId()
         {
-            var entityId = entityIndex++;
+            var entityId = _entityIndex++;
             return ((uint)LocalClient.Id << 16) | entityId;
         }
 
