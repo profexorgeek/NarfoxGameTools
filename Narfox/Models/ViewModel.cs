@@ -349,7 +349,7 @@ public class ViewModel : INotifyPropertyChanged
     /// <param name="propertyName">The name of the property to set - typically used with nameof.</param>
     /// <param name="oldValue">The old value, used to determine if a value should be assigned. If the old value matches the new value, then the property is not assigned and the return value is false.</param>
     /// <returns>Whether the value was set. This is true if the old property did not exist, or if the old value does not match the new value. If this is the initial set, then this value is ignored.</returns>
-    protected bool SetWithoutNotifying<T>(T propertyValue, string propertyName, T oldValue)
+    public bool SetWithoutNotifying<T>(T propertyValue, string propertyName, T oldValue)
     {
         var didSet = false;
 
