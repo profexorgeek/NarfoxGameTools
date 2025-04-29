@@ -1,5 +1,6 @@
 ﻿using Narfox.Entities;
 using Narfox.Services;
+using System.Collections.ObjectModel;
 
 namespace Narfox.Extensions;
 
@@ -99,5 +100,22 @@ public static class CollectionExtensions
             }
         }
         return nearest;
+    }
+
+    /// <summary>
+    /// Orders an observable collection and returns a new observable collection
+    /// with the ordered items
+    /// </summary>
+    /// <typeparam name="T">The type of item in the collection</typeparam>
+    /// <typeparam name="TKey">The key to order by, used in the provided lambda function</typeparam>
+    /// <param name="collection">The collection to order</param>
+    /// <param name="keySelector">The sorting function to use</param>
+    /// <returns></returns>
+    public static ObservableCollection<T> OrderObservableCollectionBy<T, TKey>(
+    this ObservableCollection<T> collection,
+    Func<T, TKey> keySelector)
+    {
+        var sorted = collection.OrderBy(keySelector).ToList();
+        return new ObservableCollection<T>(sorted);
     }
 }
