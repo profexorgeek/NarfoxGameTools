@@ -111,11 +111,13 @@ public static class CollectionExtensions
     /// <param name="collection">The collection to order</param>
     /// <param name="keySelector">The sorting function to use</param>
     /// <returns></returns>
-    public static ObservableCollection<T> OrderObservableCollectionBy<T, TKey>(
+    public static void SortObservableCollection<T, TKey>(
     this ObservableCollection<T> collection,
     Func<T, TKey> keySelector)
     {
         var sorted = collection.OrderBy(keySelector).ToList();
-        return new ObservableCollection<T>(sorted);
+        collection.Clear();
+        foreach ( var item in sorted)
+            collection.Add(item);
     }
 }
