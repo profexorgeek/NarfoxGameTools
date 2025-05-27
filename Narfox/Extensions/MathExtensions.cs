@@ -5,11 +5,11 @@ namespace Narfox.Extensions
 {
     public static class MathExtensions
     {
-        public const float PiFloat = (float)MathF.PI;
-        public const float RadiansPerDegree = (float)(MathF.PI / 180f);
-        public const float DegreesPerRadian = (float)(180f / MathF.PI);
-        public const float TwoPi = MathF.Tau;
-        public const float HalfPi = MathF.PI / 2f;
+        public const float PiFloat = (float)Math.PI;
+        public const float RadiansPerDegree = (float)(Math.PI / 180f);
+        public const float DegreesPerRadian = (float)(180f / Math.PI);
+        public const float TwoPi = (float)Math.PI * 2f;
+        public const float HalfPi = (float)Math.PI / 2f;
 
         /// <summary>
         /// Converts a float value from degrees to radians.
@@ -50,8 +50,8 @@ namespace Narfox.Extensions
         /// <returns>A float that falls within the provided range</returns>
         public static float Clamp(this float f, float min, float max)
         {
-            f = MathF.Max(min, f);
-            f = MathF.Min(max, f);
+            f = Math.Max(min, f);
+            f = Math.Min(max, f);
             return f;
         }
 
@@ -92,7 +92,7 @@ namespace Narfox.Extensions
         public static float RoundToNearestHalf(this float val)
         {
             var doubled = val * 2;
-            var rounded = (int)MathF.Round(doubled, MidpointRounding.AwayFromZero);
+            var rounded = (int)Math.Round(doubled, MidpointRounding.AwayFromZero);
             return rounded / 2f;
         }
 
@@ -182,7 +182,7 @@ namespace Narfox.Extensions
         /// target</returns>
         public static float RotationTo(this IPositionedEntity source, float x, float y)
         {
-            return NormalizeAngle(MathF.Atan2(y - source.Y, x - source.X));
+            return NormalizeAngle((float)Math.Atan2(y - source.Y, x - source.X));
         }
 
 
@@ -196,10 +196,10 @@ namespace Narfox.Extensions
         /// the shortest rotation to match the target.</returns>
         public static float ShortestRotationTo(this float source, float target)
         {
-            float difference = (target - source + MathF.Tau) % MathF.Tau;
-            if (difference > MathF.PI)
+            float difference = (target - source + TwoPi) % TwoPi;
+            if (difference > PiFloat)
             {
-                difference -= MathF.Tau;
+                difference -= TwoPi;
             }
             return difference;
         }

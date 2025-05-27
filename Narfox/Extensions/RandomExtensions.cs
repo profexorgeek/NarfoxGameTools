@@ -9,7 +9,7 @@ public static class RandomExtensions
     /// <summary>
     /// A float-precision version of PI
     /// </summary>
-    public static float Pi => MathF.PI;
+    public static float Pi => (float)Math.PI;
 
     /// <summary>
     /// Generates a random float between min and max
@@ -78,6 +78,14 @@ public static class RandomExtensions
             rand.InRange(-halfSize, halfSize),
             rand.InRange(-halfSize, halfSize),
             rand.InRange(-halfSize, halfSize));
+    }
+
+    public static Vector3 PositionInCube(this Random rand, float width, float height, float depth)
+    {
+        return new Vector3(
+            rand.InRange(-width / 2f, width / 2f),
+            rand.InRange(-height / 2f, height  / 2f),
+            rand.InRange(-depth / 2f, depth / 2f));
     }
 
     /// <summary>
