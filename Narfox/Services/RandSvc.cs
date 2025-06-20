@@ -4,9 +4,9 @@
 /// Provides a seeded and unseeded random instance that can be
 /// used for deterministic or non-deterministic procedural generation
 /// </summary>
-public class RandomService
+public class RandSvc
 {
-    static RandomService? instance;
+    static RandSvc? instance;
     static object padlock = new Object();
     Random seeded;
     Random unseeded;
@@ -28,7 +28,7 @@ public class RandomService
     /// for easy use. Cannot be accessed until Initialize has
     /// been called on this service.
     /// </summary>
-    public static RandomService I
+    public static RandSvc I
     {
         get
         {
@@ -52,7 +52,7 @@ public class RandomService
         {
             if(instance == null)
             {
-                instance = new RandomService(seed);
+                instance = new RandSvc(seed);
             }
         }
     }
@@ -61,7 +61,7 @@ public class RandomService
     /// The constructor, initializes the random instances
     /// </summary>
     /// <param name="seed"></param>
-    private RandomService(int seed)
+    private RandSvc(int seed)
     {
         seeded = new Random(seed);
         unseeded = new Random(seeded.Next());

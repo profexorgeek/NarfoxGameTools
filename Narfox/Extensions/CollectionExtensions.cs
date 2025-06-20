@@ -16,7 +16,7 @@ public static class CollectionExtensions
     /// <returns>An element of type T or default(T)</returns>
     public static T Random<T>(this IEnumerable<T> enumerable, Random rand = null)
     {
-        rand = rand ?? RandomService.I.UnseededRandom;
+        rand = rand ?? RandSvc.I.UnseededRandom;
         T o;
         var c = enumerable.Count();
         if (c > 0)
@@ -40,7 +40,7 @@ public static class CollectionExtensions
     /// <returns>An element of type T or default(T)</returns>
     public static T Random<T>(this T[] array, Random rand = null)
     {
-        rand = rand ?? RandomService.I.UnseededRandom;
+        rand = rand ?? RandSvc.I.UnseededRandom;
         T o;
         var c = array.Length;
         if (c > 0)

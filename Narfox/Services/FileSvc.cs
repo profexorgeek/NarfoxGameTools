@@ -11,9 +11,9 @@ namespace Narfox.Services
     /// either encrypted or unencrypted using the SimpleCryptoService,
     /// as JSON data using Newtonsoft.Json
     /// </summary>
-    public class FileService
+    public class FileSvc
     {
-        private static FileService instance;
+        private static FileSvc instance;
         private static readonly Object padlock = new Object();
         private string appVersionString = null;
         private ILogger log;
@@ -36,7 +36,7 @@ namespace Narfox.Services
             }
         }
 
-        /// <summary>
+            /// <summary>
         /// The application Version
         /// </summary>
         public Version AppVersion => Assembly.GetEntryAssembly().GetName().Version;
@@ -111,7 +111,7 @@ namespace Narfox.Services
         /// Singleton pattern service access, must be Initialized
         /// before accessing!
         /// </summary>
-        public static FileService I
+        public static FileSvc I
         {
             get
             {
@@ -135,7 +135,7 @@ namespace Narfox.Services
             {
                 if (instance == null)
                 {
-                    instance = new FileService(logger);
+                    instance = new FileSvc(logger);
                 }
             }
         }
@@ -143,7 +143,7 @@ namespace Narfox.Services
         /// <summary>
         /// Private constructor for Singleton pattern access
         /// </summary>
-        private FileService(ILogger logger) {
+        private FileSvc(ILogger logger) {
             this.log = logger;
         }
 
