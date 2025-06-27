@@ -16,7 +16,6 @@ namespace Narfox.Services
         private static FileSvc instance;
         private static readonly Object padlock = new Object();
         private string appVersionString = null;
-        private ILogger log;
 
         /// <summary>
         /// The application Version as a string with Major.Minor.Build
@@ -126,16 +125,15 @@ namespace Narfox.Services
 
 
         /// <summary>
-        /// Initialize the FileService with a logger instance
+        /// Initialize the FileService
         /// </summary>
-        /// <param name="logger"></param>
-        public static void Initialize(ILogger logger)
+        public static void Initialize()
         {
             lock(padlock)
             {
                 if (instance == null)
                 {
-                    instance = new FileSvc(logger);
+                    instance = new FileSvc();
                 }
             }
         }
@@ -143,9 +141,7 @@ namespace Narfox.Services
         /// <summary>
         /// Private constructor for Singleton pattern access
         /// </summary>
-        private FileSvc(ILogger logger) {
-            this.log = logger;
-        }
+        private FileSvc() { }
 
 
 
@@ -169,8 +165,6 @@ namespace Narfox.Services
 
             var filename = safeName + ext;
 
-            log.Debug($"Created safe filename: {filename}");
-
             return filename;
         }
 
@@ -185,7 +179,6 @@ namespace Narfox.Services
         {
             var isAbsolute = unknownPath.Contains(DefaultSaveDirectory);
             var path = isAbsolute ? unknownPath : Path.Combine(DefaultSaveDirectory, unknownPath);
-            log.Debug($"Determined {unknownPath} absolute location {path}");
             return path;
         }
 
@@ -199,8 +192,6 @@ namespace Narfox.Services
         /// <returns>A list of file paths, limited to a specific extension if one was provided.</returns>
         public List<string> GetDirectoryFiles(string path, string extension = "")
         {
-            log.Debug($"Getting all files from {path} with extension: {extension}.");
-
             var files = new List<string>();
             if (Directory.Exists(path))
             {
@@ -229,11 +220,6 @@ namespace Narfox.Services
             if (File.Exists(srcPath))
             {
                 File.Copy(srcPath, destPath, overwrite);
-                log.Debug($"Copied {srcPath} to {destPath}");
-            }
-            else
-            {
-                log.Warn($"Tried to copy file that doesn't exist: {srcPath}");
             }
         }
 
@@ -359,7 +345,6 @@ namespace Narfox.Services
             catch (Exception e)
             {
                 var msg = string.Format("Failed to save to {0}, error: {1}", path, e);
-                log.Error(msg);
             }
 
             return success;
@@ -381,7 +366,6 @@ namespace Narfox.Services
             catch (Exception e)
             {
                 var msg = string.Format("Failed to load from {0}, error: {1}", path, e);
-                log.Error(msg);
                 text = "";
             }
             return text;
