@@ -28,6 +28,10 @@ public static class ColorExtensions
     public static Color HexStringToColor(this string str)
     {
         Color outColor = Color.Black;
+        
+        // strip hex notation
+        if(str.StartsWith("0x"))
+            str = str.Replace("0x", "");
 
         if (String.IsNullOrWhiteSpace(str) == false)
         {
@@ -53,6 +57,10 @@ public static class ColorExtensions
                     System.Diagnostics.Debug.Assert(false, $"Bad values were provided to color conversion: {e.Message}");
                 }
 
+            }
+            else
+            {
+                System.Diagnostics.Debug.Assert(false, $"Bad hex string provided: {str}");
             }
         }
 
