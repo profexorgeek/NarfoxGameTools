@@ -50,7 +50,7 @@ public static class ColorExtensions
                     var R = Convert.ToInt16(str.Substring(0, 2), 16);
                     var G = Convert.ToInt16(str.Substring(2, 2), 16);
                     var B = Convert.ToInt16(str.Substring(4, 2), 16);
-                    outColor = Color.FromArgb(1, R, G, B);
+                    outColor = Color.FromArgb(byte.MaxValue, R, G, B);
                 }
                 catch (Exception e)
                 {
